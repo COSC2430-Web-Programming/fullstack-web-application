@@ -1,0 +1,32 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: 0;
+}
+
+
+
+.header_p {
+    background: url("https://t4.ftcdn.net/jpg/04/96/63/21/360_F_496632159_Ds6hKfUGl6lF3Koc0Uwp7DeAMNA3Uqyo.jpg");
+    position: relative;
+    background-size: cover;
+    min-height: 60vh;
+    color: white;
+    background-position: center;
+    
+}
+
+.color_overlay{
+    position: absolute;
+    width: 40%;
+    height: 50%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: auto;
+    margin-bottom: auto;
+    left: 0;
+    right: 0;
+    top:0;
+    bottom: 0;
+    background-color: rgba(0,0,0,0.3);
+}
