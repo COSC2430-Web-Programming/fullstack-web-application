@@ -35,9 +35,7 @@
   </head>
   <body>
     <header class='col-12 p-0'>
-      <?php 
-        require('header.php')
-      ?>
+   
       <div class='header_p'>
         <div class="color_overlay d-flex justify-content-center align-items-center">
           <div>
