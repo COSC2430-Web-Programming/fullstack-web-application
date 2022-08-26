@@ -11,17 +11,17 @@
     background: url("https://t4.ftcdn.net/jpg/04/96/63/21/360_F_496632159_Ds6hKfUGl6lF3Koc0Uwp7DeAMNA3Uqyo.jpg");
     position: relative;
     background-size: cover;
-    min-height: 60vh;
+    min-height: 40vh;
     color: white;
     background-position: center;
     
 }
 
 .header_vendor {
-    background: url("https://assets-global.website-files.com/600fe6e1ff56087409a9f096/602b9f28bb288a2b7eea1217_Inventory-Reduction-Strategies-For-Excess-Or-Slow-Moving-Stock.jpg");
+    background: url("https://www.business.org/app/uploads/2021/08/why-is-inventory-management-important.png");
     position: relative;
     background-size: cover;
-    min-height: 60vh;
+    min-height: 40vh;
     color: white;
     background-position: center;
     
@@ -39,7 +39,7 @@
     right: 0;
     top:0;
     bottom: 0;
-    background-color: rgba(0,0,0,0.3);
+    background-color: rgba(0,0,0,0.5);
 }
 
 
