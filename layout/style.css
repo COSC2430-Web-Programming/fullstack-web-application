@@ -8,20 +8,10 @@
 
 
 .header_p {
-    background: url("https://t4.ftcdn.net/jpg/04/96/63/21/360_F_496632159_Ds6hKfUGl6lF3Koc0Uwp7DeAMNA3Uqyo.jpg");
+    background: url("https://img.freepik.com/free-photo/loft-home-office-interior-design_53876-143117.jpg?w=2000");
     position: relative;
     background-size: cover;
-    min-height: 40vh;
-    color: white;
-    background-position: center;
-    
-}
-
-.header_vendor {
-    background: url("https://www.business.org/app/uploads/2021/08/why-is-inventory-management-important.png");
-    position: relative;
-    background-size: cover;
-    min-height: 40vh;
+    min-height: 45vh;
     color: white;
     background-position: center;
     

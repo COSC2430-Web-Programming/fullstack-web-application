@@ -25,9 +25,7 @@
             <div class='mb-4'>
                 <h2 class="col-12 text-center ">ORDER</h2>
             </div>
-            <div class="col-lg-10 bg-danger">
-              <?= make_tbl($data) ?>
-            </div>
+            
     </div>
     
 
