@@ -1,0 +1,18 @@
+[
+    {
+        "username": "vthanh",
+        "password": "$2y$10$6ZlnNEC31l07pP1QTG2Dh.\/Bp0GBnLMgsSxCNpiWv5jcncKPa\/BCu",
+        "profilePicture": {
+            "name": "ponyo_sleeping.jpeg",
+            "full_path": "ponyo_sleeping.jpeg",
+            "type": "image\/jpeg",
+            "tmp_name": "\/private\/var\/folders\/v7\/9w87bmpj6t146bx2k767gn600000gn\/T\/phpvxOJe8",
+            "error": 0,
+            "size": 51414
+        },
+        "businessName": "Hoang Anh",
+        "businessAddress": "12 Pooh",
+        "registeredTime": "2022-08-28 20:11",
+        "role": 0
+    }
+]

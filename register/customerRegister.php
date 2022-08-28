@@ -13,7 +13,7 @@
   <body>
     <div class='container mt-4'>
     <?php 
-        require('nav.php')
+        require('../layout/nav.php')
     ?>
         <div class='row justify-content-center'>
             <div class='mb-4'>
@@ -31,7 +31,7 @@
                     <input name="realName" type="text" class="form-control w-100" id="realName" placeholder='Name'>
                   </div>
                   <div class="mb-4">
-                    <label for="userName" class="form-label pb-3 ">User name</label>
+                    <label for="userName" class="form-label pb-3 ">Username</label>
                     <input name="userName" type="text" class="form-control w-100" id="userName" placeholder='Username'>
                   </div>
                   <div class="mb-4">
@@ -39,7 +39,7 @@
                     <input name="userPassword" type="password" class="form-control w-100" id="userPassword" placeholder='Password'>
                   </div>
                   <div class="mb-5">
-                    <label for="userProfile" class="form-label pb-2">Profile</label>
+                    <label for="userProfile" class="form-label pb-2">Profile Picture</label>
                     <input name="userProfile" type="file" class="form-control w-100" id="userProfile">
                   </div>
                   <div class="mb-4 row justify-content-center">
