@@ -5,7 +5,7 @@
         exit();
     }
 
-    if(isset($_GET['logout'])) {
+    if(isset($_GET['logout']) || isset($_GET['login'])) {
         unset($_SESSION['user']);
         header("location: ../pages/login.php");
         exit();
@@ -21,7 +21,9 @@
     <title>User's Homepage</title>
 </head>
 <body>
-
+    <?php 
+        require('../layout/nav.php')
+    ?>
     <div class="content">
         <h2>Welcome to your homepage <?php $_SESSION['user']; ?></h2>
         <a href="?logout">Log out</a>
