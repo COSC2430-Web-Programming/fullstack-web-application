@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Abel&family=Inter:wght@200;300;400&display=swap');
 *{
     margin: 0;
     padding: 0;
@@ -6,10 +7,10 @@
 
 
 .header_p {
-    background: url("https://t4.ftcdn.net/jpg/04/96/63/21/360_F_496632159_Ds6hKfUGl6lF3Koc0Uwp7DeAMNA3Uqyo.jpg");
+    background: url("https://img.freepik.com/free-photo/loft-home-office-interior-design_53876-143117.jpg?w=2000");
     position: relative;
     background-size: cover;
-    min-height: 60vh;
+    min-height: 45vh;
     color: white;
     background-position: center;
     
@@ -27,5 +28,36 @@
     right: 0;
     top:0;
     bottom: 0;
-    background-color: rgba(0,0,0,0.3);
+    background-color: rgba(0,0,0,0.5);
+}
+
+
+* {
+    margin:0;
+    padding: 0;
+
+}
+h2{
+    margin-top: 0.5em;
+}
+#profile{
+    text-align: center;
+    /* background-color: #65d8c9; */
+    align-items: end;
+}
+
+#upload-btn{
+    margin-top: 2em;
+    margin-bottom: 1em;
+
+}
+
+#header-view{
+    position: absolute;
+    /* width: 1920px;
+    height: 676px;
+    left: 0px;
+    top: 48px; */
+    width: 50%;
+    background: url(https://s3-alpha-sig.figma.com/img/1e31/19aa/60a4f5f00b579d8132f56365ff03e9fd?Expires=1661731200&Signature=GwYwKphawnKUP5e2evCb1JK9NoG6H1935DVbi5nFzUOueQ4o~XB7CsEY-xdyfGWEE-IqyJtTUZ8xnuJrhRLu~xR5LvCsUhVjhQrdrJxlBbSzd7HLNBfyg23xYv9xCDt-NbqDf6ccZ0RhzXvGgZc5zEG1UmfN0Qh4WtBIojQGywMmr2tQsOmoSKAbgD02AaXFmgtmQDKF1mw5vp7QSI2P5vS--erqkrPqDzMl7tliMuK-BBgLrzkcAGbZD25DgLJWr41tdaY6Q7KJwGDidM06qEMYLi4fqS2b~F-6tE0dRsBcaObXWNv9ch9HlO7QH2nE8Zpmlju9Hsc8e2KkN4zjQA__&Key-Pair-Id=APKAINTVSUGEWH5XD5UA);
 }
