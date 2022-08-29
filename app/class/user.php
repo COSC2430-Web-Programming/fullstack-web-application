@@ -11,7 +11,7 @@ class User {
     public $role;
     public $error;
     public $success;
-    protected $storage = "../database/accounts.db";
+    protected $storage = "../../database/accounts.db";
     protected $stored_users;
     protected $new_user;
 
