@@ -23,7 +23,7 @@ class LoginUser {
                     session_start();
                     // Redirect the users to their accounts
                     $_SESSION['user'] = $this->username;
-                    header("location: ../homepage/vendorHomepage.php");
+                    header("location: homepage/vendorHomepage.php");
                     exit();
 
                     return  $this->success = "Successfully loged in";

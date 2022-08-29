@@ -15,12 +15,12 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <title>Login Page</title>
     <style>
-        <?php include '../css/login.css'; ?>
+        <?php include '../../www/assets/css/login.css'; ?>
     </style>
   </head>
   <body>
     <!-- <?php 
-        include('../layout/nav.php')
+        include('layout/nav.php')
     ?> -->
     <section class="Form">
         <div class="container">

@@ -1,4 +1,4 @@
-<?php include("../class/vendor.php") ?>
+<?php include("../../class/vendor.php") ?>
 <?php
    if(isset($_POST['submit'])){
       $username = $_POST['username'];
