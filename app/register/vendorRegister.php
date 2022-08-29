@@ -39,7 +39,7 @@
                     <li class=' col-lg-2 col-md m-2 p-2 bg-light border border-secondary'><span class=' text-secondary'>Customer</span></li>
                     <li class=' col-lg-2 col-md m-2 p-2 bg-light border border-secondary'><span class=' text-secondary'>Shipper</span></li>
                 </ul>
-                <form action="" class="col-sm-10 col-lg-8 form mx-auto" enctype="multipart/form-data" name='registerForm' method='post'>
+                <form action="" class="col-sm-10 col-lg-8 form mx-auto" id="form" enctype="multipart/form-data" name='registerForm' method='post'>
                   <div class="mb-4">
                     <label for="username" class="form-label pb-3 ">Username</label>
                     <input name="username" type="text" class="form-control w-100" id="username" placeholder='Username'>
@@ -65,9 +65,7 @@
                   </div>
                   <p class="error"><?php echo @$user->error ?></p>
                   <p class="success"><?php echo @$user->success ?></p>
-
                 </form>
-                
             </div>
         </div>
     </div>
