@@ -42,23 +42,28 @@
                 <form action="" class="col-sm-10 col-lg-8 form mx-auto" id="form" enctype="multipart/form-data" name='registerForm' method='post'>
                   <div class="mb-4">
                     <label for="username" class="form-label pb-3 ">Username</label>
-                    <input name="username" type="text" class="form-control w-100" id="username" placeholder='Username'>
+                    <input name="username" type="text" class="form-control error w-100" id="username" placeholder='Username'>
+                    <small>Error message</small>
                   </div>
                   <div class="mb-4">
                     <label for="password" class="form-label pb-3">Password</label>
                     <input name="password" type="password" class="form-control w-100" id="password" placeholder='Password'>
+                    <small>Error message</small>
                   </div>
                   <div class="mb-4">
                     <label for="profilePicture" class="form-label pb-2">Profile Picture</label>
                     <input name="profilePicture" type="file" class="form-control w-100" id="profilePicture">
+                    <small>Error message</small>
                   </div>
                   <div class="mb-4">
                     <label for="businessName" class="form-label pb-3 ">Business Name</label>
                     <input name="businessName" type="text" class="form-control w-100" id="businessName" placeholder='Business Name'>
+                    <small>Error message</small>
                   </div>
                   <div class="mb-4">
                     <label for="businessAddress" class="form-label pb-3 ">Business Address</label>
                     <input name="businessAddress" type="text" class="form-control w-100" id="businessAddress" placeholder='Business Address'>
+                    <small>Error message</small>
                   </div>
                   <div class="mb-4 row justify-content-center">
                     <input name='submit' value="Register" type="submit" class=" col-lg-8 btn btn-outline-dark " id="submit">

@@ -44,7 +44,7 @@
                                 <button type="submit" name="submit" class="btn-login">Login</button>
                             </div>
                         </div>
-                        <p>If you haven't had an account? <a href="../register/customerRegister.php">Register here!</a></p>
+                        <p>If you haven't had an account? <a href="register/customerRegister.php">Register here!</a></p>
                         <p class="error"><?php echo @$user->error ?></p>
                         <p class="success"><?php echo @$user->success ?></p>
                     </form>

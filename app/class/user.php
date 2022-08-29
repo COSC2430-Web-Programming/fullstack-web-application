@@ -24,7 +24,7 @@ class User {
 
         $this->new_user = [
             "username" => $this->username,
-            "password" => $this->hashed_password,
+            "password" => $this->password,
         ];
 
         if ($this->checkFieldValues()) {
