@@ -24,10 +24,23 @@ class Vendor extends User {
             "role" => $this->role
         ];
         
-        echo($this->checkFieldValues());
-
-        if ($this->checkFieldValues() == TRUE) {
+        if ($this->checkFieldValues() == TRUE && $this->checkFieldValuesOfVendor() == TRUE) {
             $this->insertUser();
+        }
+    }
+
+    private function checkFieldValuesOfVendor() {
+        if (empty($this->businessName) && empty($this->businessAddress)) {
+            $this->error = "Please input you business name and address";
+            return false;
+        } else if (empty($this->businessName)) {
+            $this->error = "Please input your business name";
+            return false;
+        } else if (empty($this->businessAddress)) {
+            $this->error = "Please input your business address";
+            return false;
+        } else {
+            return true;
         }
     }
 
@@ -35,7 +48,7 @@ class Vendor extends User {
         // Check if the business name is unique in the database
         foreach((array)$this->stored_users as $user) {
             if ($this->businessName == $user['businessName']) {
-                $this->error = "Your Bussiness Name is not unique among vendor, please choose another one";
+                $this->error = "Your Bussiness Name is not unique among vendors, please choose another one";
                 return true;
             }
         }
@@ -45,7 +58,7 @@ class Vendor extends User {
     protected function businessAddressExists() {
         foreach((array)$this->stored_users as $user) {
             if ($this->businessAddress == $user['businessAddress']) {
-                $this->error = "Your Bussiness Address is not unique among vendor, please choose another one";
+                $this->error = "Your Bussiness Address is not unique among vendors, please choose another one";
                 return true;
             }
         }

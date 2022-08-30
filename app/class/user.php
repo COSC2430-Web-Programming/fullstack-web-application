@@ -63,13 +63,18 @@ class User {
 
     protected function checkFieldValues(){
         // Check if username or password field is empty
-        if (empty($this->username) || empty($this->password)) {
+        if (empty($this->username) && empty($this->password)) {
             $this->error = "Please input both username and password";
             return false;
-        } else {
-            return true;
+        } else if (empty($this->username)) {
+            $this->error = "Please input username";
+            return false;
+        } else if (empty($this->password)) {
+            $this->error = "Please input password";
+            return false;
         }
 
+        return true;
     }
 
     protected function usernameExists(){

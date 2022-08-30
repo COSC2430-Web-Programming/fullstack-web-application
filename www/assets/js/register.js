@@ -1,35 +1,53 @@
 /* Register Validation For Client-side */
-const form = document.getElementById('form');
-const username = document.getElementById('form');
-const password = document.getElementById('form');
-// Other fiels are required and have a minimum length of 5 characters
+const username = document.getElementById('username')
+const password = document.getElementById('password')
+const form = document.getElementById('form')
+const errorElement = document.getElementById('error')
 
 form.addEventListener('submit', (e) => {
-    e.preventDefault();
+    const usernameVal = username.value
+    const passwordVal = password.value
+    let errorMessages = []
 
-    checkInputs();
-});
-
-function checkInputs() {
-    // get the input values
-    const usernameValue = username.value.trim();
-    const passwordValue = password.value.trim();
-
-    if (usernameValue === '') {
-        // display error and add error class
-        setErrorFor(username, 'Username cannot be blank');
-    } else {
-        setSuccessFor(username);
+    // Validate constraints
+    // username is not null
+    if (usernameVal == null || usernameVal === '') {
+        errorMessages.push("> Please input username.")
     }
-}
 
-function setErrorFor(input, message) {
-    const formControl = input.parentElement; // this is the .form-control class
-    const small = formControl.querySelector('small');
+    // username contains only letters and digits
+    const usernamePat = /^[a-zA-Z0-9]*$/
+    if (!(usernamePat.test(usernameVal))) {
+        errorMessages.push("> Please input the username which contains only letters and digits.")
+    }
 
-    // display error message inside small
-    small.innerText = message;
+    // username's length from 8 to 15 chars
+    if (!(8 <= usernameVal.length && usernameVal.length <= 15)) {
+        errorMessages.push("> Username must have a length from 8 to 15 characters.")
+    }
 
-    // add error class
-    formControl.className = 'form-control-error';
-}
+    // username is unique --> already checked in PHP
+
+    // Password
+    // password: contains at least one upper case letter, 
+    // at least one lower case letter, 
+    // at least one digit, 
+    // at least one special letter in the set !@#$%^&*, NO other kind of characters, 
+    const passwordPat = /^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#\$%\^&\*])(?=.{8,20})/
+    if (!(passwordPat.test(passwordVal))) {
+        if (!(/^(?=.*[a-z])/.test(passwordVal))) {
+            errorMessages.push("> Password must contain at least one lower case letter.")
+        }  // else if here
+    }
+
+    // password's length from 8 to 20 characters
+    if (!(8 <= passwordVal.length && passwordVal.length <= 20)) {
+        errorMessages.push("> Password must have a length from 8 to 20 characters.")
+    }
+
+    if (errorMessages.length > 0) {
+        e.preventDefault()
+        errorElement.innerText = errorMessages.join('\n')
+    }
+
+})
