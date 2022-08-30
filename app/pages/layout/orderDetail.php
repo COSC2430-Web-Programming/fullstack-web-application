@@ -30,13 +30,11 @@
 
 
     foreach($data2 as $row => $info){
-        // echo '<pre>';
-        // print_r($info['orderID']);
-        // echo '</pre>';
         if (strcmp($info['orderID'],$order_id) == 0){
             $detail = $info;
         }
       };
+
 ?>
 <!doctype html>
 <html lang="en">
@@ -44,7 +42,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Bootstrap demo</title>
-    <link rel="stylesheet" type="text/css" href="style.css" />
+    <link 
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
   </head>
   <body>
@@ -58,7 +56,7 @@
       <div class='header_p'>
         <div class="color_overlay d-flex justify-content-center align-items-center">
           <div>
-            <h3>ORDER DETAIL PAGE</h3>
+            <h3 class='hi'>ORDER DETAIL PAGE</h3>
           </div>
         </div>
       </div>

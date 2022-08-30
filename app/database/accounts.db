@@ -19,12 +19,12 @@
         "username": "hoanganh",
         "password": "$2y$10$tisAkFjK2PmxZLujhvj9BuoiaW7VvfkaqDLJUyPIzlLSn\/a7Zxpne",
         "profilePicture": {
-            "name": "ponyo_sleeping.jpeg",
-            "full_path": "ponyo_sleeping.jpeg",
-            "type": "image\/jpeg",
-            "tmp_name": "\/private\/var\/folders\/v7\/9w87bmpj6t146bx2k767gn600000gn\/T\/php5JPRKe",
+            "name": "",
+            "full_path": "",
+            "type": "",
+            "tmp_name": "",
             "error": 0,
-            "size": 51414
+            "size": 0
         },
         "businessName": "Anh Hoang",
         "businessAddress": "13 Pooh",
