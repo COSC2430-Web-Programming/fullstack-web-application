@@ -2,7 +2,32 @@
     {
         "productName": "Hula",
         "price": 130,
-        "description":"Hello",
-        "productImg":"img.29"
+        "description": "Hello",
+        "productImg": "img.29"
     },
+    {
+        "name": "Apple",
+        "price": "15000194",
+        "image": null,
+        "description": null
+    },
+    {
+        "name": "Apple",
+        "price": "98490128041",
+        "image": null,
+        "description": null
+    },
+    {
+        "name": "NBA",
+        "price": "12123123",
+        "image": {
+            "name": "1_29.webp",
+            "full_path": "1_29.webp",
+            "type": "image\/webp",
+            "tmp_name": "C:\\Users\\DELL\\AppData\\Local\\Temp\\phpE946.tmp",
+            "error": 0,
+            "size": 17890
+        },
+        "description": "fkasjaskfhsakf"
+    }
 ]

@@ -14,6 +14,8 @@ class Product {
     function __construct($name, $price, $image, $description) {
         $this->name = trim($name);
         $this->price = trim($price);
+        $this->image = $image;
+        $this->description=$description;
         $this->stored_products = json_decode(file_get_contents($this->storage), true);
 
         $this->new_product = [
