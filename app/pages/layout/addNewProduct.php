@@ -1,3 +1,16 @@
+<?php 
+    include("../../class/product.php")
+?>
+<?php 
+    if(isset($_POST['save'])){
+        $productName = $_POST['productName'];
+        $price = $_POST['price'];
+        $description = $_POST['description'];
+        $productImg = $_FILES['productImg'];
+
+        $product = new Product($productName, $price, $productImg, $description);
+    }
+?>
 <!doctype html>
 <html lang="en">
   <head>
@@ -30,7 +43,7 @@
                     </div>
                     <div class="form floating mb-4">
                         <label for="description" class="font-weight-bold pb-3">Description</label>
-                        <textarea class="form-control w-100" placeholder="Leave a description here" id="description"></textarea>
+                        <textarea class="form-control w-100" placeholder="Leave a description here" id="description" name='description'></textarea>
                     </div>
                     <div class="mb-4">
                         <label for="productImg" class="font-weight-bold pb-3">Product Image</label>
@@ -43,6 +56,5 @@
             </div>
         </div>
     </div>
-  <script src="libs/bootstrap/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
   </body>
 </html>

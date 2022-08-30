@@ -1,3 +1,14 @@
 [
-    
+    {
+        "productName": "Hula",
+        "price": 130,
+        "description": "Hello",
+        "productImg": "img.29"
+    },
+    {
+        "name": "Apple",
+        "price": "12",
+        "image": null,
+        "description": null
+    }
 ]
