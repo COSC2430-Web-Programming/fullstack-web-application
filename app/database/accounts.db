@@ -30,5 +30,21 @@
         "businessAddress": "13 Pooh",
         "registeredTime": "2022-08-29 09:07",
         "role": 0
+    },
+    {
+        "username": "poohdeanh",
+        "password": "$2y$10$le9uKQOMRluH6O2HLkXMDOuNqDB70GZSEhiFguXJI6azAAIKUOBOy",
+        "profilePicture": {
+            "name": "",
+            "full_path": "",
+            "type": "",
+            "tmp_name": "",
+            "error": 4,
+            "size": 0
+        },
+        "businessName": "A",
+        "businessAddress": "A",
+        "registeredTime": "2022-08-30 07:02",
+        "role": 0
     }
 ]

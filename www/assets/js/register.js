@@ -3,10 +3,12 @@ const username = document.getElementById('username')
 const password = document.getElementById('password')
 const form = document.getElementById('form')
 const errorElement = document.getElementById('error')
+const role = document.getElementById('userRole');
 
 form.addEventListener('submit', (e) => {
     const usernameVal = username.value
     const passwordVal = password.value
+    const roleVal = role.value;
     let errorMessages = []
 
     // Validate constraints
@@ -28,7 +30,6 @@ form.addEventListener('submit', (e) => {
 
     // username is unique --> already checked in PHP
 
-    // Password
     // password: contains at least one upper case letter, 
     // at least one lower case letter, 
     // at least one digit, 
@@ -37,12 +38,32 @@ form.addEventListener('submit', (e) => {
     if (!(passwordPat.test(passwordVal))) {
         if (!(/^(?=.*[a-z])/.test(passwordVal))) {
             errorMessages.push("> Password must contain at least one lower case letter.")
-        }  // else if here
+        }
+        if (!(/^(?=.*[A-Z])/.test(passwordVal))) {
+            errorMessages.push("> Password must contain at least one upper case letter.")
+        }
+        if (!(/^(?=.*[0-9])/.test(passwordVal))) {
+            errorMessages.push("> Password must contain at least one digit.")
+        }
+        if (!(/^(?=.*[!@#\$%\^&\*])/.test(passwordVal))) {
+            errorMessages.push("> Password must contain at least one special letter in the set !@#$%^&*.")
+        }
+        if (!(8 <= passwordVal.length && passwordVal.length <= 20)) {
+            errorMessages.push("> Password must have a length from 8 to 20 characters.")
+        }
     }
 
-    // password's length from 8 to 20 characters
-    if (!(8 <= passwordVal.length && passwordVal.length <= 20)) {
-        errorMessages.push("> Password must have a length from 8 to 20 characters.")
+    // other fields
+    // vendor
+    if (roleVal === 'vendor') {
+        const bussinessNameVal = document.getElementById('businessName').value
+        const businessAddressVal = document.getElementById('businessAddress').value
+        if (!(bussinessNameVal.length >= 5)) {
+            errorMessages.push("> Business name must have a minimum length of 5 characters.")
+        }
+        if (!(businessAddressVal.length >= 5)) {
+            errorMessages.push("> Business address must have a minimum length of 5 characters.")
+        }
     }
 
     if (errorMessages.length > 0) {

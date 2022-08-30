@@ -35,7 +35,7 @@
             </div>
             <div class="col-10">
                 <ul class='d-flex justify-content-around list-unstyled text-center'>
-                    <li class=' col-lg-2 col-md m-2 p-2 bg-secondary border border-secondary '><span class=' text-white'>Vendor</span></li>
+                    <li class=' col-lg-2 col-md m-2 p-2 bg-secondary border border-secondary '><span class=' text-white' id="userRole">Vendor</span></li>
                     <li class=' col-lg-2 col-md m-2 p-2 bg-light border border-secondary'><span class=' text-secondary'>Customer</span></li>
                     <li class=' col-lg-2 col-md m-2 p-2 bg-light border border-secondary'><span class=' text-secondary'>Shipper</span></li>
                 </ul>
@@ -44,31 +44,25 @@
                   <div class="mb-4">
                     <label for="username" class="form-label pb-3 ">Username</label>
                     <input name="username" type="text" class="form-control w-100" id="username" placeholder='Username' required>
-                    <small></small>
                   </div>
                   <div class="mb-4">
                     <label for="password" class="form-label pb-3">Password</label>
                     <input name="password" type="password" class="form-control w-100" id="password" placeholder='Password' required>
-                    <small></small>
                   </div>
                   <div class="mb-4">
                     <label for="profilePicture" class="form-label pb-2">Profile Picture</label>
                     <input name="profilePicture" type="file" class="form-control w-100" id="profilePicture">
-                    <small></small>
                   </div>
                   <div class="mb-4">
                     <label for="businessName" class="form-label pb-3 ">Business Name</label>
                     <input name="businessName" type="text" class="form-control w-100" id="businessName" placeholder='Business Name' required>
-                    <small></small>
                   </div>
                   <div class="mb-4">
                     <label for="businessAddress" class="form-label pb-3 ">Business Address</label>
                     <input name="businessAddress" type="text" class="form-control w-100" id="businessAddress" placeholder='Business Address' required>
-                    <small></small>
                   </div>
                   <div class="mb-4 row justify-content-center">
                     <input name='submit' value="Register" type="submit" class=" col-lg-8 btn btn-outline-dark " id="submit">
-                    <small></small>
                   </div>
                   <p class="error"><?php echo @$user->error ?></p>
                   <p class="success"><?php echo @$user->success ?></p>
@@ -76,6 +70,9 @@
             </div>
         </div>
     </div>
+    <script>      
+      document.getElementById("userRole").value = 'vendor';
+    </script>
     <script src="../../../www/assets/js/register.js"></script>
   </body>
 </html>
