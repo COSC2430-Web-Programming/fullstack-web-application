@@ -14,7 +14,7 @@ body {
     width: 100%;
     background: white;
     margin: 5%;
-    box-shadow: 12px 12px 22px grey;
+    /* box-shadow: 12px 12px 22px grey; */
     display: flex;
     justify-content: center;
 }

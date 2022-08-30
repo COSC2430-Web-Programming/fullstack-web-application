@@ -19,39 +19,39 @@
     </style>
   </head>
   <body>
-    <!-- <?php 
-        include('layout/nav.php')
-    ?> -->
-    <section class="Form">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg">
-                    <h1 class="font-weight-bold py-3">Laza</h1>
-                    <h4>Login to your account</h4>
-                    <form action="" method="post" enctype="multipart/form-data" autocomplete="off">
-                        <div class="form-row">
-                            <div class="col-lg">
-                                <input type="text" name="username" placeholder="Username" class="form-control my-3 p-2">
+    <div class="container mt-5">
+        <section class="Form justify-content-center">
+            <div class="container">
+                <div class="row m-0">
+                    <div class="col-lg">
+                        <h1 class="font-weight-bold py-3 text-center">Laza</h1>
+                        <h4 class='text-center'>Login to your account</h4>
+                        <form action="" method="post" enctype="multipart/form-data" autocomplete="off">
+                            <div class="form-row">
+                                <div class="col-lg mx-auto">
+                                    <input type="text" name="username" placeholder="Username" class="form-control my-3 p-2">
+                                </div>
                             </div>
-                        </div>
-                        <div class="form-row">
-                            <div class="col-lg">
-                                <input type="password" name="password" placeholder="Password" class="form-control my-3 p-2">
+                            <div class="form-row">
+                                <div class="col-lg mx-auto">
+                                    <input type="password" name="password" placeholder="Password" class="form-control my-3 p-2">
+                                </div>
                             </div>
-                        </div>
-                        <div class="form-row">
-                            <div class="col-lg">
-                                <button type="submit" name="submit" class="btn-login">Login</button>
+                            <div class="form-row">
+                                <div class="col-lg mx-auto">
+                                    <button type="submit" name="submit" class="btn-login">Login</button>
+                                </div>
                             </div>
-                        </div>
-                        <p>If you haven't had an account? <a href="register/customerRegister.php">Register here!</a></p>
-                        <p class="error"><?php echo @$user->error ?></p>
-                        <p class="success"><?php echo @$user->success ?></p>
-                    </form>
+                            <p class='text-center'>If you haven't had an account? <a href="register/customerRegister.php">Register here!</a></p>
+                            <p class="error text-center"><?php echo @$user->error ?></p>
+                            <p class="succes text-center"><?php echo @$user->success ?></p>
+                        </form>
+                    </div>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
+    </div>
+    
     
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
   </body>
