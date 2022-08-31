@@ -17,18 +17,35 @@ form.addEventListener('submit', (e) =>{
         setSuccessFor(productName)
     }
 
-    if(productPriceVal < 0 ){
-        errorMessages.push("The product price must be positive")
-    }
+    // if(productPriceVal < 0 ){
+    //     errorMessages.push("The product price must be positive")
+    // }
 
-    if (productDescriptionVal.length > 500){
-        errorMessages.pushI("The product description length must be smaller than 500 characters")
-    }
+    // if (productDescriptionVal.length > 500){
+    //     errorMessages.pushI("The product description length must be smaller than 500 characters")
+    // }
 
-    if (errorMessages.length > 0){
-        e.preventDefault()
-        errorElement.innerText = errorMessages.join('\n')
-    }
+    // if (errorMessages.length > 0){
+    //     e.preventDefault()
+    //     errorElement.innerText = errorMessages.join('\n')
+    // }
 }
 )
+
+function setErrorFor(input, message){
+    const formControl = input.parentElement
+    const small = formControl.querySelector('small')
+
+    small.innerText = message
+
+    formControl.className = 'form_control error';
+
+}
+
+
+function setSuccessFor(input){
+    const formControl= input.parentElement;
+    formControl.className = 'form_control success';
+
+}
 
