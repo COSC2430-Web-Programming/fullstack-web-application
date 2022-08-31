@@ -4,28 +4,39 @@ const password = document.getElementById('password')
 const form = document.getElementById('form')
 const errorElement = document.getElementById('error')
 const role = document.getElementById('userRole');
+const usernameErrorElement = document.getElementById('usernameError')
+const passwordErrorElement = document.getElementById('passwordError')
+const businessNameErrorElement = document.getElementById('businessNameError')
+const businessAddressErrorElement = document.getElementById('businessAddressError')
 
 form.addEventListener('submit', (e) => {
     const usernameVal = username.value
     const passwordVal = password.value
     const roleVal = role.value;
-    let errorMessages = []
+    let errorCount = 0;
+    let usernameErrorMessages = []
+    let passwordErrorMessages = []
+    let businessNameErrorMessages = []
+    let businessAddressErrorMessages = []
 
     // Validate constraints
     // username is not null
     if (usernameVal == null || usernameVal === '') {
-        errorMessages.push("> Please input username.")
+        usernameErrorMessages.push("> Please input username.")
+        errorCount++;
     }
 
     // username contains only letters and digits
     const usernamePat = /^[a-zA-Z0-9]*$/
     if (!(usernamePat.test(usernameVal))) {
-        errorMessages.push("> Please input the username which contains only letters and digits.")
+        usernameErrorMessages.push("Username must contain only letters and digits.")
+        errorCount++;
     }
 
     // username's length from 8 to 15 chars
     if (!(8 <= usernameVal.length && usernameVal.length <= 15)) {
-        errorMessages.push("> Username must have a length from 8 to 15 characters.")
+        usernameErrorMessages.push("Username must have a length from 8 to 15 characters.")
+        errorCount++;
     }
 
     // username is unique --> already checked in PHP
@@ -37,20 +48,21 @@ form.addEventListener('submit', (e) => {
     const passwordPat = /^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#\$%\^&\*])(?=.{8,20})/
     if (!(passwordPat.test(passwordVal))) {
         if (!(/^(?=.*[a-z])/.test(passwordVal))) {
-            errorMessages.push("> Password must contain at least one lower case letter.")
+            passwordErrorMessages.push("Password must contain at least one lower case letter.")
         }
         if (!(/^(?=.*[A-Z])/.test(passwordVal))) {
-            errorMessages.push("> Password must contain at least one upper case letter.")
+            passwordErrorMessages.push("Password must contain at least one upper case letter.")
         }
         if (!(/^(?=.*[0-9])/.test(passwordVal))) {
-            errorMessages.push("> Password must contain at least one digit.")
+            passwordErrorMessages.push("Password must contain at least one digit.")
         }
         if (!(/^(?=.*[!@#\$%\^&\*])/.test(passwordVal))) {
-            errorMessages.push("> Password must contain at least one special letter in the set !@#$%^&*.")
+            passwordErrorMessages.push("Password must contain at least one special letter in the set !@#$%^&*.")
         }
         if (!(8 <= passwordVal.length && passwordVal.length <= 20)) {
-            errorMessages.push("> Password must have a length from 8 to 20 characters.")
+            passwordErrorMessages.push("Password must have a length from 8 to 20 characters.")
         }
+        errorCount++;
     }
 
     // other fields
@@ -59,16 +71,21 @@ form.addEventListener('submit', (e) => {
         const bussinessNameVal = document.getElementById('businessName').value
         const businessAddressVal = document.getElementById('businessAddress').value
         if (!(bussinessNameVal.length >= 5)) {
-            errorMessages.push("> Business name must have a minimum length of 5 characters.")
+            businessNameErrorMessages.push("Business name must have a minimum length of 5 characters.")
+            errorCount++;
         }
         if (!(businessAddressVal.length >= 5)) {
-            errorMessages.push("> Business address must have a minimum length of 5 characters.")
+            businessAddressErrorMessages.push("Business address must have a minimum length of 5 characters.")
+            errorCount++;
         }
     }
 
-    if (errorMessages.length > 0) {
+    if (errorCount > 0) {
         e.preventDefault()
-        errorElement.innerText = errorMessages.join('\n')
+        usernameErrorElement.innerText = usernameErrorMessages.join('\n')
+        passwordErrorElement.innerText = passwordErrorMessages.join('\n')
+        businessNameErrorElement.innerText = businessNameErrorMessages.join('\n')
+        businessAddressErrorElement.innerText = businessAddressErrorMessages.join('\n')
     }
 
 })
