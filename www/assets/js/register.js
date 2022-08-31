@@ -14,8 +14,12 @@ form.addEventListener('submit', (e) => {
     let errorCount = 0;
     let usernameErrorMessages = []
     let passwordErrorMessages = []
+    // vendor
     let businessNameErrorMessages = []
     let businessAddressErrorMessages = []
+    // customer
+    let customerNameErrorMessages = []
+    let customerAddressErrorMessages = []
 
     // Validate constraints
     // username is not null
@@ -78,6 +82,22 @@ form.addEventListener('submit', (e) => {
         }
     }
 
+    // customer
+    if (roleVal === 'customer') {
+        const customerNameVal =  document.getElementById('businessName').value
+        const customerAddressVal = document.getElementById('businessAddress').value
+
+        if (!(customerNameVal.length >= 5)) {
+            customerNameErrorMessages.push("Your name must have a minimum length of 5 characters.")
+            errorCount++;
+        }
+        if (!(customerAddressVal.length >= 5)) {
+            customerAddressErrorMessages.push("Your address must have a minimum length of 5 characters.")
+            errorCount++;
+        } 
+    }
+
+
     if (errorCount > 0) {
         e.preventDefault()
         usernameErrorElement.innerText = usernameErrorMessages.join('\n')
@@ -89,7 +109,13 @@ form.addEventListener('submit', (e) => {
             businessNameErrorElement.innerText = businessNameErrorMessages.join('\n')
             businessAddressErrorElement.innerText = businessAddressErrorMessages.join('\n')
         }
-       
+
+        if (roleVal === 'customer') {
+            const customerNameErrorElement = document.getElementById('customerNameError')
+            const customerAddressErrorElement = document.getElementById('customerAddressError')
+            customerNameErrorElement.innerText = customerNameErrorMessages.join('\n')
+            customerAddressErrorElement.innerText = customerAddressErrorMessages.join('\n')
+        }
     }
 
 })

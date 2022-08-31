@@ -45,5 +45,53 @@
         },
         "registeredTime": "2022-08-31 08:13",
         "role": 2
+    },
+    {
+        "username": "!",
+        "password": "$2y$10$AbYMC9em\/7UjmACTCa985.4q.wjf.245by0GOSR2L9r32169UBqfG",
+        "profilePicture": {
+            "name": "",
+            "full_path": "",
+            "type": "",
+            "tmp_name": "",
+            "error": 4,
+            "size": 0
+        },
+        "name": "@",
+        "address": "1",
+        "registeredTime": "2022-09-01 05:03",
+        "role": 1
+    },
+    {
+        "username": "%&%*%(&)",
+        "password": "$2y$10$CmeUd4EWKLLpuykvDdlt8esnfPswBDsXJx8fMYZ0qRzmcoAWbXY0q",
+        "profilePicture": {
+            "name": "",
+            "full_path": "",
+            "type": "",
+            "tmp_name": "",
+            "error": 4,
+            "size": 0
+        },
+        "name": "dfjsd",
+        "address": "sa",
+        "registeredTime": "2022-09-01 05:10",
+        "role": 1
+    },
+    {
+        "username": "^&^&*",
+        "password": "$2y$10$Od8bmjY0hNJHR7tfz3XhZexa0uJYAyqe2CbrhJbpXc7PP.jiKf6kC",
+        "profilePicture": {
+            "name": "",
+            "full_path": "",
+            "type": "",
+            "tmp_name": "",
+            "error": 4,
+            "size": 0
+        },
+        "name": "^(",
+        "address": "sdas",
+        "registeredTime": "2022-09-01 05:10",
+        "role": 1
     }
 ]

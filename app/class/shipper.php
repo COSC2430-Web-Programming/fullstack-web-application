@@ -4,6 +4,7 @@ class Shipper extends User {
     protected $distributionHub;
 
     function __construct($username, $password, $distributionHub, $profilePicture) {
+        date_default_timezone_set("Asia/Ho_Chi_Minh");
         $this->username = $username;
         $this->password = $password;
         $this->distributionHub = $distributionHub;
@@ -23,18 +24,6 @@ class Shipper extends User {
         
         if ($this->checkFieldValues() == TRUE) {
             $this->insertUser();
-        }
-    }
-
-    protected function insertUser() {
-        if($this->usernameExists() == FALSE) {
-            array_push($this->stored_users, $this->new_user);
-            // Write data to file
-            if (file_put_contents($this->storage, json_encode($this->stored_users, JSON_PRETTY_PRINT))) {
-                return $this->success = "Successfully registered";
-            } else {
-                $this->error = "Unsuccessfully registered, please try again";
-            }
         }
     }
 }

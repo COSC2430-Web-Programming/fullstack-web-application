@@ -5,6 +5,7 @@ class Vendor extends User {
     protected $bussinessAddress;
 
     function __construct($username, $password, $profilePicture, $bussinessName, $bussinessAddress) {
+        date_default_timezone_set("Asia/Ho_Chi_Minh");
         $this->username = $username;
         $this->password = $password;
         $this->profilePicture = $profilePicture;
