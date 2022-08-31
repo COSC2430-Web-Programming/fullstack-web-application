@@ -34,12 +34,12 @@
             </div>
             <div class="col-10">
                 <ul class='d-flex justify-content-around list-unstyled text-center'>
-                    <li class=' col-lg-2 col-md m-2 p-2 bg-light border border-secondary'><span class=' text-secondary'>Vendor</span></li>
-                    <li class=' col-lg-2 col-md m-2 p-2 bg-light border border-secondary '><span class=' text-secondary'>Customer</span></li>
-                    <li class=' col-lg-2 col-md m-2 p-2 bg-secondary border border-secondary'><span class=' text-white' id="userRole">Shipper</span></li>
+                    <li class=' col-lg-2 col-md m-2 p-2 bg-light border border-secondary'><a href='vendorRegister.php' class=' text-decoration-none text-secondary'>Vendor</a></li>
+                    <li class=' col-lg-2 col-md m-2 p-2 bg-light border border-secondary'><a href='customerRegister.php' class='text-decoration-none text-secondary'>Customer</a></li>
+                    <li class=' col-lg-2 col-md m-2 p-2 bg-secondary border border-secondary'><a href='shipperRegister.php' class='text-decoration-none text-white' id='userRole'>Shipper</a></li>
                 </ul>
                 <div id='error'></div>
-                <form action="" class="col-sm-10 col-lg-8 form mx-auto" enctype="multipart/form-data" name='registerForm' method='post'>
+                <form action="" class="col-sm-10 col-lg-8 form mx-auto" enctype="multipart/form-data" name='registerForm' method='post' id='form'>
                   <div class="mb-4">
                     <label for="username" class="font-weight-bold pb-3">Username</label>
                     <input name="username" type="text" class="form-control w-100" id="username" placeholder='Username'>
