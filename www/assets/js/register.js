@@ -11,6 +11,7 @@ form.addEventListener('submit', (e) => {
     const usernameVal = username.value
     const passwordVal = password.value
     const roleVal = role.value;
+    console.log("roleVal", roleVal)
     let errorCount = 0;
     let usernameErrorMessages = []
     let passwordErrorMessages = []
