@@ -44,10 +44,12 @@
                   <div class="mb-4">
                     <label for="username" class="form-label pb-3 ">Username</label>
                     <input name="username" type="text" class="form-control w-100" id="username" placeholder='Username' required>
+                    <small id="usernameError"></small>
                   </div>
                   <div class="mb-4">
                     <label for="password" class="form-label pb-3">Password</label>
                     <input name="password" type="password" class="form-control w-100" id="password" placeholder='Password' required>
+                    <small id="passwordError"></small>
                   </div>
                   <div class="mb-4">
                     <label for="profilePicture" class="form-label pb-2">Profile Picture</label>
@@ -56,10 +58,12 @@
                   <div class="mb-4">
                     <label for="businessName" class="form-label pb-3 ">Business Name</label>
                     <input name="businessName" type="text" class="form-control w-100" id="businessName" placeholder='Business Name' required>
+                    <small id="businessNameError"></small>
                   </div>
                   <div class="mb-4">
                     <label for="businessAddress" class="form-label pb-3 ">Business Address</label>
                     <input name="businessAddress" type="text" class="form-control w-100" id="businessAddress" placeholder='Business Address' required>
+                    <small id="businessAddressError"></small>
                   </div>
                   <div class="mb-4 row justify-content-center">
                     <input name='submit' value="Register" type="submit" class=" col-lg-8 btn btn-outline-dark " id="submit">

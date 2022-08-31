@@ -25,7 +25,7 @@
   <body>
     <div class="container mt-4">
         <?php 
-            require('nav.php')
+            require('../layout/nav.php')
         ?>
         <div class="row justify-content-center">
             <div class="mb-4">
