@@ -34,7 +34,6 @@
             $detail = $info;
         }
       };
-
 ?>
 <!doctype html>
 <html lang="en">
@@ -49,7 +48,7 @@
   <header class='col-12 p-0'>
       <div class="container">
         <?php 
-          require('nav.php')
+          require('../layout/nav.php')
         ?>
 
       </div>
@@ -87,7 +86,7 @@
                 <li class="list-group-item">
                     <div class=" d-flex justify-content-between">
                         <div class="fw-bold">TOTAL PRICE</div>
-                        <span class="fw-bold"> <?= $detail['total_price'] ?>$</span>
+                        <span class="fw-bold"> $<?= $detail['total_price'] ?></span>
                     </div>
                 </li>
                 <li class="list-group-item">

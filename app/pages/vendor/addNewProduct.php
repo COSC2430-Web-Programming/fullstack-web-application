@@ -9,6 +9,7 @@
         $productImg = $_FILES['productImg'];
 
         $product = new Product($productName, $price, $productImg, $description);
+        // NEED TO PROVIDE THE VENDOR NAME AS WELL
     }
 ?>
 <!doctype html>
@@ -53,6 +54,8 @@
                         <input name='save' value="Save" type="submit" class=" col-lg-8 btn btn-outline-dark " id="save">
                     </div>
                 </form>
+                <p class="error"><?php echo @$product->error ?></p>
+                <p class="success"><?php echo @$product->success ?></p>
             </div>
         </div>
     </div>

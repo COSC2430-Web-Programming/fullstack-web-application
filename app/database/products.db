@@ -1,23 +1,5 @@
 [
     {
-        "productName": "Hula",
-        "price": 130,
-        "description": "Hello",
-        "productImg": "img.29"
-    },
-    {
-        "name": "Apple",
-        "price": "15000194",
-        "image": null,
-        "description": null
-    },
-    {
-        "name": "Apple",
-        "price": "98490128041",
-        "image": null,
-        "description": null
-    },
-    {
         "name": "NBA",
         "price": "12123123",
         "image": {
@@ -29,5 +11,31 @@
             "size": 17890
         },
         "description": "fkasjaskfhsakf"
+    },
+    {
+        "name": "Sang Nguyen",
+        "price": "140000",
+        "image": {
+            "name": "term-bg-1-666de2d9.jpg",
+            "full_path": "term-bg-1-666de2d9.jpg",
+            "type": "image\/jpeg",
+            "tmp_name": "C:\\Users\\DELL\\AppData\\Local\\Temp\\phpADCA.tmp",
+            "error": 0,
+            "size": 44365
+        },
+        "description": "\u1ebbkejrkejrkerj"
+    },
+    {
+        "name": "Han Nguyen",
+        "price": "30000",
+        "image": {
+            "name": "289595971_5216100701758923_4796900539377564180_n.jpg",
+            "full_path": "289595971_5216100701758923_4796900539377564180_n.jpg",
+            "type": "image\/jpeg",
+            "tmp_name": "C:\\Users\\DELL\\AppData\\Local\\Temp\\php11C4.tmp",
+            "error": 0,
+            "size": 262947
+        },
+        "description": "sjdksjdkjsdsdjksdjk"
     }
 ]
