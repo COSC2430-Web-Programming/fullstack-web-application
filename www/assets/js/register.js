@@ -6,8 +6,6 @@ const errorElement = document.getElementById('error')
 const role = document.getElementById('userRole');
 const usernameErrorElement = document.getElementById('usernameError')
 const passwordErrorElement = document.getElementById('passwordError')
-const businessNameErrorElement = document.getElementById('businessNameError')
-const businessAddressErrorElement = document.getElementById('businessAddressError')
 
 form.addEventListener('submit', (e) => {
     const usernameVal = username.value
@@ -22,7 +20,7 @@ form.addEventListener('submit', (e) => {
     // Validate constraints
     // username is not null
     if (usernameVal == null || usernameVal === '') {
-        usernameErrorMessages.push("> Please input username.")
+        usernameErrorMessages.push("Username must not be null.")
         errorCount++;
     }
 
@@ -84,8 +82,14 @@ form.addEventListener('submit', (e) => {
         e.preventDefault()
         usernameErrorElement.innerText = usernameErrorMessages.join('\n')
         passwordErrorElement.innerText = passwordErrorMessages.join('\n')
-        businessNameErrorElement.innerText = businessNameErrorMessages.join('\n')
-        businessAddressErrorElement.innerText = businessAddressErrorMessages.join('\n')
+
+        if (roleVal === 'vendor') {
+            const businessNameErrorElement = document.getElementById('businessNameError')
+            const businessAddressErrorElement = document.getElementById('businessAddressError')
+            businessNameErrorElement.innerText = businessNameErrorMessages.join('\n')
+            businessAddressErrorElement.innerText = businessAddressErrorMessages.join('\n')
+        }
+       
     }
 
 })
