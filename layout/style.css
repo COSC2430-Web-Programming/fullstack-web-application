@@ -17,6 +17,15 @@
     
 }
 
+.header_vendor {
+    background: url("https://www.deskera.com/blog/content/images/2021/05/store-5619201_1920.jpg");
+    position: relative;
+    background-size: cover;
+    min-height: 45vh;
+    color: white;
+    background-position: center;
+    
+}
 .color_overlay{
     position: absolute;
     width: 40%;
