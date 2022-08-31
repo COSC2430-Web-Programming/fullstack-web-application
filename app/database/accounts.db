@@ -19,12 +19,12 @@
         "username": "hoanganh",
         "password": "$2y$10$tisAkFjK2PmxZLujhvj9BuoiaW7VvfkaqDLJUyPIzlLSn\/a7Zxpne",
         "profilePicture": {
-            "name": "ponyo_sleeping.jpeg",
-            "full_path": "ponyo_sleeping.jpeg",
-            "type": "image\/jpeg",
-            "tmp_name": "\/private\/var\/folders\/v7\/9w87bmpj6t146bx2k767gn600000gn\/T\/php5JPRKe",
+            "name": "",
+            "full_path": "",
+            "type": "",
+            "tmp_name": "",
             "error": 0,
-            "size": 51414
+            "size": 0
         },
         "businessName": "Anh Hoang",
         "businessAddress": "13 Pooh",
@@ -45,53 +45,5 @@
         },
         "registeredTime": "2022-08-31 08:13",
         "role": 2
-    },
-    {
-        "username": "!",
-        "password": "$2y$10$AbYMC9em\/7UjmACTCa985.4q.wjf.245by0GOSR2L9r32169UBqfG",
-        "profilePicture": {
-            "name": "",
-            "full_path": "",
-            "type": "",
-            "tmp_name": "",
-            "error": 4,
-            "size": 0
-        },
-        "name": "@",
-        "address": "1",
-        "registeredTime": "2022-09-01 05:03",
-        "role": 1
-    },
-    {
-        "username": "%&%*%(&)",
-        "password": "$2y$10$CmeUd4EWKLLpuykvDdlt8esnfPswBDsXJx8fMYZ0qRzmcoAWbXY0q",
-        "profilePicture": {
-            "name": "",
-            "full_path": "",
-            "type": "",
-            "tmp_name": "",
-            "error": 4,
-            "size": 0
-        },
-        "name": "dfjsd",
-        "address": "sa",
-        "registeredTime": "2022-09-01 05:10",
-        "role": 1
-    },
-    {
-        "username": "^&^&*",
-        "password": "$2y$10$Od8bmjY0hNJHR7tfz3XhZexa0uJYAyqe2CbrhJbpXc7PP.jiKf6kC",
-        "profilePicture": {
-            "name": "",
-            "full_path": "",
-            "type": "",
-            "tmp_name": "",
-            "error": 4,
-            "size": 0
-        },
-        "name": "^(",
-        "address": "sdas",
-        "registeredTime": "2022-09-01 05:10",
-        "role": 1
     }
 ]

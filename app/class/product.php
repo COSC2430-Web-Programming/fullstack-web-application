@@ -23,8 +23,27 @@ class Product {
             "price" => $this->price,
             "image" => $this->image,
             "description" => $this->description
+            
         ];
-        $this-> insertProduct();
+
+        if ($this->checkFieldValueofProduct() == TRUE){
+            $this-> insertProduct();
+        }
+    }
+
+    private function checkFieldValueofProduct(){
+        if(strlen($this->name) <10 || strlen($this->name) >20){
+            $this->error = "The length for the product name is from 10 to 20 character";
+            return false;
+        }else if($this->price < 0){
+            $this-> error = "The product price need to be positive";
+            return false;
+        }else if(strlen($this->description) > 500){
+            $this-> error = "The product description length need to be less than 500 character";
+            return false;
+        }else{
+            return true;
+        }
     }
 
     protected function insertProduct(){

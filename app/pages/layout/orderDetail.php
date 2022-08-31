@@ -30,9 +30,6 @@
 
 
     foreach($data2 as $row => $info){
-        // echo '<pre>';
-        // print_r($info['orderID']);
-        // echo '</pre>';
         if (strcmp($info['orderID'],$order_id) == 0){
             $detail = $info;
         }
@@ -51,14 +48,14 @@
   <header class='col-12 p-0'>
       <div class="container">
         <?php 
-          require('nav.php')
+          require('../layout/nav.php')
         ?>
 
       </div>
-      <div class='header_p'>
+      <div class='header_order'>
         <div class="color_overlay d-flex justify-content-center align-items-center">
           <div>
-            <h3>ORDER DETAIL PAGE</h3>
+            <h3 class='hi'>ORDER DETAIL PAGE</h3>
           </div>
         </div>
       </div>
@@ -89,7 +86,7 @@
                 <li class="list-group-item">
                     <div class=" d-flex justify-content-between">
                         <div class="fw-bold">TOTAL PRICE</div>
-                        <span class="fw-bold"> <?= $detail['total_price'] ?>$</span>
+                        <span class="fw-bold"> $<?= $detail['total_price'] ?></span>
                     </div>
                 </li>
                 <li class="list-group-item">
