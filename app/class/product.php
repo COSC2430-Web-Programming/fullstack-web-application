@@ -5,24 +5,27 @@ class Product {
     private $price;
     private $image;
     private $description;
+    private $creator;
     public $error;
     public $success;
     private $storage = "../../database/products.db";
     private $stored_products;
     private $new_product;
 
-    function __construct($name, $price, $image, $description) {
+    function __construct($name, $price, $image, $description, $creator) {
         $this->name = trim($name);
         $this->price = trim($price);
         $this->image = $image;
         $this->description=$description;
+        $this->creator = $creator;
         $this->stored_products = json_decode(file_get_contents($this->storage), true);
 
         $this->new_product = [
             "name" => $this->name,
             "price" => $this->price,
             "image" => $this->image,
-            "description" => $this->description
+            "description" => $this->description,
+            "creator" => $this->creator
         ];
         $this-> insertProduct();
     }

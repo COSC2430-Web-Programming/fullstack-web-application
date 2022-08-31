@@ -1,14 +1,18 @@
 <?php 
     include("../../class/product.php")
 ?>
+
 <?php 
+    session_start();
+    $creator = $_SESSION['user'];
     if(isset($_POST['save'])){
         $productName = $_POST['productName'];
         $price = $_POST['price'];
         $description = $_POST['description'];
         $productImg = $_FILES['productImg'];
+        $creator = $creator;
 
-        $product = new Product($productName, $price, $productImg, $description);
+        $product = new Product($productName, $price, $productImg, $description, $creator);
     }
 ?>
 <!doctype html>
@@ -25,7 +29,7 @@
   <body>
     <div class="container mt-4">
         <?php 
-            require('nav.php')
+            require('../layout/nav.php')
         ?>
         <div class="row justify-content-center">
             <div class="mb-4">
@@ -52,6 +56,8 @@
                     <div class="mb-4 row justify-content-center">
                         <input name='save' value="Save" type="submit" class=" col-lg-8 btn btn-outline-dark " id="save">
                     </div>
+                    <p class="error"><?php echo @$product->error ?></p>
+                    <p class="success"><?php echo @$product->success ?></p>
                 </form>
             </div>
         </div>
