@@ -79,3 +79,7 @@ h2{
     width: 50%;
     background: url(https://s3-alpha-sig.figma.com/img/1e31/19aa/60a4f5f00b579d8132f56365ff03e9fd?Expires=1661731200&Signature=GwYwKphawnKUP5e2evCb1JK9NoG6H1935DVbi5nFzUOueQ4o~XB7CsEY-xdyfGWEE-IqyJtTUZ8xnuJrhRLu~xR5LvCsUhVjhQrdrJxlBbSzd7HLNBfyg23xYv9xCDt-NbqDf6ccZ0RhzXvGgZc5zEG1UmfN0Qh4WtBIojQGywMmr2tQsOmoSKAbgD02AaXFmgtmQDKF1mw5vp7QSI2P5vS--erqkrPqDzMl7tliMuK-BBgLrzkcAGbZD25DgLJWr41tdaY6Q7KJwGDidM06qEMYLi4fqS2b~F-6tE0dRsBcaObXWNv9ch9HlO7QH2nE8Zpmlju9Hsc8e2KkN4zjQA__&Key-Pair-Id=APKAINTVSUGEWH5XD5UA);
 }
+
+.error-mes{
+    border: 1px solid red;
+}
