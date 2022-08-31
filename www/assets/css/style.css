@@ -6,7 +6,6 @@
 }
 
 
-
 .header_p {
     background: url("https://img.freepik.com/free-photo/loft-home-office-interior-design_53876-143117.jpg?w=2000");
     position: relative;
@@ -41,15 +40,10 @@
     background-color: rgba(0,0,0,0.5);
 }
 
-
-* {
-    margin:0;
-    padding: 0;
-
-}
 h2{
     margin-top: 0.5em;
 }
+
 #profile{
     text-align: center;
     /* background-color: #65d8c9; */

@@ -12,9 +12,9 @@
   </head>
   <body>
     <div class='container mt-4'>
-        <?php 
-            require('nav.php')
-        ?>
+    <?php 
+        require('../layout/nav.php')
+    ?>
         <div class='row justify-content-center'>
             <div class='mb-4'>
                 <h2 class="col-12 text-center ">REGISTER</h2>

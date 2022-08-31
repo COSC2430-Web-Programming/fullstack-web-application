@@ -1,0 +1,50 @@
+[
+    {
+        "username": "vthanh",
+        "password": "$2y$10$6ZlnNEC31l07pP1QTG2Dh.\/Bp0GBnLMgsSxCNpiWv5jcncKPa\/BCu",
+        "profilePicture": {
+            "name": "ponyo_sleeping.jpeg",
+            "full_path": "ponyo_sleeping.jpeg",
+            "type": "image\/jpeg",
+            "tmp_name": "\/private\/var\/folders\/v7\/9w87bmpj6t146bx2k767gn600000gn\/T\/phpvxOJe8",
+            "error": 0,
+            "size": 51414
+        },
+        "businessName": "Hoang Anh",
+        "businessAddress": "12 Pooh",
+        "registeredTime": "2022-08-28 20:11",
+        "role": 0
+    },
+    {
+        "username": "hoanganh",
+        "password": "$2y$10$tisAkFjK2PmxZLujhvj9BuoiaW7VvfkaqDLJUyPIzlLSn\/a7Zxpne",
+        "profilePicture": {
+            "name": "ponyo_sleeping.jpeg",
+            "full_path": "ponyo_sleeping.jpeg",
+            "type": "image\/jpeg",
+            "tmp_name": "\/private\/var\/folders\/v7\/9w87bmpj6t146bx2k767gn600000gn\/T\/php5JPRKe",
+            "error": 0,
+            "size": 51414
+        },
+        "businessName": "Anh Hoang",
+        "businessAddress": "13 Pooh",
+        "registeredTime": "2022-08-29 09:07",
+        "role": 0
+    },
+    {
+        "username": "poohdeanh",
+        "password": "$2y$10$le9uKQOMRluH6O2HLkXMDOuNqDB70GZSEhiFguXJI6azAAIKUOBOy",
+        "profilePicture": {
+            "name": "",
+            "full_path": "",
+            "type": "",
+            "tmp_name": "",
+            "error": 4,
+            "size": 0
+        },
+        "businessName": "A",
+        "businessAddress": "A",
+        "registeredTime": "2022-08-30 07:02",
+        "role": 0
+    }
+]
