@@ -34,25 +34,26 @@
             </div>
             <div class="col-10">
                 <form action="" class="col-sm-10 col-lg-8 form mx-auto" enctype="multipart/form-data" name='addNewProductForm' method='post' id='form'>
-                        <div class="form_control mb-4">
+                        <div class="mb-4">
                             <label for="productName" class="font-weight-bold pb-3">Name</label>
                             <input name="productName" type="text" class="form-control w-100 error_mes" id="productName" placeholder="Product Name">
-                            <small>Error message</small>
+                            <small id='productNameError'></small>
                         </div>
-                        <div class="form_control mb-4">
+                        <div class="mb-4">
                             <label for="price" class="font-weight-bold pb-3">Price</label>
                             <input name="price" type="number" class="form-control w-100" id="price" placeholder="Price">
-                            <small>Error message</small>
+                            <small id='productPriceError'></small>
                         </div>
-                        <div class="form_control form floating mb-4">
+                        <div class="form floating mb-4">
                             <label for="description" class="font-weight-bold pb-3">Description</label>
                             <textarea class="form-control w-100" placeholder="Leave a description here" id="description" name='description'></textarea>
-                            <small>Error message</small>
+                            <small id='productDescriptionError'></small>
                         </div>
                         <div class="mb-4">
                             <label for="productImg" class="font-weight-bold pb-3">Product Image</label>
                             <input name="productImg" type="file" class="form-control w-100" id="productImg">
                         </div>
+                        <small id="add_success" class='success'></small>
                         <div class="mb-4 row justify-content-center">
                             <input name='save' value="Save" type="submit" class=" col-lg-8 btn btn-outline-dark " id="save">
                         </div>
