@@ -32,8 +32,9 @@
         "role": 0
     },
     {
-        "username": "poohdeanh",
-        "password": "$2y$10$le9uKQOMRluH6O2HLkXMDOuNqDB70GZSEhiFguXJI6azAAIKUOBOy",
+        "username": "12",
+        "password": "$2y$10$S\/c6GnMc44hHpjqsvrTvs.07d.bJ1ZE7N5CD412ODW9wrKhmAEufe",
+        "distributionHub": "Saigon",
         "profilePicture": {
             "name": "",
             "full_path": "",
@@ -42,25 +43,7 @@
             "error": 4,
             "size": 0
         },
-        "businessName": "A",
-        "businessAddress": "A",
-        "registeredTime": "2022-08-30 07:02",
-        "role": 0
-    },
-    {
-        "username": "a",
-        "password": "$2y$10$lbd0sZXzNxj2Y1jT5AL75.XGxLSMSGJnwGSXJTgiKBUxj7YspJ6ym",
-        "profilePicture": {
-            "name": "",
-            "full_path": "",
-            "type": "",
-            "tmp_name": "",
-            "error": 4,
-            "size": 0
-        },
-        "businessName": "a",
-        "businessAddress": "a",
-        "registeredTime": "2022-08-30 07:55",
-        "role": 0
+        "registeredTime": "2022-08-31 08:13",
+        "role": 2
     }
 ]
