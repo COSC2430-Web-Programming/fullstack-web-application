@@ -13,7 +13,7 @@ class Product {
     private $stored_products;
     private $new_product;
 
-    function __construct($name, $price, $image, $description, $creator) {
+    function __construct($name, $price, $raw_image, $description, $creator) {
         $this->name = trim($name);
         $this->price = trim($price);
         $this->raw_image = $raw_image;
