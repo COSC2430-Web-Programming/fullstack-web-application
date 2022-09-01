@@ -16,6 +16,7 @@ class User {
     protected $new_user;
 
     function __construct($username, $password) {
+        date_default_timezone_set("Asia/Ho_Chi_Minh");
         $this->username = trim($username);
         $this->username = filter_var($username, FILTER_UNSAFE_RAW);
         $this->password = filter_var(trim($password), FILTER_UNSAFE_RAW);
@@ -30,35 +31,6 @@ class User {
         if ($this->checkFieldValues()) {
             $this->insertUser();
         }
-    }
-
-    function setPassword($password) {
-        $this->password = $password;
-    }
-
-    function setRegistrationTime($registeredTime) {
-        $this->registeredTime = $registeredTime;
-    }
-
-    function getUserId() {
-        return $this->id;
-    }
-
-    function getUsername() {
-        return $this->username;
-    }
-
-    function getPassword() {
-        return $this->password;
-    }
-
-    function getRegistrationTime() {
-        return $this->registeredTime;
-    }
-
-    public function jsonSerialize() {
-        $vars = get_object_vars($this);
-        return $vars;
     }
 
     protected function checkFieldValues(){
@@ -91,7 +63,6 @@ class User {
     protected function insertUser(){
         if($this->usernameExists() == FALSE) {
             array_push($this->stored_users, $this->new_user);
-
             // Write data to file
             if (file_put_contents($this->storage, json_encode($this->stored_users, JSON_PRETTY_PRINT))) {
                 return $this->success = "Successfully registered";

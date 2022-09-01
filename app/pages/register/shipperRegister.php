@@ -20,7 +20,7 @@
 
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-
+    <link rel="stylesheet" type="text/css" href="../../../www/assets/css/register.css">
     <title>Register for Shipper</title>
   </head>
   <body>
@@ -39,7 +39,7 @@
                     <li class=' col-lg-2 col-md m-2 p-2 bg-secondary border border-secondary'><a href='shipperRegister.php' class='text-decoration-none text-white' id='userRole'>Shipper</a></li>
                 </ul>
                 <div id='error'></div>
-                <form action="" class="col-sm-10 col-lg-8 form mx-auto" enctype="multipart/form-data" name='registerForm' method='post' id='form'>
+                <form action="" class="col-sm-10 col-lg-8 form mx-auto" id="form" enctype="multipart/form-data" name='registerForm' method='post'>
                   <div class="mb-4">
                     <label for="username" class="font-weight-bold pb-3">Username</label>
                     <input name="username" type="text" class="form-control w-100" id="username" placeholder='Username'>
@@ -74,7 +74,6 @@
                   <p class="error"><?php echo @$user->error ?></p>
                   <p class="success"><?php echo @$user->success ?></p>
                 </form>
-                
             </div>
         </div>
     </div>
