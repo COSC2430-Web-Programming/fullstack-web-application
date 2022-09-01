@@ -88,7 +88,7 @@
                         <td><?=$info['address']; ?></td>
                         <td><?=$info['total_price']; ?></td>
                         <td><?=$info['status']; ?></td>
-                        <td><a href="orderDetail.php?orderID=<?= $info['orderID']; ?>">See Detail</a></td>
+                        <td><a href="../layout/orderDetail.php?orderID=<?= $info['orderID']; ?>">See Detail</a></td>
                       </tr>
                     <?php
                   };
@@ -102,7 +102,7 @@
       <?php 
           require('../layout/footer.php')
       ?>
-    </footer>
+  </footer>
   </body>
 </html>
 

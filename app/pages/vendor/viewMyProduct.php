@@ -11,7 +11,7 @@
     <title>Dashboard</title>
   </head>
   <body>
-  <header class='col-12 p-0'>
+    <header class='col-12 p-0'>
       <div class="container">
         <?php 
           require('../layout/nav.php')
@@ -26,49 +26,56 @@
         </div>
       </div>
     </header>
-    <div class='container mt-4'>
-      <div class='row justify-content-center'>
-            <div class='mb-4'>
-                <h2 class="col-12 text-center">ALL PRODUCTS</h2>
-            </div>
-            <div class="row row-cols-lg-3 row-cols-md-2 row-cols-sm-2 row-cols-1 bg-primary">
-              <div class="col text-center d-flex flex-column">
-                <span>
-                  <img src="http://cdn.tgdd.vn/Files/2020/10/24/1301635/list-12-nha-hang-quan-an-sushi-cuc-chat-luong-o-quan-1-202201141555392974.jpg" width="50%">
-                </span>
-                <span>Sushi</span>
+    <main>
+      <div class='container mt-4'>
+        <div class='row justify-content-center'>
+              <div class='mb-4'>
+                  <h2 class="col-12 text-center">ALL PRODUCTS</h2>
               </div>
-              <div class="col text-center d-flex flex-column">
-                <span>
-                  <img src="http://cdn.tgdd.vn/Files/2020/10/24/1301635/list-12-nha-hang-quan-an-sushi-cuc-chat-luong-o-quan-1-202201141555392974.jpg" width="50%">
-                </span>
-                <span>Sushi</span>
+              <div class="row row-cols-lg-3 row-cols-md-2 row-cols-sm-2 row-cols-1">
+                <div class="col text-center d-flex flex-column">
+                  <span>
+                    <img src="http://cdn.tgdd.vn/Files/2020/10/24/1301635/list-12-nha-hang-quan-an-sushi-cuc-chat-luong-o-quan-1-202201141555392974.jpg" width="50%">
+                  </span>
+                  <span>Sushi</span>
+                </div>
+                <div class="col text-center d-flex flex-column">
+                  <span>
+                    <img src="http://cdn.tgdd.vn/Files/2020/10/24/1301635/list-12-nha-hang-quan-an-sushi-cuc-chat-luong-o-quan-1-202201141555392974.jpg" width="50%">
+                  </span>
+                  <span>Sushi</span>
+                </div>
+                <div class="col text-center d-flex flex-column">
+                  <span>
+                    <img src="http://cdn.tgdd.vn/Files/2020/10/24/1301635/list-12-nha-hang-quan-an-sushi-cuc-chat-luong-o-quan-1-202201141555392974.jpg" width="50%">
+                  </span>
+                  <span>Sushi</span>
+                </div>
+                <div class="col text-center d-flex flex-column">
+                  <span>
+                    <img src="http://cdn.tgdd.vn/Files/2020/10/24/1301635/list-12-nha-hang-quan-an-sushi-cuc-chat-luong-o-quan-1-202201141555392974.jpg" width="50%">
+                  </span>
+                  <span>Sushi</span>
+                </div>
+                <div class="col text-center d-flex flex-column">
+                  <span>
+                    <img src="http://cdn.tgdd.vn/Files/2020/10/24/1301635/list-12-nha-hang-quan-an-sushi-cuc-chat-luong-o-quan-1-202201141555392974.jpg" width="50%">
+                  </span>
+                  <span>Sushi</span>
+                </div>
+                <div class="col text-center d-flex flex-column">
+                  <span>
+                    <img src="http://cdn.tgdd.vn/Files/2020/10/24/1301635/list-12-nha-hang-quan-an-sushi-cuc-chat-luong-o-quan-1-202201141555392974.jpg" width="50%">
+                  </span>
+                  <span>Sushi</span>
+                </div>
               </div>
-              <div class="col text-center d-flex flex-column">
-                <span>
-                  <img src="http://cdn.tgdd.vn/Files/2020/10/24/1301635/list-12-nha-hang-quan-an-sushi-cuc-chat-luong-o-quan-1-202201141555392974.jpg" width="50%">
-                </span>
-                <span>Sushi</span>
-              </div>
-              <div class="col text-center d-flex flex-column">
-                <span>
-                  <img src="http://cdn.tgdd.vn/Files/2020/10/24/1301635/list-12-nha-hang-quan-an-sushi-cuc-chat-luong-o-quan-1-202201141555392974.jpg" width="50%">
-                </span>
-                <span>Sushi</span>
-              </div>
-              <div class="col text-center d-flex flex-column">
-                <span>
-                  <img src="http://cdn.tgdd.vn/Files/2020/10/24/1301635/list-12-nha-hang-quan-an-sushi-cuc-chat-luong-o-quan-1-202201141555392974.jpg" width="50%">
-                </span>
-                <span>Sushi</span>
-              </div>
-              <div class="col text-center d-flex flex-column">
-                <span>
-                  <img src="http://cdn.tgdd.vn/Files/2020/10/24/1301635/list-12-nha-hang-quan-an-sushi-cuc-chat-luong-o-quan-1-202201141555392974.jpg" width="50%">
-                </span>
-                <span>Sushi</span>
-              </div>
-            </div>
-    </div>
+      </div>
+    </main>
+    <footer class='mt-5'>
+      <?php 
+          require('../layout/footer.php')
+      ?>
+    </footer>
   </body>
 </html>

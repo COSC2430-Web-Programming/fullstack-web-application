@@ -1,9 +1,9 @@
 <?php 
     session_start();
-    // if(!isset($_SESSION['user'])) {
-    //     header("location: ../login.php");
-    //     exit();
-    // }
+    if(!isset($_SESSION['user'])) {
+        header("location: ../login.php");
+        exit();
+    }
 
     if(isset($_GET['logout']) || isset($_GET['login'])) {
         unset($_SESSION['user']);
