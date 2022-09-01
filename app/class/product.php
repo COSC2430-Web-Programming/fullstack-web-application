@@ -6,17 +6,19 @@ class Product {
     private $image;
     private $raw_image;
     private $description;
+    private $creator;
     public $error;
     public $success;
     private $storage = "../../database/products.db";
     private $stored_products;
     private $new_product;
 
-    function __construct($name, $price, $raw_image, $description) {
+    function __construct($name, $price, $raw_image, $description, $creator) {
         $this->name = trim($name);
         $this->price = trim($price);
         $this->raw_image = $raw_image;
         $this->description=$description;
+        $this->creator = $creator;
         $this->stored_products = json_decode(file_get_contents($this->storage), true);
         $this->validateImage();
 
@@ -24,7 +26,8 @@ class Product {
             "name" => $this->name,
             "price" => $this->price,
             "image" => $this->image,
-            "description" => $this->description
+            "description" => $this->description,
+            "creator" => $this->creator
         ];
 
         if ($this->checkFieldValueofProduct() == TRUE){
@@ -66,7 +69,7 @@ class Product {
         $imageExt = explode('.', $imageName);
         $imageActualExt = strtolower(end($imageExt));
         // Allowed types for an image
-        $allowed = array('jpg', 'jpeg', 'png', 'pdf');
+        $allowed = array('jpg', 'jpeg', 'png', 'pdf', 'webp');
 
         if (in_array($imageActualExt, $allowed)) {
             if ($imageError === 0) {

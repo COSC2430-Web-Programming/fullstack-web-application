@@ -103,7 +103,7 @@ class User {
         $imageExt = explode('.', $imageName);
         $imageActualExt = strtolower(end($imageExt));
         // Allowed types for an image
-        $allowed = array('jpg', 'jpeg', 'png', 'pdf');
+        $allowed = array('jpg', 'jpeg', 'png', 'pdf', 'webp');
 
         if (in_array($imageActualExt, $allowed)) {
             if ($imageError === 0) {
