@@ -99,3 +99,20 @@ small{
     justify-content: center;
     font-size: 18px;
 }
+
+.col-xl-4.col-lg-4.col-md-6.col-md-12.card{
+    width: 19rem;
+    margin-left: 5px;
+    margin-top: 15px;
+    padding: 5px;
+    border: 1px solid black;
+    background: #fafaf7;
+    color: black;
+    cursor: pointer;
+    transition: transform .3s ease-out;
+}
+
+
+.col.card:hover{
+    transform: translate(0, -5px);
+}
