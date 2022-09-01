@@ -40,9 +40,7 @@
                 if (strcmp($_SESSION['user'], $product['creator']) == 0){
                   ?>
                     <div class="col text-center d-flex flex-column">
-                      <span>
-                        <img src="http://cdn.tgdd.vn/Files/2020/10/24/1301635/list-12-nha-hang-quan-an-sushi-cuc-chat-luong-o-quan-1-202201141555392974.jpg" width="50%">
-                      </span>
+                      <span><img src='<?php echo $product['image']['full_path'] ?>'></span>
                       <hstack justify-content-between>
                         <span><?php echo $product['name']?></span>
                         <span><?php echo $product['price']?></span>

@@ -3,10 +3,10 @@
         "name": "NBA",
         "price": "12123123",
         "image": {
-            "name": "1_29.webp",
-            "full_path": "1_29.webp",
+            "name": "6310b215b54363.07138771.jpeg",
+            "full_path": "..\/..\/www\/assets\/images\/6310b215b54363.07138771.jpeg",
             "type": "image\/webp",
-            "tmp_name": "C:\\Users\\DELL\\AppData\\Local\\Temp\\phpE946.tmp",
+            "tmp_name": "C:\\Users\\DELL\\AppData\\Local\\Temp\\phpB2D7.tmp",
             "error": 0,
             "size": 17890
         },
@@ -17,8 +17,8 @@
         "name": "Hula Nguyen",
         "price": "5000",
         "image": {
-            "name": "1292A319-9C37-4911-8C78-96B7A570C3C4.jpeg",
-            "full_path": "1292A319-9C37-4911-8C78-96B7A570C3C4.jpeg",
+            "name": "6310b215b54363.07138771.jpeg",
+            "full_path": "..\/..\/www\/assets\/images\/6310b215b54363.07138771.jpeg",
             "type": "image\/jpeg",
             "tmp_name": "\/private\/var\/folders\/87\/1968km2943320rfnjc_zr2yc0000gn\/T\/phpav8Dwl",
             "error": 0,
@@ -53,6 +53,20 @@
             "size": 304298
         },
         "description": "hoang anh lam bai di",
+        "creator": "vthanh"
+    },
+    {
+        "name": "Product no1",
+        "price": "1",
+        "image": {
+            "name": "6310b215b54363.07138771.jpeg",
+            "full_path": "6310b215b54363.07138771.jpeg",
+            "type": "image\/jpeg",
+            "tmp_name": "\/private\/var\/folders\/87\/1968km2943320rfnjc_zr2yc0000gn\/T\/phpSghseL",
+            "error": 0,
+            "size": 51414
+        },
+        "description": "Han",
         "creator": "vthanh"
     }
 ]

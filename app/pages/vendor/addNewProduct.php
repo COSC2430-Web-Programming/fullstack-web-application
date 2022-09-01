@@ -23,7 +23,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <link rel="stylesheet" href="libs/bootstrap/css/bootstrap.min.css" >
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="../../../www/assets/css/style.css">
   </head>
   </head>
   <body>
@@ -36,31 +36,37 @@
                 <h2 class="col-12 text-center"> ADD NEW PRODUCT</h2>
             </div>
             <div class="col-10">
-                <form action="" class="col-sm-10 col-lg-8 form mx-auto" enctype="multipart/form-data" name='addNewProductForm' method='post'>
-                    <div class="mb-4">
-                        <label for="productName" class="font-weight-bold pb-3">Name</label>
-                        <input name="productName" type="text" class="form-control w-100" id="productName" placeholder="Product Name">
-                    </div>
-                    <div class="mb-4">
-                        <label for="price" class="font-weight-bold pb-3">Price</label>
-                        <input name="price" type="number" class="form-control w-100" id="price" placeholder="Price">
-                    </div>
-                    <div class="form floating mb-4">
-                        <label for="description" class="font-weight-bold pb-3">Description</label>
-                        <textarea class="form-control w-100" placeholder="Leave a description here" id="description" name='description'></textarea>
-                    </div>
-                    <div class="mb-4">
-                        <label for="productImg" class="font-weight-bold pb-3">Product Image</label>
-                        <input name="productImg" type="file" class="form-control w-100" id="productImg">
-                    </div>
-                    <div class="mb-4 row justify-content-center">
-                        <input name='save' value="Save" type="submit" class=" col-lg-8 btn btn-outline-dark " id="save">
-                    </div>
-                    <p class="error"><?php echo @$product->error ?></p>
-                    <p class="success"><?php echo @$product->success ?></p>
+                <form action="" class="col-sm-10 col-lg-8 form mx-auto" enctype="multipart/form-data" name='addNewProductForm' method='post' id='form'>
+                        <div class="mb-4">
+                            <label for="productName" class="font-weight-bold pb-3">Name</label>
+                            <input name="productName" type="text" class="form-control w-100 error_mes" id="productName" placeholder="Product Name">
+                            <small id='productNameError'></small>
+                        </div>
+                        <div class="mb-4">
+                            <label for="price" class="font-weight-bold pb-3">Price</label>
+                            <input name="price" type="number" class="form-control w-100" id="price" placeholder="Price">
+                            <small id='productPriceError'></small>
+                        </div>
+                        <div class="form floating mb-4">
+                            <label for="description" class="font-weight-bold pb-3">Description</label>
+                            <textarea class="form-control w-100" placeholder="Leave a description here" id="description" name='description'></textarea>
+                            <small id='productDescriptionError'></small>
+                        </div>
+                        <div class="mb-4">
+                            <label for="productImg" class="font-weight-bold pb-3">Product Image</label>
+                            <input name="productImg" type="file" class="form-control w-100" id="productImg">
+                        </div>
+                        <small id="add_success" class='success'></small>
+                        <div class="mb-4 row justify-content-center">
+                            <input name='save' value="Save" type="submit" class=" col-lg-8 btn btn-outline-dark " id="save">
+                        </div>
+
                 </form>
+                <p class="error"><?php echo @$product->error ?></p>
+                <p class="success"><?php echo @$product->success ?></p>
             </div>
         </div>
     </div>
+    <script src="../../../www/assets/js/addNewProduct.js"></script>
   </body>
 </html>
