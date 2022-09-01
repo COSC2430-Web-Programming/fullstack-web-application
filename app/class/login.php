@@ -1,58 +1,49 @@
-<?php include("../class/login.php") ?>
-
 <?php
-   if(isset($_POST['submit'])){
-      $user = new LoginUser($_POST['username'], $_POST['password']);
-   }
-?>
+define('VENDOR_ROLE', 0);
+define('CUSTOMER_ROLE', 1);
+define('SHIPPER_ROLE', 2);
 
-<!doctype html>
-<html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <!-- Bootstrap CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-    <title>Login Page</title>
-    <style>
-        <?php include '../../www/assets/css/login.css'; ?>
-    </style>
-  </head>
-  <body>
-    <div class="container mt-5">
-        <section class="Form justify-content-center">
-            <div class="container">
-                <div class="row m-0">
-                    <div class="col-lg">
-                        <h1 class="font-weight-bold py-3 text-center">Laza</h1>
-                        <h4 class='text-center'>Login to your account</h4>
-                        <form action="" method="post" enctype="multipart/form-data" autocomplete="off">
-                            <div class="form-row">
-                                <div class="col-lg mx-auto">
-                                    <input type="text" name="username" placeholder="Username" class="form-control my-3 p-2">
-                                </div>
-                            </div>
-                            <div class="form-row">
-                                <div class="col-lg mx-auto">
-                                    <input type="password" name="password" placeholder="Password" class="form-control my-3 p-2">
-                                </div>
-                            </div>
-                            <div class="form-row">
-                                <div class="col-lg mx-auto">
-                                    <button type="submit" name="submit" class="btn-login">Login</button>
-                                </div>
-                            </div>
-                            <p class='text-center'>If you haven't had an account? <a href="register/customerRegister.php">Register here!</a></p>
-                            <p class="error text-center"><?php echo @$user->error ?></p>
-                            <p class="succes text-center"><?php echo @$user->success ?></p>
-                        </form>
-                    </div>
-                </div>
-            </div>
-        </section>
-    </div>
-    
-    
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
-  </body>
-</html>
+class LoginUser {
+    private $username;
+    private $password;
+    public $error;
+    public $success;
+    private $storage = "../database/accounts.db";
+    private $stored_users; 
+    private $new_user;
+
+    public function __construct($username, $password) {
+        $this->username = $username;
+        $this->password = $password;
+        $this->stored_users = json_decode(file_get_contents($this->storage), true);
+        $this->login();
+    }
+
+    private function login() {
+        foreach ($this->stored_users as $user) {
+            if($user['username'] == $this->username){
+                if(password_verify($this->password, $user['password'])){ // the first argument is plain password, the second is the hashed password
+                    // Set a session
+                    session_start();
+                    // Redirect the users to their accounts
+                    $_SESSION['user'] = $this->username;
+                    
+                    if ($user['role'] === VENDOR_ROLE) {
+                        header("location: homepage/vendorHomepage.php");
+                    } else if ($user['role'] === CUSTOMER_ROLE) {
+                        header("location: homepage/customerHomepage.php");
+                    } else if ($user['role'] === SHIPPER_ROLE) {
+                        header("location: homepage/shipperHomepage.php");
+                    }
+
+                    exit();
+
+                    return  $this->success = "Successfully loged in";
+                }
+            }
+        }
+        return $this->error = "Wrong input username or password";
+    }
+}
+
+?>
