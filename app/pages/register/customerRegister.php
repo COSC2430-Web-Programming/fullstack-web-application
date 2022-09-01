@@ -3,12 +3,14 @@
    if(isset($_POST['submit'])){
       $username = $_POST['username'];
       $password = $_POST['password'];
+      $raw_password = $_POST['password'];
       $password = password_hash($password, PASSWORD_DEFAULT);
       $name = $_POST['customerName'];
       $address = $_POST['address'];
+      // include("imageUpload.php");
       $profilePicture =  $_FILES['profilePicture'];
      
-      $user = new Customer($username, $password, $profilePicture, $name, $address);
+      $user = new Customer($username, $password, $raw_password, $profilePicture, $name, $address);
    }
 ?>
 

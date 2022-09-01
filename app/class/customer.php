@@ -5,16 +5,18 @@ class Customer extends User {
     protected $name;
     protected $address;
 
-    function __construct($username, $password, $profilePicture, $name, $address) {
+    function __construct($username, $password, $raw_password, $rawProfilePicture, $name, $address) {
         date_default_timezone_set("Asia/Ho_Chi_Minh");
         $this->username = $username;
         $this->password = $password;
-        $this->profilePicture = $profilePicture;
+        $this->raw_password = $raw_password;
+        $this->rawProfilePicture = $rawProfilePicture;
         $this->name = $name;
         $this->address = $address;
         $this->registeredTime = date('Y-m-d H:i');
         $this->role = CUSTOMER_ROLE;
         $this->stored_users = json_decode(file_get_contents($this->storage), true);
+        $this->validateImage();
 
         $this->new_user = [
             "username" => $this->username,
@@ -26,9 +28,17 @@ class Customer extends User {
             "role" => $this->role
         ];
         
-        if ($this->checkFieldValues() == TRUE) {
+        if ($this->checkFieldValues() == TRUE && $this->checkFieldValuesOfCustomer() == TRUE) {
             $this->insertUser();
         }
+    }
+
+    private function checkFieldValuesOfCustomer() {
+        // Error messages have already displayed by checking in client side
+        if (strlen($this->name) < 5) return false;
+        if (strlen($this->address) < 5) return false;
+
+        return true;
     }
 }
 

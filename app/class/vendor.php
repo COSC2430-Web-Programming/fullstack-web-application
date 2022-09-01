@@ -1,19 +1,21 @@
 <?php include 'user.php'; ?>
 <?php 
 class Vendor extends User {
-    protected $bussinessName;
-    protected $bussinessAddress;
+    protected $businessName;
+    protected $businessAddress;
 
-    function __construct($username, $password, $profilePicture, $bussinessName, $bussinessAddress) {
+    function __construct($username, $password, $raw_password, $rawProfilePicture, $businessName, $businessAddress) {
         date_default_timezone_set("Asia/Ho_Chi_Minh");
         $this->username = $username;
         $this->password = $password;
-        $this->profilePicture = $profilePicture;
-        $this->businessName = $bussinessName;
-        $this->businessAddress = $bussinessAddress;
+        $this->raw_password = $raw_password;
+        $this->rawProfilePicture = $rawProfilePicture;
+        $this->businessName = $businessName;
+        $this->businessAddress = $businessAddress;
         $this->registeredTime = date('Y-m-d H:i');
         $this->role = VENDOR_ROLE;
         $this->stored_users = json_decode(file_get_contents($this->storage), true);
+        $this->validateImage();
 
         $this->new_user = [
             "username" => $this->username,
@@ -43,14 +45,19 @@ class Vendor extends User {
         } else {
             return true;
         }
+
+        if (strlen($this->businessName) < 5) return false;
+        if (strlen($this->businessAddress) < 5) return false;
     }
 
     protected function businessNameExists() {
         // Check if the business name is unique in the database
         foreach((array)$this->stored_users as $user) {
-            if ($this->businessName == $user['businessName']) {
-                $this->error = "Your Bussiness Name is not unique among vendors, please choose another one";
-                return true;
+            if ($user['role'] == VENDOR_ROLE) {
+                if ($this->businessName == $user['businessName']) {
+                    $this->error = "Your Bussiness Name is not unique among vendors, please choose another one";
+                    return true;
+                }
             }
         }
         return false;
@@ -58,11 +65,14 @@ class Vendor extends User {
 
     protected function businessAddressExists() {
         foreach((array)$this->stored_users as $user) {
-            if ($this->businessAddress == $user['businessAddress']) {
-                $this->error = "Your Bussiness Address is not unique among vendors, please choose another one";
-                return true;
+            if ($user['role'] == VENDOR_ROLE) {
+                if ($this->businessAddress == $user['businessAddress']) {
+                    $this->error = "Your Bussiness Address is not unique among vendors, please choose another one";
+                    return true;
+                }
             }
         }
+        
         return false;
     }
 

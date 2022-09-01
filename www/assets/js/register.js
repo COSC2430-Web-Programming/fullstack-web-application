@@ -10,9 +10,9 @@ const passwordErrorElement = document.getElementById('passwordError')
 form.addEventListener('submit', (e) => {
     const usernameVal = username.value
     const passwordVal = password.value
-    const roleVal = role.value;
-    console.log("roleVal", roleVal)
-    let errorCount = 0;
+    const roleVal = role.value
+
+    let errorCount = 0
     let usernameErrorMessages = []
     let passwordErrorMessages = []
     // vendor
@@ -47,7 +47,7 @@ form.addEventListener('submit', (e) => {
     // password: contains at least one upper case letter, 
     // at least one lower case letter, 
     // at least one digit, 
-    // at least one special letter in the set !@#$%^&*, NO other kind of characters, 
+    // at least one special letter in the set !@#$%^&*, NO other kind of characters
     const passwordPat = /^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#\$%\^&\*])(?=.{8,20})/
     if (!(passwordPat.test(passwordVal))) {
         if (!(/^(?=.*[a-z])/.test(passwordVal))) {
@@ -62,9 +62,10 @@ form.addEventListener('submit', (e) => {
         if (!(/^(?=.*[!@#\$%\^&\*])/.test(passwordVal))) {
             passwordErrorMessages.push("Password must contain at least one special letter in the set !@#$%^&*.")
         }
-        if (!(8 <= passwordVal.length && passwordVal.length <= 20)) {
-            passwordErrorMessages.push("Password must have a length from 8 to 20 characters.")
-        }
+        errorCount++;
+    }
+    if (!(8 <= passwordVal.length && passwordVal.length <= 20)) {
+        passwordErrorMessages.push("Password must have a length from 8 to 20 characters.")
         errorCount++;
     }
 
@@ -85,8 +86,8 @@ form.addEventListener('submit', (e) => {
 
     // customer
     if (roleVal === 'customer') {
-        const customerNameVal =  document.getElementById('businessName').value
-        const customerAddressVal = document.getElementById('businessAddress').value
+        const customerNameVal =  document.getElementById('customerName').value
+        const customerAddressVal = document.getElementById('address').value
 
         if (!(customerNameVal.length >= 5)) {
             customerNameErrorMessages.push("Your name must have a minimum length of 5 characters.")
@@ -97,7 +98,6 @@ form.addEventListener('submit', (e) => {
             errorCount++;
         } 
     }
-
 
     if (errorCount > 0) {
         e.preventDefault()

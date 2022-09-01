@@ -6,7 +6,9 @@ define('SHIPPER_ROLE', 2);
 class User {
     protected $username;
     protected $password;
+    protected $raw_password;
     protected $profilePicture;
+    protected $rawProfilePicture;
     protected $registeredTime;
     public $role;
     public $error;
@@ -15,13 +17,15 @@ class User {
     protected $stored_users;
     protected $new_user;
 
-    function __construct($username, $password) {
+    function __construct($username, $password, $rawProfilePicture) {
         date_default_timezone_set("Asia/Ho_Chi_Minh");
         $this->username = trim($username);
         $this->username = filter_var($username, FILTER_UNSAFE_RAW);
         $this->password = filter_var(trim($password), FILTER_UNSAFE_RAW);
         $this->registeredTime = date('Y-m-d H:i');
         $this->stored_users = json_decode(file_get_contents($this->storage), true);
+        $this->rawProfilePicture = $rawProfilePicture;
+        validateImage();
 
         $this->new_user = [
             "username" => $this->username,
@@ -45,6 +49,22 @@ class User {
             $this->error = "Please input password";
             return false;
         }
+
+        // Check other constraints
+        // username contains only letters and digits
+        $usernamePat = "/^[a-zA-Z0-9]*$/";
+        if (!preg_match($usernamePat, $this->username)) return false;
+        // username's length from 8 to 15 chars
+        if (!(8 <= strlen($this->username) && strlen($this->username) <= 15)) return false;
+
+        // password: contains at least one upper case letter, 
+        // at least one lower case letter, 
+        // at least one digit, 
+        // at least one special letter in the set !@#$%^&*, NO other kind of characters
+        $passwordPat = "/^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#\$%\^&\*])(?=.{8,20})/";
+        if (!preg_match($passwordPat, $this->raw_password)) return false;
+        // password has length from 8 to 20 characters
+        if (!(8 <= strlen($this->raw_password) && strlen($this->raw_password)<= 20)) return false;
 
         return true;
     }
@@ -71,6 +91,36 @@ class User {
             }
         }
 
+    }
+
+    protected function validateImage() {
+        $imageName = $this->rawProfilePicture['name'];
+        $imageTmpName = $this->rawProfilePicture['tmp_name'];
+        $imageSize = $this->rawProfilePicture['size'];
+        $imageError = $this->rawProfilePicture['error'];
+        $imageType = $this->rawProfilePicture['type'];
+
+        $imageExt = explode('.', $imageName);
+        $imageActualExt = strtolower(end($imageExt));
+        // Allowed types for an image
+        $allowed = array('jpg', 'jpeg', 'png', 'pdf');
+
+        if (in_array($imageActualExt, $allowed)) {
+            if ($imageError === 0) {
+                if ($imageSize < 1000000) {
+                    $imageNameNew = uniqid('', true).".".$imageActualExt;
+                    $imageDestination = '../../../www/assets/images/'.$imageNameNew;
+                    $this->profilePicture = $imageNameNew;
+                    move_uploaded_file($imageTmpName, $imageDestination);
+                } else {
+                    $this->error = "Your image size is too big. Please choose another image!";
+                }
+            } else {
+                $this->error = "Founded error in uploading image. Please choose another image!";
+            }
+        } else {
+            $this->error =  "You cannot upload image of this type!. Please choose another image!";
+        }
     }
 }
 
