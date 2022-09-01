@@ -43,6 +43,9 @@ class Vendor extends User {
         } else {
             return true;
         }
+
+        if (($this->businessName).length < 5) return false;
+        if (($this->businessAddress).length < 5) return false;
     }
 
     protected function businessNameExists() {

@@ -47,7 +47,7 @@ form.addEventListener('submit', (e) => {
     // password: contains at least one upper case letter, 
     // at least one lower case letter, 
     // at least one digit, 
-    // at least one special letter in the set !@#$%^&*, NO other kind of characters, 
+    // at least one special letter in the set !@#$%^&*, NO other kind of characters
     const passwordPat = /^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#\$%\^&\*])(?=.{8,20})/
     if (!(passwordPat.test(passwordVal))) {
         if (!(/^(?=.*[a-z])/.test(passwordVal))) {

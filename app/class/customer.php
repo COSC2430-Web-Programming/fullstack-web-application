@@ -26,9 +26,17 @@ class Customer extends User {
             "role" => $this->role
         ];
         
-        if ($this->checkFieldValues() == TRUE) {
+        if ($this->checkFieldValues() == TRUE && $this->checkFieldValuesOfCustomer() == TRUE) {
             $this->insertUser();
         }
+    }
+
+    private function checkFieldValuesOfCustomer() {
+        // Error messages have already displayed by checking in client side
+        if (($this->name).length < 5) return false;
+        if (($this->address).length < 5) return false;
+
+        return true;
     }
 }
 

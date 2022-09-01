@@ -4,6 +4,7 @@
       $username = $_POST['username'];
       $password = $_POST['password'];
       $password = password_hash($password, PASSWORD_DEFAULT);
+      $rawPassword = $POST['password'];
       $name = $_POST['customerName'];
       $address = $_POST['address'];
       include("imageUpload.php");

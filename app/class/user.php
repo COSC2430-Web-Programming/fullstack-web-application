@@ -46,6 +46,14 @@ class User {
             return false;
         }
 
+        // Check other constraints
+        // username contains only letters and digits
+        $usernamePat = "/^[a-zA-Z0-9]*$/";
+        if (!preg_match($usernamePat, $this->username)) return false;
+        // username's length from 8 to 15 chars
+        if (!(8 <= ($this->username).length && ($this->username).length <= 15)) return false;
+        // password checked in client side
+
         return true;
     }
 
