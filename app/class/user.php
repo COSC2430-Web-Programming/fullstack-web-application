@@ -94,11 +94,11 @@ class User {
     }
 
     protected function validateImage() {
-        $imageName = $rawProfilePicture['name'];
-        $imageTmpName = $rawProfilePicture['tmp_name'];
-        $imageSize = $rawProfilePicture['size'];
-        $imageError = $rawProfilePicture['error'];
-        $imageType = $rawProfilePicture['type'];
+        $imageName = $this->rawProfilePicture['name'];
+        $imageTmpName = $this->rawProfilePicture['tmp_name'];
+        $imageSize = $this->rawProfilePicture['size'];
+        $imageError = $this->rawProfilePicture['error'];
+        $imageType = $this->rawProfilePicture['type'];
 
         $imageExt = explode('.', $imageName);
         $imageActualExt = strtolower(end($imageExt));

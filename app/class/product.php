@@ -4,6 +4,7 @@ class Product {
     private $name;
     private $price;
     private $image;
+    private $raw_image;
     private $description;
     private $creator;
     public $error;
@@ -15,10 +16,11 @@ class Product {
     function __construct($name, $price, $image, $description, $creator) {
         $this->name = trim($name);
         $this->price = trim($price);
-        $this->image = $image;
+        $this->raw_image = $raw_image;
         $this->description=$description;
         $this->creator = $creator;
         $this->stored_products = json_decode(file_get_contents($this->storage), true);
+        $this->validateImage();
 
         $this->new_product = [
             "name" => $this->name,
@@ -54,6 +56,36 @@ class Product {
             return $this->success = "Successfully registered";
         } else {
             $this->error = "Unsuccessfully registered, please try again";
+        }
+    }
+
+    private function validateImage() {
+        $imageName = $this->raw_image['name'];
+        $imageTmpName = $this->raw_image['tmp_name'];
+        $imageSize = $this->raw_image['size'];
+        $imageError = $this->raw_image['error'];
+        $imageType = $this->raw_image['type'];
+
+        $imageExt = explode('.', $imageName);
+        $imageActualExt = strtolower(end($imageExt));
+        // Allowed types for an image
+        $allowed = array('jpg', 'jpeg', 'png', 'pdf');
+
+        if (in_array($imageActualExt, $allowed)) {
+            if ($imageError === 0) {
+                if ($imageSize < 1000000) {
+                    $imageNameNew = uniqid('', true).".".$imageActualExt;
+                    $imageDestination = '../../../www/assets/images/'.$imageNameNew;
+                    $this->image = $imageNameNew;
+                    move_uploaded_file($imageTmpName, $imageDestination);
+                } else {
+                    $this->error = "Your image size is too big. Please choose another image!";
+                }
+            } else {
+                $this->error = "Founded error in uploading image. Please choose another image!";
+            }
+        } else {
+            $this->error =  "You cannot upload image of this type!. Please choose another image!";
         }
     }
 }

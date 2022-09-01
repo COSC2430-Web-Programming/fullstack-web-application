@@ -5,18 +5,18 @@ class Customer extends User {
     protected $name;
     protected $address;
 
-    function __construct($username, $password, $raw_password, $profilePicture, $name, $address) {
+    function __construct($username, $password, $raw_password, $rawProfilePicture, $name, $address) {
         date_default_timezone_set("Asia/Ho_Chi_Minh");
         $this->username = $username;
         $this->password = $password;
         $this->raw_password = $raw_password;
-        $this->profilePicture = $profilePicture;
+        $this->rawProfilePicture = $rawProfilePicture;
         $this->name = $name;
         $this->address = $address;
         $this->registeredTime = date('Y-m-d H:i');
         $this->role = CUSTOMER_ROLE;
         $this->stored_users = json_decode(file_get_contents($this->storage), true);
-        validateImage();
+        $this->validateImage();
 
         $this->new_user = [
             "username" => $this->username,
