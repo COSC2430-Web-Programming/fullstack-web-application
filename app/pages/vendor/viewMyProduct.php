@@ -40,7 +40,7 @@
                 if (strcmp($_SESSION['user'], $product['creator']) == 0){
                   ?>
                     <div class="col text-center d-flex flex-column">
-                      <span><img src='<?php echo $product['image']['full_path'] ?>'></span>
+                      <span><img src='<?php echo $product['image'] ?>'></span>
                       <hstack justify-content-between>
                         <span><?php echo $product['name']?></span>
                         <span><?php echo $product['price']?></span>

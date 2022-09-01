@@ -1,72 +1,16 @@
 [
     {
-        "name": "NBA",
-        "price": "12123123",
-        "image": {
-            "name": "6310b215b54363.07138771.jpeg",
-            "full_path": "..\/..\/www\/assets\/images\/6310b215b54363.07138771.jpeg",
-            "type": "image\/webp",
-            "tmp_name": "C:\\Users\\DELL\\AppData\\Local\\Temp\\phpB2D7.tmp",
-            "error": 0,
-            "size": 17890
-        },
-        "description": "fkasjaskfhsakf",
-        "creator": "bhan"
-    },
-    {
-        "name": "Hula Nguyen",
-        "price": "5000",
-        "image": {
-            "name": "6310b215b54363.07138771.jpeg",
-            "full_path": "..\/..\/www\/assets\/images\/6310b215b54363.07138771.jpeg",
-            "type": "image\/jpeg",
-            "tmp_name": "\/private\/var\/folders\/87\/1968km2943320rfnjc_zr2yc0000gn\/T\/phpav8Dwl",
-            "error": 0,
-            "size": 596014
-        },
-        "description": "chat luong te",
+        "name": "Tiffany Bracelet",
+        "price": "1000",
+        "image": "6310d9c96f5e51.85516925.jpeg",
+        "description": "Inspired by the iconic key ring first introduced in 1969, the Return to Tiffany collection is a classic reinvented. An engraved tag and toggle closure add dimension to this timeless bracelet.",
         "creator": "vthanh"
     },
     {
-        "name": "Ai Quynh",
-        "price": "7000",
-        "image": {
-            "name": "187C38A9-8B30-4D2C-847D-A33B2DF9045F.jpeg",
-            "full_path": "187C38A9-8B30-4D2C-847D-A33B2DF9045F.jpeg",
-            "type": "image\/jpeg",
-            "tmp_name": "\/private\/var\/folders\/87\/1968km2943320rfnjc_zr2yc0000gn\/T\/phpKY7Ne2",
-            "error": 0,
-            "size": 341844
-        },
-        "description": "rate 1 sao",
+        "name": "Tiffany Watches",
+        "price": "2950",
+        "image": "6310e2c0600843.37130933.jpeg",
+        "description": "Women's watch in stainless steel. Silver azure dial. On a black calf strap. 29 mm case. Quartz movement. Water resistant to 50 meters\/160 feet\/5 ATM. Swiss-made.",
         "creator": "vthanh"
-    },
-    {
-        "name": "Hoang Anh",
-        "price": "2000",
-        "image": {
-            "name": "1599F691-D724-4545-A1C0-0938937DC344.jpeg",
-            "full_path": "1599F691-D724-4545-A1C0-0938937DC344.jpeg",
-            "type": "image\/jpeg",
-            "tmp_name": "\/private\/var\/folders\/87\/1968km2943320rfnjc_zr2yc0000gn\/T\/phpyqzVNV",
-            "error": 0,
-            "size": 304298
-        },
-        "description": "hoang anh lam bai di",
-        "creator": "vthanh"
-    },
-    {
-        "name": "Product no1",
-        "price": "1",
-        "image": {
-            "name": "6310b215b54363.07138771.jpeg",
-            "full_path": "6310b215b54363.07138771.jpeg",
-            "type": "image\/jpeg",
-            "tmp_name": "\/private\/var\/folders\/87\/1968km2943320rfnjc_zr2yc0000gn\/T\/phpSghseL",
-            "error": 0,
-            "size": 51414
-        },
-        "description": "Han",
-        "creator": "vthanh"
-    },
+    }
 ]
