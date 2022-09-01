@@ -5,9 +5,9 @@
       $password = $_POST['password'];
       $password = password_hash($password, PASSWORD_DEFAULT);
       $hub = $_POST['distributionHub'];
-      $profilePicture =  $_FILES['profilePicture'];
+      include("imageUpload.php");
      
-      $user = new Shipper($username, $password, $hub, $profilePicture);
+      $user = new Shipper($username, $password, $hub, $imageNameNew);
    }
 ?>
 

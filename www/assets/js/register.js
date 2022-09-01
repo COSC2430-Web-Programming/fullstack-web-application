@@ -10,9 +10,9 @@ const passwordErrorElement = document.getElementById('passwordError')
 form.addEventListener('submit', (e) => {
     const usernameVal = username.value
     const passwordVal = password.value
-    const roleVal = role.value;
-    console.log("roleVal", roleVal)
-    let errorCount = 0;
+    const roleVal = role.value
+
+    let errorCount = 0
     let usernameErrorMessages = []
     let passwordErrorMessages = []
     // vendor
@@ -85,8 +85,8 @@ form.addEventListener('submit', (e) => {
 
     // customer
     if (roleVal === 'customer') {
-        const customerNameVal =  document.getElementById('businessName').value
-        const customerAddressVal = document.getElementById('businessAddress').value
+        const customerNameVal =  document.getElementById('customerName').value
+        const customerAddressVal = document.getElementById('address').value
 
         if (!(customerNameVal.length >= 5)) {
             customerNameErrorMessages.push("Your name must have a minimum length of 5 characters.")
@@ -97,7 +97,6 @@ form.addEventListener('submit', (e) => {
             errorCount++;
         } 
     }
-
 
     if (errorCount > 0) {
         e.preventDefault()

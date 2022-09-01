@@ -4,11 +4,11 @@
       $username = $_POST['username'];
       $password = $_POST['password'];
       $password = password_hash($password, PASSWORD_DEFAULT);
-      $profilePicture =  $_FILES['profilePicture'];
+      include("imageUpload.php");      
       $businessName = $_POST['businessName'];
       $businessAddress = $_POST['businessAddress'];
 
-      $user = new Vendor($username, $password, $profilePicture, $businessName, $businessAddress);
+      $user = new Vendor($username, $password, $imageNameNew, $businessName, $businessAddress);
    }
 ?>
 

@@ -6,9 +6,9 @@
       $password = password_hash($password, PASSWORD_DEFAULT);
       $name = $_POST['customerName'];
       $address = $_POST['address'];
-      $profilePicture =  $_FILES['profilePicture'];
+      include("imageUpload.php");
      
-      $user = new Customer($username, $password, $profilePicture, $name, $address);
+      $user = new Customer($username, $password, $imageNameNew, $name, $address);
    }
 ?>
 

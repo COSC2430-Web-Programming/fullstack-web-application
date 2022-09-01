@@ -45,5 +45,23 @@
         },
         "registeredTime": "2022-08-31 08:13",
         "role": 2
+    },
+    {
+        "username": "lalisamanoban",
+        "password": "$2y$10$xCMo4c9PGnos4avw.3zlxeMQm.80XY5C9LB9KFZLVIZ92.8HNHPW2",
+        "profilePicture": "63106694a60136.09567911.jpeg",
+        "name": "Lalisa Manoban",
+        "address": "Bangkok, Thailand",
+        "registeredTime": "2022-09-01 15:00",
+        "role": 1
+    },
+    {
+        "username": "jennierubyjane",
+        "password": "$2y$10$A\/krMWp4eG6Yj2oZELKyo.XYXiwlzcG\/ZKgg94wgnzRszrezJuN5C",
+        "profilePicture": "6310699a4c1020.99049980.jpeg",
+        "name": " Kim Jennie",
+        "address": "LA, California",
+        "registeredTime": "2022-09-01 15:13",
+        "role": 1
     }
 ]
