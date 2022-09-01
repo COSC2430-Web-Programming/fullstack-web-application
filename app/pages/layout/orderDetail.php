@@ -45,7 +45,7 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
   </head>
   <body>
-  <header class='col-12 p-0'>
+    <header class='col-12 p-0'>
       <div class="container">
         <?php 
           require('../layout/nav.php')
@@ -60,51 +60,55 @@
         </div>
       </div>
     </header>
-    
-    <div class='container mt-4'>
-        <div class="row">
-            <div class='mb-4'>
-                <h2 class="col-12 text-center ">ORDER DETAIL</h2>
-            </div>
-            <ul class="list-group p-0">
-                    <?php
-                    foreach ($detail['products'] as $row => $info) {
-                        echo "
-                        <li class='list-group-item'>
-                        <div class='hstack gap-3'>
-                            <div class='col-2'>
-                                <img src='{$info['image']}' class='img-thumbnail' alt='food'>
-                            </div>
-                            <div class='col-10 d-flex justify-content-between'>
-                                <div class='fw-bold'>{$info['name']}</div>
-                                <span class='badge bg-dark rounded-pill me-4'>{$info['quantity']}</span>
-                            </div>
-                        </div>
-                    </li>";
-                    }; 
-                    ?>
-                <li class="list-group-item">
-                    <div class=" d-flex justify-content-between">
-                        <div class="fw-bold">TOTAL PRICE</div>
-                        <span class="fw-bold"> $<?= $detail['total_price'] ?></span>
-                    </div>
-                </li>
-                <li class="list-group-item">
-                    <div class=" d-flex justify-content-between">
-                        <div class="fw-bold">ADDRESS</div>
-                        <span class="fw-bold"> <?= $detail['address'] ?></span>
-                    </div>
-                </li>
-                <li class="list-group-item">
-                    <div class=" d-flex justify-content-between">
-                        <div class="fw-bold">STATUS</div>
-                        <span class="fw-bold"> <?= $detail['status'] ?></span>
-                    </div>
-                </li>
-            </ul>
-        </div>
-    </div>
-
-    
+    <main>
+      <div class='container mt-4'>
+          <div class="row">
+              <div class='mb-4'>
+                  <h2 class="col-12 text-center ">ORDER DETAIL</h2>
+              </div>
+              <ul class="list-group p-0">
+                      <?php
+                      foreach ($detail['products'] as $row => $info) {
+                          echo "
+                          <li class='list-group-item'>
+                          <div class='hstack gap-3'>
+                              <div class='col-2'>
+                                  <img src='{$info['image']}' class='img-thumbnail' alt='food'>
+                              </div>
+                              <div class='col-10 d-flex justify-content-between'>
+                                  <div class='fw-bold'>{$info['name']}</div>
+                                  <span class='badge bg-dark rounded-pill me-4'>{$info['quantity']}</span>
+                              </div>
+                          </div>
+                      </li>";
+                      }; 
+                      ?>
+                  <li class="list-group-item">
+                      <div class=" d-flex justify-content-between">
+                          <div class="fw-bold">TOTAL PRICE</div>
+                          <span class="fw-bold"> $<?= $detail['total_price'] ?></span>
+                      </div>
+                  </li>
+                  <li class="list-group-item">
+                      <div class=" d-flex justify-content-between">
+                          <div class="fw-bold">ADDRESS</div>
+                          <span class="fw-bold"> <?= $detail['address'] ?></span>
+                      </div>
+                  </li>
+                  <li class="list-group-item">
+                      <div class=" d-flex justify-content-between">
+                          <div class="fw-bold">STATUS</div>
+                          <span class="fw-bold"> <?= $detail['status'] ?></span>
+                      </div>
+                  </li>
+              </ul>
+          </div>
+      </div>
+    </main>
+    <footer class='mt-4'>
+      <?php 
+          require('../layout/footer.php')
+      ?>
+    </footer>
   </body>
 </html>
