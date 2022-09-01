@@ -1,15 +1,18 @@
 <?php 
     include("../../class/product.php")
 ?>
+
 <?php 
+    session_start();
+    $creator = $_SESSION['user'];
     if(isset($_POST['save'])){
         $productName = $_POST['productName'];
         $price = $_POST['price'];
         $description = $_POST['description'];
         $productImg = $_FILES['productImg'];
+        $creator = $creator;
 
-        $product = new Product($productName, $price, $productImg, $description);
-        // NEED TO PROVIDE THE VENDOR NAME AS WELL
+        $product = new Product($productName, $price, $productImg, $description, $creator);
     }
 ?>
 <!doctype html>
