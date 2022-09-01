@@ -52,7 +52,8 @@
                     <p class="mb-4 d-flex justify-content-end fw-bold fs-3">$<?= $data[0]['price'] ?></p>
                   </div>
                   <p class="card-text mb-5 text-wrap text-justify"><?= $data[0]['description'] ?></p>
-                  <button class=" w-100 btn btn-outline-dark btn-sm mt-3" >Add To Cart</button>
+                  <button class=" w-100 btn btn-outline-dark btn-sm mt-3" id='add-cart' >Add To Cart</button>
+                  <span class='cart'>Cart <span>0</span></span>
                 </div>
               </div>
             </div>
@@ -60,6 +61,12 @@
         </div>
       </div>
     </main>
+    <footer>
+      <?php 
+          require('../layout/footer.php')
+      ?>
+    </footer>
+    <script src="../../../www/assets/js/addToCart.js"></script>
   </body>
 </html>
 

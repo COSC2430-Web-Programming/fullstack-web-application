@@ -29,7 +29,7 @@
                 </li>
             </ul>
         </div>
-        <p class="text-left fs-8"> Copyright &copy; 2022 | All rights reserved</p>
+        <p class="text-left fs-8 mb-0"> Copyright &copy; 2022 | All rights reserved</p>
     </div>
 </footer>
 

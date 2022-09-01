@@ -1,9 +1,9 @@
 <?php 
     session_start();
-    // if(!isset($_SESSION['user'])) {
-    //     header("location: ../login.php");
-    //     exit();
-    // }
+    if(!isset($_SESSION['user'])) {
+        header("location: ../login.php");
+        exit();
+    }
 
     if(isset($_GET['logout']) || isset($_GET['login'])) {
         unset($_SESSION['user']);
@@ -37,16 +37,20 @@
       </div>
     </header>
     <main>
-        <div class="container mt-5">
+        <div class="container mt-5 pt-5 pb-5">
             <div class="row justify-content-center">
-                <div class="hstack gap-3 col-lg-8 ">
+                <div class="hstack gap-3 col-lg-8 mt-3 mb-3">
                     <a href='../vendor/addNewProduct.php' class='btn-option'>Add more Products</a>
                     <a href='#' class="btn-option">View my Products</a>
                 </div>
             </div>
         </div>
     </main>
-    
+    <footer class='mt-3'>
+      <?php 
+          require('../layout/footer.php')
+      ?>
+    </footer>
 </body>
 </html>
 
