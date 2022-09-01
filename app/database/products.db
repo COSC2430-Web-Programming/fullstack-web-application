@@ -1,80 +1,8 @@
 [
     {
-        "name": "NBA",
-        "price": "12123123",
-        "image": {
-            "name": "1_29.webp",
-            "full_path": "1_29.webp",
-            "type": "image\/webp",
-            "tmp_name": "C:\\Users\\DELL\\AppData\\Local\\Temp\\phpE946.tmp",
-            "error": 0,
-            "size": 17890
-        },
-        "description": "fkasjaskfhsakf"
-    },
-    {
-        "name": "Sang Nguyen",
-        "price": "140000",
-        "image": {
-            "name": "term-bg-1-666de2d9.jpg",
-            "full_path": "term-bg-1-666de2d9.jpg",
-            "type": "image\/jpeg",
-            "tmp_name": "C:\\Users\\DELL\\AppData\\Local\\Temp\\phpADCA.tmp",
-            "error": 0,
-            "size": 44365
-        },
-        "description": "\u1ebbkejrkejrkerj"
-    },
-    {
-        "name": "Han Nguyen",
-        "price": "30000",
-        "image": {
-            "name": "289595971_5216100701758923_4796900539377564180_n.jpg",
-            "full_path": "289595971_5216100701758923_4796900539377564180_n.jpg",
-            "type": "image\/jpeg",
-            "tmp_name": "C:\\Users\\DELL\\AppData\\Local\\Temp\\php11C4.tmp",
-            "error": 0,
-            "size": 262947
-        },
-        "description": "sjdksjdkjsdsdjksdjk"
-    },
-    {
-        "name": "Hula Nguyen",
-        "price": "300",
-        "image": {
-            "name": "1_29.webp",
-            "full_path": "1_29.webp",
-            "type": "image\/webp",
-            "tmp_name": "C:\\Users\\DELL\\AppData\\Local\\Temp\\phpB2D7.tmp",
-            "error": 0,
-            "size": 17890
-        },
-        "description": "askjdsakjksadjkasjkasjdaskjkasd"
-    },
-    {
-        "name": "Hula Nguyen",
-        "price": "300",
-        "image": {
-            "name": "1_29.webp",
-            "full_path": "1_29.webp",
-            "type": "image\/webp",
-            "tmp_name": "C:\\Users\\DELL\\AppData\\Local\\Temp\\php97CB.tmp",
-            "error": 0,
-            "size": 17890
-        },
-        "description": "askjdsakjksadjkasjkasjdaskjkasd"
-    },
-    {
-        "name": "Hula Nguyen",
-        "price": "300",
-        "image": {
-            "name": "1_29.webp",
-            "full_path": "1_29.webp",
-            "type": "image\/webp",
-            "tmp_name": "C:\\Users\\DELL\\AppData\\Local\\Temp\\phpB96D.tmp",
-            "error": 0,
-            "size": 17890
-        },
-        "description": "askjdsakjksadjkasjkasjdaskjkasd"
+        "name": "Tiffany Bracelet",
+        "price": "1000",
+        "image": "6310d9c96f5e51.85516925.jpeg",
+        "description": "Inspired by the iconic key ring first introduced in 1969, the Return to Tiffany collection is a classic reinvented. An engraved tag and toggle closure add dimension to this timeless bracelet."
     }
 ]
