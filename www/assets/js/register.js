@@ -62,9 +62,10 @@ form.addEventListener('submit', (e) => {
         if (!(/^(?=.*[!@#\$%\^&\*])/.test(passwordVal))) {
             passwordErrorMessages.push("Password must contain at least one special letter in the set !@#$%^&*.")
         }
-        if (!(8 <= passwordVal.length && passwordVal.length <= 20)) {
-            passwordErrorMessages.push("Password must have a length from 8 to 20 characters.")
-        }
+        errorCount++;
+    }
+    if (!(8 <= passwordVal.length && passwordVal.length <= 20)) {
+        passwordErrorMessages.push("Password must have a length from 8 to 20 characters.")
         errorCount++;
     }
 

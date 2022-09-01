@@ -6,6 +6,7 @@ define('SHIPPER_ROLE', 2);
 class User {
     protected $username;
     protected $password;
+    protected $raw_password;
     protected $profilePicture;
     protected $registeredTime;
     public $role;
@@ -51,8 +52,16 @@ class User {
         $usernamePat = "/^[a-zA-Z0-9]*$/";
         if (!preg_match($usernamePat, $this->username)) return false;
         // username's length from 8 to 15 chars
-        if (!(8 <= ($this->username).length && ($this->username).length <= 15)) return false;
-        // password checked in client side
+        if (!(8 <= strlen($this->username) && strlen($this->username) <= 15)) return false;
+
+        // password: contains at least one upper case letter, 
+        // at least one lower case letter, 
+        // at least one digit, 
+        // at least one special letter in the set !@#$%^&*, NO other kind of characters
+        $passwordPat = "/^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#\$%\^&\*])(?=.{8,20})/";
+        if (!preg_match($passwordPat, $this->raw_password)) return false;
+        // password has length from 8 to 20 characters
+        if (!(8 <= strlen($this->raw_password) && strlen($this->raw_password)<= 20)) return false;
 
         return true;
     }

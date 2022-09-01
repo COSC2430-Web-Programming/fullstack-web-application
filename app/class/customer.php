@@ -5,10 +5,11 @@ class Customer extends User {
     protected $name;
     protected $address;
 
-    function __construct($username, $password, $profilePicture, $name, $address) {
+    function __construct($username, $password, $raw_password, $profilePicture, $name, $address) {
         date_default_timezone_set("Asia/Ho_Chi_Minh");
         $this->username = $username;
         $this->password = $password;
+        $this->raw_password = $raw_password;
         $this->profilePicture = $profilePicture;
         $this->name = $name;
         $this->address = $address;
@@ -33,8 +34,8 @@ class Customer extends User {
 
     private function checkFieldValuesOfCustomer() {
         // Error messages have already displayed by checking in client side
-        if (($this->name).length < 5) return false;
-        if (($this->address).length < 5) return false;
+        if (strlen($this->name) < 5) return false;
+        if (strlen($this->address) < 5) return false;
 
         return true;
     }

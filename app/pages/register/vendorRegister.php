@@ -3,12 +3,13 @@
    if(isset($_POST['submit'])){
       $username = $_POST['username'];
       $password = $_POST['password'];
+      $raw_password = $_POST['password'];
       $password = password_hash($password, PASSWORD_DEFAULT);
       include("imageUpload.php");      
       $businessName = $_POST['businessName'];
       $businessAddress = $_POST['businessAddress'];
 
-      $user = new Vendor($username, $password, $imageNameNew, $businessName, $businessAddress);
+      $user = new Vendor($username, $password, $raw_password, $imageNameNew, $businessName, $businessAddress);
    }
 ?>
 
@@ -41,6 +42,8 @@
                 </ul>
                 <div id='error'></div>
                 <form action="" class="col-sm-10 col-lg-8 form mx-auto" id="form" enctype="multipart/form-data" name='registerForm' method='post'>
+                  <p class="error"><?php echo @$user->error ?></p>
+                  <p class="success"><?php echo @$user->success ?></p>
                   <div class="mb-4">
                     <label for="username" class="form-label pb-3 ">Username</label>
                     <input name="username" type="text" class="form-control w-100" id="username" placeholder='Username' required>
@@ -68,8 +71,6 @@
                   <div class="mb-4 row justify-content-center">
                     <input name='submit' value="Register" type="submit" class=" col-lg-8 btn btn-outline-dark " id="submit">
                   </div>
-                  <p class="error"><?php echo @$user->error ?></p>
-                  <p class="success"><?php echo @$user->success ?></p>
                 </form>
             </div>
         </div>

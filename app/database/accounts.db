@@ -63,5 +63,31 @@
         "address": "LA, California",
         "registeredTime": "2022-09-01 15:13",
         "role": 1
+    },
+    {
+        "username": "jisookim",
+        "password": "$2y$10$fn4mrX8PB9\/rud\/llDhwe.gQVps8SB0SKPm7f4tfhSqTMyx3.FkQa",
+        "profilePicture": "63107df902abf5.10684301.jpeg",
+        "name": "Kim Jisoo",
+        "address": "Seoul, South Korea",
+        "registeredTime": "2022-09-01 16:40",
+        "role": 1
+    },
+    {
+        "username": "rosesarerosie",
+        "password": "$2y$10$pibMeHnbF4Q0nONxmK7K\/uE\/Eu3npXdXOmtYNAMp8BxOQIqwmpDty",
+        "profilePicture": "6310853f101937.39456269.jpeg",
+        "businessName": "Rose Official",
+        "businessAddress": "Melbourne, Australia",
+        "registeredTime": "2022-09-01 17:11",
+        "role": 0
+    },
+    {
+        "username": "karinashipper",
+        "password": "$2y$10$XVmI1zXVCDZZKEjElaMFjeu8OXFqjUQAEu\/.FkU88fD.Dj4rbC76O",
+        "distributionHub": "Saigon",
+        "profilePicture": "631085f5969660.76488046.jpeg",
+        "registeredTime": "2022-09-01 17:14",
+        "role": 2
     }
 ]
