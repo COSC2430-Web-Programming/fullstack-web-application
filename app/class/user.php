@@ -8,6 +8,7 @@ class User {
     protected $password;
     protected $raw_password;
     protected $profilePicture;
+    protected $rawProfilePicture;
     protected $registeredTime;
     public $role;
     public $error;
@@ -16,13 +17,15 @@ class User {
     protected $stored_users;
     protected $new_user;
 
-    function __construct($username, $password) {
+    function __construct($username, $password, $rawProfilePicture) {
         date_default_timezone_set("Asia/Ho_Chi_Minh");
         $this->username = trim($username);
         $this->username = filter_var($username, FILTER_UNSAFE_RAW);
         $this->password = filter_var(trim($password), FILTER_UNSAFE_RAW);
         $this->registeredTime = date('Y-m-d H:i');
         $this->stored_users = json_decode(file_get_contents($this->storage), true);
+        $this->rawProfilePicture = $rawProfilePicture;
+        validateImage();
 
         $this->new_user = [
             "username" => $this->username,
@@ -88,6 +91,36 @@ class User {
             }
         }
 
+    }
+
+    protected function validateImage() {
+        $imageName = $rawProfilePicture['name'];
+        $imageTmpName = $rawProfilePicture['tmp_name'];
+        $imageSize = $rawProfilePicture['size'];
+        $imageError = $rawProfilePicture['error'];
+        $imageType = $rawProfilePicture['type'];
+
+        $imageExt = explode('.', $imageName);
+        $imageActualExt = strtolower(end($imageExt));
+        // Allowed types for an image
+        $allowed = array('jpg', 'jpeg', 'png', 'pdf');
+
+        if (in_array($imageActualExt, $allowed)) {
+            if ($imageError === 0) {
+                if ($imageSize < 1000000) {
+                    $imageNameNew = uniqid('', true).".".$imageActualExt;
+                    $imageDestination = '../../../www/assets/images/'.$imageNameNew;
+                    $this->profilePicture = $imageNameNew;
+                    move_uploaded_file($imageTmpName, $imageDestination);
+                } else {
+                    $this->error = "Your image size is too big. Please choose another image!";
+                }
+            } else {
+                $this->error = "Founded error in uploading image. Please choose another image!";
+            }
+        } else {
+            $this->error =  "You cannot upload image of this type!. Please choose another image!";
+        }
     }
 }
 

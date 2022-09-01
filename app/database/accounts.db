@@ -89,5 +89,13 @@
         "profilePicture": "631085f5969660.76488046.jpeg",
         "registeredTime": "2022-09-01 17:14",
         "role": 2
+    },
+    {
+        "username": "winniethepooh",
+        "password": "$2y$10$4E3l49VY8XLtblqlXnOpxOWnnAOLvVZ7W2rcR\/hUQjQQhW0wrsUJC",
+        "distributionHub": "Saigon",
+        "profilePicture": "6310b215b54363.07138771.jpeg",
+        "registeredTime": "2022-09-01 20:22",
+        "role": 2
     }
 ]
