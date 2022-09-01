@@ -67,6 +67,11 @@
             </div>
         </div>
     </div>
+    <footer class='mt-4'>
+      <?php 
+          require('../layout/footer.php')
+      ?>
+    </footer>
     <script src="../../../www/assets/js/addNewProduct.js"></script>
   </body>
 </html>

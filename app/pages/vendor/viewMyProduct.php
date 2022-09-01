@@ -11,7 +11,7 @@
     <title>Dashboard</title>
   </head>
   <body>
-  <header class='col-12 p-0'>
+    <header class='col-12 p-0'>
       <div class="container">
         <?php 
           require('../layout/nav.php')
