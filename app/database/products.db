@@ -76,5 +76,11 @@
             "size": 17890
         },
         "description": "askjdsakjksadjkasjkasjdaskjkasd"
+    },
+    {
+        "name": "Tiffany Bracelet",
+        "price": "1000",
+        "image": "6310d9c96f5e51.85516925.jpeg",
+        "description": "Inspired by the iconic key ring first introduced in 1969, the Return to Tiffany collection is a classic reinvented. An engraved tag and toggle closure add dimension to this timeless bracelet."
     }
 ]
