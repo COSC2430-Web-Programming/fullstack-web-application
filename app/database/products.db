@@ -1,23 +1,5 @@
 [
     {
-        "productName": "Hula",
-        "price": 130,
-        "description": "Hello",
-        "productImg": "img.29"
-    },
-    {
-        "name": "Apple",
-        "price": "15000194",
-        "image": null,
-        "description": null
-    },
-    {
-        "name": "Apple",
-        "price": "98490128041",
-        "image": null,
-        "description": null
-    },
-    {
         "name": "NBA",
         "price": "12123123",
         "image": {
@@ -28,7 +10,8 @@
             "error": 0,
             "size": 17890
         },
-        "description": "fkasjaskfhsakf"
+        "description": "fkasjaskfhsakf",
+        "creator": "bhan"
     },
     {
         "name": "Hula Nguyen",
@@ -56,6 +39,20 @@
             "size": 341844
         },
         "description": "rate 1 sao",
+        "creator": "vthanh"
+    },
+    {
+        "name": "Hoang Anh",
+        "price": "2000",
+        "image": {
+            "name": "1599F691-D724-4545-A1C0-0938937DC344.jpeg",
+            "full_path": "1599F691-D724-4545-A1C0-0938937DC344.jpeg",
+            "type": "image\/jpeg",
+            "tmp_name": "\/private\/var\/folders\/87\/1968km2943320rfnjc_zr2yc0000gn\/T\/phpyqzVNV",
+            "error": 0,
+            "size": 304298
+        },
+        "description": "hoang anh lam bai di",
         "creator": "vthanh"
     }
 ]
