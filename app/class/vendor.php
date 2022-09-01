@@ -4,18 +4,18 @@ class Vendor extends User {
     protected $businessName;
     protected $businessAddress;
 
-    function __construct($username, $password, $raw_password, $profilePicture, $businessName, $businessAddress) {
+    function __construct($username, $password, $raw_password, $rawProfilePicture, $businessName, $businessAddress) {
         date_default_timezone_set("Asia/Ho_Chi_Minh");
         $this->username = $username;
         $this->password = $password;
         $this->raw_password = $raw_password;
-        $this->profilePicture = $profilePicture;
+        $this->rawProfilePicture = $rawProfilePicture;
         $this->businessName = $businessName;
         $this->businessAddress = $businessAddress;
         $this->registeredTime = date('Y-m-d H:i');
         $this->role = VENDOR_ROLE;
         $this->stored_users = json_decode(file_get_contents($this->storage), true);
-        validateImage();
+        $this->validateImage();
 
         $this->new_user = [
             "username" => $this->username,
