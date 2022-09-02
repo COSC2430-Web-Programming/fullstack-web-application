@@ -72,10 +72,14 @@
                         <span class='fw-semibold'>100$</span>
                     </div>
                 </div>
-                
             </div>
         </div>
     </main>
+    <footer>
+        <?php 
+            require('../layout/footer.php')
+        ?>
+    </footer>
 
 
 
