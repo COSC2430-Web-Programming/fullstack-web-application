@@ -24,54 +24,28 @@
       </div>
     </header>
     <main>
-    <div class='container mt-4'>
-        <div class='row justify-content-center'>
-            <div class='mb-4'>
-                <h2 class="col-12 text-center">ALL PRODUCTS</h2>
-            </div>
-            <div class="row row-cols-lg-3 row-cols-md-2 row-cols-sm-2 row-cols-1 justify-content-around">
-                <div class="col card">  
-                    <img src="http://cdn.tgdd.vn/Files/2020/10/24/1301635/list-12-nha-hang-quan-an-sushi-cuc-chat-luong-o-quan-1-202201141555392974.jpg" class='card-img-top'>
-                    <div class="card-body d-flex justify-content-between ml-xl-3">
-                        <span class='fw-bold'>Sushi</span>
-                        <span class='fw-semibold'>100$</span>
-                    </div>
+        <div class='container mt-4'>
+            <div class='row justify-content-center'>
+                <div class='mb-4'>
+                    <h2 class="col-12 text-center">ALL PRODUCTS</h2>
                 </div>
-                <div class="col card">  
-                    <img src="http://cdn.tgdd.vn/Files/2020/10/24/1301635/list-12-nha-hang-quan-an-sushi-cuc-chat-luong-o-quan-1-202201141555392974.jpg" class='card-img-top'>
-                    <div class="card-body d-flex justify-content-between">
-                        <span class='fw-bold'>Sushi</span>
-                        <span class='fw-semibold'>100$</span>
-                    </div>
-                </div>
-                <div class="col card">  
-                    <img src="http://cdn.tgdd.vn/Files/2020/10/24/1301635/list-12-nha-hang-quan-an-sushi-cuc-chat-luong-o-quan-1-202201141555392974.jpg" class='card-img-top'>
-                    <div class="card-body d-flex justify-content-between">
-                        <span class='fw-bold'>Sushi</span>
-                        <span class='fw-semibold'>100$</span>
-                    </div>
-                </div>
-                <div class="col card">  
-                    <img src="http://cdn.tgdd.vn/Files/2020/10/24/1301635/list-12-nha-hang-quan-an-sushi-cuc-chat-luong-o-quan-1-202201141555392974.jpg" class='card-img-top'>
-                    <div class="card-body d-flex justify-content-between">
-                        <span class='fw-bold'>Sushi</span>
-                        <span class='fw-semibold'>100$</span>
-                    </div>
-                </div>
-                <div class="col card">  
-                    <img src="http://cdn.tgdd.vn/Files/2020/10/24/1301635/list-12-nha-hang-quan-an-sushi-cuc-chat-luong-o-quan-1-202201141555392974.jpg" class='card-img-top'>
-                    <div class="card-body d-flex justify-content-between">
-                        <span class='fw-bold'>Sushi</span>
-                        <span class='fw-semibold'>100$</span>
-                    </div>
-                </div>
-                <div class="col card">  
-                    <img src="http://cdn.tgdd.vn/Files/2020/10/24/1301635/list-12-nha-hang-quan-an-sushi-cuc-chat-luong-o-quan-1-202201141555392974.jpg" class='card-img-top'>
-                    <div class="card-body d-flex justify-content-between ">
-                        <span class='fw-bold'>Sushi</span>
-                        <span class='fw-semibold'>100$</span>
-                    </div>
-                </div>
+                <div class="row justify-content-evenly">
+                <?php
+                    session_start();
+                    $json_data = file_get_contents("../../database/products.db");
+                    $products = json_decode($json_data,true);
+                    foreach ($products as $product){
+                        ?>
+                        <div class="col-xl-4 col-lg-4 col-md-6 col-md-12 card">
+                            <img src='<?php echo "../../../www/assets/images/".$product['image'] ?>' class='card-img-top'>
+                            <div class="card-body d-flex justify-content-between ml-xl-3">
+                            <span class='fw-bold'><?php echo $product['name']?></span>
+                            <span class='fw-semibold'><?php echo $product['price']?></span>
+                            </div>
+                        </div>
+                    <?php
+                    }
+                ?>
             </div>
         </div>
     </main>
