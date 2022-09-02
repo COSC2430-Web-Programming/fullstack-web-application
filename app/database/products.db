@@ -4,27 +4,23 @@
         "price": "1000",
         "image": "6310d9c96f5e51.85516925.jpeg",
         "description": "Inspired by the iconic key ring first introduced in 1969, the Return to Tiffany collection is a classic reinvented. An engraved tag and toggle closure add dimension to this timeless bracelet.",
-        "vendor": "vthanh"
+        "vendor": "vthanh",
+        "product_id": "product_6311f224c84211.73613912"
     },
     {
         "name": "Tiffany Watches",
         "price": "2950",
         "image": "6310e2c0600843.37130933.jpeg",
         "description": "Women's watch in stainless steel. Silver azure dial. On a black calf strap. 29 mm case. Quartz movement. Water resistant to 50 meters\/160 feet\/5 ATM. Swiss-made.",
-        "vendor": "vthanh"
+        "vendor": "vthanh",
+        "product_id": "product_6311f1d8251bd0.48478000"
     },
     {
-        "name": "Tiffany Bracelet",
-        "price": "1950",
-        "image": "6311ab8ebd39b8.08193640.webp",
-        "description": "Tiffany HardWear is elegantly subversive and captures the spirit of the women of New York City. This bold bracelet is a modern interpretation of an archival design from 1971.",
-        "vendor": "vthanh"
-    },
-    {
-        "name": "Montblanc Bracelet",
-        "price": "450",
-        "image": "6311abf45f6d76.78232708.webp",
-        "description": "This men's bracelet is a reflection of its time. Made of woven blue leather with a polished stainless steel closure and three rings, this jewel offers numerous possibilities to highlight one\u2019s style and personality. The bracelet is inspired by Montblanc's Meisterst\u00fcck Le Petit Prince writing Instrument collection.",
-        "vendor": "vthanh"
+        "name": "Bulgari Necklace",
+        "price": "100",
+        "image": "6311f116509511.90884499.png",
+        "description": "Bulgari Necklace",
+        "vendor": "vthanh",
+        "product_id": "product_6311f116506c19.37934972"
     }
 ]

@@ -116,3 +116,11 @@ small{
 .col.card:hover{
     transform: translate(0, -5px);
 }
+
+.btn-filter{
+    padding: 5px 20px;
+    background: black;
+    color: white;
+    border-radius: 5px;
+}
+
