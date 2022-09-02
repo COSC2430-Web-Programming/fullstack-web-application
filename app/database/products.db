@@ -4,13 +4,20 @@
         "price": "1000",
         "image": "6310d9c96f5e51.85516925.jpeg",
         "description": "Inspired by the iconic key ring first introduced in 1969, the Return to Tiffany collection is a classic reinvented. An engraved tag and toggle closure add dimension to this timeless bracelet.",
-        "creator": "vthanh"
+        "vendor": "vthanh"
     },
     {
         "name": "Tiffany Watches",
         "price": "2950",
         "image": "6310e2c0600843.37130933.jpeg",
         "description": "Women's watch in stainless steel. Silver azure dial. On a black calf strap. 29 mm case. Quartz movement. Water resistant to 50 meters\/160 feet\/5 ATM. Swiss-made.",
-        "creator": "vthanh"
+        "vendor": "vthanh"
+    },
+     {
+        "name": "Tiffany Watches",
+        "price": "2950",
+        "image": "6310e2c0600843.37130933.jpeg",
+        "description": "Women's watch in stainless steel. Silver azure dial. On a black calf strap. 29 mm case. Quartz movement. Water resistant to 50 meters\/160 feet\/5 ATM. Swiss-made.",
+        "vendor": "vthanh"
     }
 ]

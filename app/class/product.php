@@ -6,19 +6,19 @@ class Product {
     private $image;
     private $raw_image;
     private $description;
-    private $creator;
+    private $vendor;
     public $error;
     public $success;
     private $storage = "../../database/products.db";
     private $stored_products;
     private $new_product;
 
-    function __construct($name, $price, $raw_image, $description, $creator) {
+    function __construct($name, $price, $raw_image, $description, $vendor) {
         $this->name = trim($name);
         $this->price = trim($price);
         $this->raw_image = $raw_image;
         $this->description=$description;
-        $this->creator = $creator;
+        $this->vendor = $vendor;
         $this->stored_products = json_decode(file_get_contents($this->storage), true);
         $this->validateImage();
 
@@ -27,7 +27,7 @@ class Product {
             "price" => $this->price,
             "image" => $this->image,
             "description" => $this->description,
-            "creator" => $this->creator
+            "vendor" => $this->vendor
         ];
 
         if ($this->checkFieldValueofProduct() == TRUE){
