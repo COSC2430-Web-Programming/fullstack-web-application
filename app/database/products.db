@@ -13,11 +13,18 @@
         "description": "Women's watch in stainless steel. Silver azure dial. On a black calf strap. 29 mm case. Quartz movement. Water resistant to 50 meters\/160 feet\/5 ATM. Swiss-made.",
         "vendor": "vthanh"
     },
-     {
-        "name": "Tiffany Watches",
-        "price": "2950",
-        "image": "6310e2c0600843.37130933.jpeg",
-        "description": "Women's watch in stainless steel. Silver azure dial. On a black calf strap. 29 mm case. Quartz movement. Water resistant to 50 meters\/160 feet\/5 ATM. Swiss-made.",
+    {
+        "name": "Tiffany Bracelet",
+        "price": "1950",
+        "image": "6311ab8ebd39b8.08193640.webp",
+        "description": "Tiffany HardWear is elegantly subversive and captures the spirit of the women of New York City. This bold bracelet is a modern interpretation of an archival design from 1971.",
+        "vendor": "vthanh"
+    },
+    {
+        "name": "Montblanc Bracelet",
+        "price": "450",
+        "image": "6311abf45f6d76.78232708.webp",
+        "description": "This men's bracelet is a reflection of its time. Made of woven blue leather with a polished stainless steel closure and three rings, this jewel offers numerous possibilities to highlight one\u2019s style and personality. The bracelet is inspired by Montblanc's Meisterst\u00fcck Le Petit Prince writing Instrument collection.",
         "vendor": "vthanh"
     }
 ]
