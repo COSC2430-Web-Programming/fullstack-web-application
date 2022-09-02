@@ -46,7 +46,6 @@
                         <span><?php echo $product['price']?></span>
                       </hstack>
                     </div>
-              
                 <?php
                 }
               }
