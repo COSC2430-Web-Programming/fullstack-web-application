@@ -1,7 +1,6 @@
 <?php 
     include("../../class/product.php")
 ?>
-
 <?php 
     session_start();
     $creator = $_SESSION['user'];

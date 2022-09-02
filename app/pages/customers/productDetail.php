@@ -7,6 +7,28 @@
      'price' => 100
     ]
   ];
+
+  $json_data = file_get_contents("../../database/products.db");
+  $products = json_decode($json_data,true);
+
+  $product_id = '';
+  $detail = [];
+  if(isset($_GET['product_id'])){
+  $product_id = $_GET['product_id'];
+  }
+
+  echo "$product_id";
+
+  foreach($products as $row => $info){
+    if (strcmp($info['product_id'],$product_id) == 0){
+        $detail = $info;
+    }
+  };
+
+  echo("<pre>");
+  print_r($detail);
+  echo("</pre>");
+
 ?>
 
 <!doctype html>
@@ -44,14 +66,14 @@
             <div class="col-sm-8 col-10 d-flex justify-content-center">
               <div class="card col-sm-8">
                
-                <img src="<?= $data[0]['image'] ?>" class="img-fluid w-100" alt="...">
+                <img src='<?php echo "../../../www/assets/images/".$detail['image'] ?>' class="img-fluid w-100" alt="...">
 
                 <div class="card-body">
                   <div class="d-flex justify-content-between mt-4 mb-4 align-items-center w-100">
-                    <h5 class="card-title mb-4"> <?= $data[0]['name'] ?></h5>
-                    <p class="mb-4 d-flex justify-content-end fw-bold fs-3">$<?= $data[0]['price'] ?></p>
+                    <h5 class="card-title mb-4"> <?= $detail['name'] ?></h5>
+                    <p class="mb-4 d-flex justify-content-end fw-bold fs-3">$<?= $detail['price'] ?></p>
                   </div>
-                  <p class="card-text mb-5 text-wrap text-justify"><?= $data[0]['description'] ?></p>
+                  <p class="card-text mb-5 text-wrap text-justify"><?= $detail['description'] ?></p>
                   <button class=" w-100 btn btn-outline-dark btn-sm mt-3" id='add-cart' >Add To Cart</button>
                   <span class='cart'>Cart <span>0</span></span>
                 </div>

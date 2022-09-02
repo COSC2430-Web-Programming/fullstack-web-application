@@ -20,6 +20,7 @@ class Product {
         $this->description=$description;
         $this->creator = $creator;
         $this->stored_products = json_decode(file_get_contents($this->storage), true);
+        $this->product_id = uniqid('product_',true);
         $this->validateImage();
 
         $this->new_product = [
@@ -27,7 +28,8 @@ class Product {
             "price" => $this->price,
             "image" => $this->image,
             "description" => $this->description,
-            "creator" => $this->creator
+            "creator" => $this->creator,
+            "product_id" => $this->product_id
         ];
 
         if ($this->checkFieldValueofProduct() == TRUE){
