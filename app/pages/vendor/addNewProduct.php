@@ -3,15 +3,14 @@
 ?>
 <?php 
     session_start();
-    $creator = $_SESSION['user'];
+    $vendor = $_SESSION['user'];
     if(isset($_POST['save'])){
         $productName = $_POST['productName'];
         $price = $_POST['price'];
         $description = $_POST['description'];
         $productImg = $_FILES['productImg'];
-        $creator = $creator;
-
-        $product = new Product($productName, $price, $productImg, $description, $creator);
+        $vendor = $vendor;
+        $product = new Product($productName, $price, $productImg, $description, $vendor);
     }
 ?>
 <!doctype html>

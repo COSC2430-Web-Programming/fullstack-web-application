@@ -1,4 +1,8 @@
+<?php
+  session_start()
+?>
 <!doctype html>
+
 <html lang="en">
   <head>
     <!-- Required meta tags -->
@@ -34,12 +38,52 @@
                 </div>
                 <div class="col-10">
                     <ul class='d-flex justify-content-around list-unstyled text-center'>
-                        <li class=' col-lg-2 col-md m-2 p-2 bg-secondary border border-secondary'>Customer</li>
+                    <?php
+                        define('VENDOR_ROLE', 0);
+                        define('CUSTOMER_ROLE', 1);
+                        define('SHIPPER_ROLE', 2);
+                        $json_data = file_get_contents("../database/accounts.db");
+                        $accounts = json_decode($json_data, true);
+                        foreach($accounts as $account){
+                          if(strcmp($_SESSION['user'], $account['username']) == 0){
+                            if($account['role'] == VENDOR_ROLE){
+                                ?>
+                              <li class=' col-lg-2 col-md m-2 p-2 bg-secondary border border-secondary'>Vendor</li>
+                            <?php
+                              }
+                            ?>
+                            <?php 
+                            if($account['role'] == CUSTOMER_ROLE){
+                              ?>
+                              <li class=' col-lg-2 col-md m-2 p-2 bg-secondary border border-secondary'>Customer</li>
+                            <?php
+                              }
+                            ?>
+                            <?php 
+                            if($account['role'] == SHIPPER_ROLE){
+                              ?>
+                              <li class=' col-lg-2 col-md m-2 p-2 bg-secondary border border-secondary'>Shipper</li>
+                            <?php
+                              }
+                            ?>
+                        <?php
+                          }
+                        }
+                        ?>
                     </ul>
-                    <div class="mb-4">
-                        <label for="realName" class="font-weight-bold pb-3">Name</label>
-                        <label for name="realName" class="form-control w-100" id="realName">May Tran</label>
+                    <?php
+                      foreach($GLOBALS('accounts') as $account){
+                        if(strcmp($_SESSION['user'], $account['username']) == 0){
+                          ?>
+                           <div class="mb-4">
+                            <label for="customerName" class="form-label pb-3 ">Username</label>
+                            <label for="customerName" class="form-control w-100" id="customerName"><?php echo $account['username']?></label>
                     </div>
+                    <?php
+                        }
+                      }
+                    ?>
+                   
                     <div class="mb-4">
                         <label for="customerName" class="form-label pb-3 ">Username</label>
                         <label for="customerName" class="form-control w-100" id="customerName">maytran216</label>
@@ -69,3 +113,26 @@
   </footer>
   </body>
 </html>
+
+<!-- <?php
+                        session_start();
+                        if($_SESSION('user') === 0){
+                          ?>
+                        <li class=' col-lg-2 col-md m-2 p-2 bg-secondary border border-secondary'>Vendor</li>
+                      <?php
+                        }
+                      ?>
+                      <?php 
+                        if($_SESSION('user')['role'] === 1){
+                          ?>
+                        <li class=' col-lg-2 col-md m-2 p-2 bg-secondary border border-secondary'>Customer</li>
+                      <?php
+                        }
+                      ?>
+                      <?php 
+                        if($_SESSION('user')['role'] === 2){
+                          ?>
+                        <li class=' col-lg-2 col-md m-2 p-2 bg-secondary border border-secondary'>Shipper</li>
+                      <?php
+                        }
+                      ?> -->

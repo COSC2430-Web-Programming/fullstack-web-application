@@ -1,13 +1,4 @@
 <?php 
-  $data = [
-    ['productID' => '1',
-     'name'=> 'Hamburger',
-     'image' => 'https://res.edu.vn/wp-content/uploads/2021/12/unit-46-topic-food.jpeg',
-     'description' => 'A hamburger is a sandwich consisting of a cooked meat patty on a bun or roll. You can order a hamburger, fries, and a shake at most fast food restaurants. Hamburgers are traditionally made with ground beef and served with onions, tomatoes, lettuce, ketchup, and other garnishes.',
-     'price' => 100
-    ]
-  ];
-
   $json_data = file_get_contents("../../database/products.db");
   $products = json_decode($json_data,true);
 
@@ -17,17 +8,11 @@
   $product_id = $_GET['product_id'];
   }
 
-  echo "$product_id";
-
   foreach($products as $row => $info){
     if (strcmp($info['product_id'],$product_id) == 0){
         $detail = $info;
     }
   };
-
-  echo("<pre>");
-  print_r($detail);
-  echo("</pre>");
 
 ?>
 

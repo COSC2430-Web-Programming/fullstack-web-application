@@ -74,6 +74,14 @@
     </div>
 <!-- Customer homepage ends -->
     </main>
+    <footer>
+        <?php 
+            require('../layout/footer.php')
+        ?>
+    </footer>
+
+
+
 </body>
 </html>
 
