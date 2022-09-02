@@ -1,5 +1,4 @@
 <?php include("../class/login.php") ?>
-
 <?php
    if(isset($_POST['submit'])){
       $user = new LoginUser($_POST['username'], $_POST['password']);
