@@ -36,7 +36,7 @@
       <div class='header_order'>
         <div class="color_overlay d-flex justify-content-center align-items-center">
           <div>
-            <h3 class='hi'>PRODUCT DETAIL PAGE</h3>
+            <h3 class='h3 text-center'>PRODUCT DETAIL PAGE</h3>
           </div>
         </div>
       </div>
@@ -51,16 +51,18 @@
             <div class="col-sm-8 col-10 d-flex justify-content-center">
               <div class="card col-sm-8">
                
-                <img src='<?php echo "../../../www/assets/images/".$detail['image'] ?>' class="img-fluid w-100" alt="...">
+                <img src='<?php echo "../../../www/assets/images/".$detail['image'] ?>' class="img-fluid w-100" alt="product_img" id='productImg'>
 
                 <div class="card-body">
                   <div class="d-flex justify-content-between mt-4 mb-4 align-items-center w-100">
-                    <h5 class="card-title mb-4"> <?= $detail['name'] ?></h5>
-                    <p class="mb-4 d-flex justify-content-end fw-bold fs-3">$<?= $detail['price'] ?></p>
+                    <h5 id='productName' class="card-title mb-4"> <?= $detail['name'] ?></h5>
+                    <p id='productPrice' class="mb-4 d-flex justify-content-end fw-bold fs-3"><?= $detail['price'] ?></p>
                   </div>
-                  <p class="card-text mb-5 text-wrap text-justify"><?= $detail['description'] ?></p>
+                  <p id='productDescription' class="card-text mb-5 text-wrap text-justify"><?= $detail['description'] ?></p>
                   <button class=" w-100 btn btn-outline-dark btn-sm mt-3" id='add-cart' >Add To Cart</button>
-                  <span class='cart'>Cart <span>0</span></span>
+                  <a href='cartPage.php' class='cart-link'>
+                    <button class='cart'>View your cart <span>0</span></button>
+                  </a>
                 </div>
               </div>
             </div>

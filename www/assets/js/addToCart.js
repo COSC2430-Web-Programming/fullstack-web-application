@@ -1,14 +1,23 @@
-
+const productName = document.getElementById('productName')
+const productPrice = document.getElementById('productPrice')
+const productDescription = document.getElementById('productDescription')
+const productImg = document.getElementById('productImg')
 let product = {
-        name: 'Hamburger',
-        price: 100,
+        name: productName.innerHTML,
+        price: Number(productPrice.innerHTML),
+        image: productImg.src,
         incart: 0,
 }
+
+console.log("Image", productImg.src)
+
+console.log("product", product)
 
 const add_cart = document.getElementById('add-cart')
 
 add_cart.addEventListener('click',() =>{
     cartNumber(product)
+    totalCost(product)
 })
 
 
@@ -44,6 +53,13 @@ function setItem(product){
     console.log(cartProduct)
 
     if(cartProduct != null){
+
+        if(cartProduct[product.name] == undefined){
+            cartProduct = {
+                ...cartProduct,
+                [product.name]: product
+            }
+        }
         cartProduct[product.name].incart += 1
     }else{
         product.incart = 1
@@ -56,4 +72,25 @@ function setItem(product){
     localStorage.setItem('productInCart',JSON.stringify(cartProduct))
 }
 
+function totalCost(product){
+    // console.log("the product price is", product.price)
+    let cartCost = localStorage.getItem('totalCost')
+
+    if(cartCost != null){
+        cartCost = parseInt(cartCost)
+        localStorage.setItem('totalCost', cartCost + product.price);
+    }else{
+        localStorage.setItem("totalCost", product.price)
+    }
+
+}
+
+function cartShow(){
+    let cartList = localStorage.getItem("productInCart")
+    cartList = JSON.parse(cartList)
+
+    console.log(cartList)
+}
+
 onLoadCartNumbers()
+cartShow()

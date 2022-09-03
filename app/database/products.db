@@ -15,7 +15,7 @@
         "vendor": "vthanh",
         "product_id": "product_6311f2042f3818.20137655"
     },
-     {
+    {
         "name": "Tiffany Watches",
         "price": "2950",
         "image": "6310e2c0600843.37130933.jpeg",
@@ -38,5 +38,13 @@
         "description": "Bulgari Necklace",
         "vendor": "vthanh",
         "product_id": "product_6311f116506c19.37934972"
+    },
+    {
+        "name": "Bvlgari Ring",
+        "price": "1000",
+        "image": "6312b42b2d6b90.20035641.jpg",
+        "description": "Bvlgari Serpenti Viper Ring",
+        "product_id": "product_6312b42b2d46f2.13141630",
+        "vendor": "vthanh"
     }
 ]
