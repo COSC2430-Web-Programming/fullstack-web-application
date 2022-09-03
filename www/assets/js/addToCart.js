@@ -2,8 +2,12 @@ const productName = document.getElementById('productName')
 const productPrice = document.getElementById('productPrice')
 const productDescription = document.getElementById('productDescription')
 const productImg = document.getElementById('productImg')
+
+var param = new URLSearchParams(location.search)
+
 let product = {
-        name: productName.innerHTML,
+        product_id: param.get('product_id'),
+        name: productName.innerHTML.trim(),
         price: Number(productPrice.innerHTML),
         image: productImg.src,
         incart: 0,
@@ -51,20 +55,21 @@ function cartNumber(product) {
 function setItem(product){
     let cartProduct = JSON.parse(localStorage.getItem('productInCart'))
     console.log(cartProduct)
+   
 
     if(cartProduct != null){
 
-        if(cartProduct[product.name] == undefined){
+        if(cartProduct[product.product_id] == undefined){
             cartProduct = {
                 ...cartProduct,
-                [product.name]: product
+                [product.product_id]: product
             }
         }
-        cartProduct[product.name].incart += 1
+        cartProduct[product.product_id].incart += 1
     }else{
         product.incart = 1
         cartProduct = {
-            [product.name]: product
+            [product.product_id]: product
         }
 
     }

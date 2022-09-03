@@ -154,3 +154,11 @@ small{
     float: right;
     margin-right: 5px;
 }
+
+.delete_btn{
+    background: red;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 3px 8px;
+}

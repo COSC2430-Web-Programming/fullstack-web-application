@@ -44,6 +44,11 @@
            
         </div>
     </main>
+    <footer>
+        <?php 
+            require('../layout/footer.php')
+        ?>
+    </footer>
     <script src="../../../www/assets/js/cartDisplay.js"></script>
   </body>
 </html>
