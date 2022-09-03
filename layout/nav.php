@@ -11,17 +11,17 @@
 </head>
 <body>
 <nav class="navbar navbar-expand-lg navbar-light">
-    <a class="navbar-brand display-1" href="#">Laza</a>
+    <a class="navbar-brand display-1" href="#">Logo</a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mynavbar">
       <i class="bi bi-list text-dark"></i>
     </button>
     <div class="collapse navbar-collapse" id="mynavbar">
        <ul class="navbar-nav ms-auto">
         <li class="nav-item ms-auto">
-          <a href="?login" class="nav-link">Login</a>
+          <a href="" class="nav-link">Login</a>
         </li>
         <li class="nav-item ms-auto">
-          <a href="?logout" class="nav-link">Logout</a>
+          <a href="" class="nav-link">Logout</a>
         </li>
        </ul>
     </div>
