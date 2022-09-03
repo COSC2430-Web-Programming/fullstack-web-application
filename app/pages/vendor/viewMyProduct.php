@@ -31,27 +31,7 @@
             <div class='mb-4'>
                 <h2 class="col-12 text-center">ALL PRODUCTS</h2>
             </div>
-            <div class="row row-cols-lg-3 row-cols-md-2 row-cols-sm-2 row-cols-1 ">
-            <?php
-              session_start();
-              $json_data = file_get_contents("../../database/products.db");
-              $products = json_decode($json_data,true);
-              foreach ($products as $product){
-                if (strcmp($_SESSION['user'], $product['creator']) == 0){
-                  ?>
-                    <div class="col text-center d-flex flex-column">
-                      <span><img src='<?php echo $product['image'] ?>'></span>
-                      <hstack justify-content-between>
-                        <span><?php echo $product['name']?></span>
-                        <span><?php echo $product['price']?></span>
-                      </hstack>
-                    </div>
-                <?php
-                }
-              }
-              ?>
-              </div>
-              <div class="row justify-content-evenly">
+            <div class="row justify-content-evenly">
               <?php
                 session_start();
                 $json_data = file_get_contents("../../database/products.db");

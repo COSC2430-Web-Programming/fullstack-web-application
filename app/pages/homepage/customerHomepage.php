@@ -40,11 +40,11 @@
                 <form action="" class='row d-flex '>
                     <div class="col form-row hstack gap-2 my-3">
                         <label for="filter-price-from" class="font-weight-bold">From</label>
-                        <input name="filter-price-from" type="number" class="form-control w-100" id="filter-price-from" placeholder='Price'>
+                        <input name="filter-price-from" type="number" class="form-control w-100" id="filter-price-from" placeholder='Minimum Price'>
                     </div>
                     <div class="col form-row hstack gap-2 my-3">
                         <label for="filter-price-to" class="font-weight-bold">To</label>
-                        <input name="filter-price-to" type="number" class="form-control w-100" id="filter-price-to" placeholder='Price'>
+                        <input name="filter-price-to" type="number" class="form-control w-100" id="filter-price-to" placeholder='Maximum Price'>
                     </div>
                     <div class="col-md-auto form-row my-3">
                         <button type="submit" name="submit" class="btn-filter w-100">Filter</button>
@@ -57,7 +57,7 @@
                         $products = json_decode($json_data,true);
                         foreach ($products as $product){
                             ?>
-                            <a href="../customers/productDetail.php?product_id=<?= $product['product_id']; ?>">
+                            <a class='text-decoration-none' href="../customer/productDetail.php?product_id=<?= $product['product_id']; ?>">
                                 <div class="col card">
                                     <img src='<?php echo "../../../www/assets/images/".$product['image'] ?>' class='card-img-top'>
                                     <div class="card-body d-flex justify-content-between ml-xl-3">
