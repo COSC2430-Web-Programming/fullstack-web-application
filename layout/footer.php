@@ -19,13 +19,13 @@
             </a>
             <ul class="nav justify-content-center text-white">
                 <li class="nav-item m-3">
-                    <a href="#" class="nav-link px-2 text-white "><span>About</span></a>
+                    <a href="../footer/about.php" class="nav-link px-2 text-white "><span>About</span></a>
                 </li>
                 <li class="nav-item m-3 ">
-                    <a href="#" class="nav-link px-2 text-white "><span>Privacy</span></a>
+                    <a href="../footer/privacy.php" class="nav-link px-2 text-white "><span>Privacy</span></a>
                 </li>
                 <li class="nav-item m-3">
-                    <a href="#" class="nav-link px-2 text-white "><span>Help</span></a>
+                    <a href="../footer/help.php" class="nav-link px-2 text-white "><span>Help</span></a>
                 </li>
             </ul>
         </div>
