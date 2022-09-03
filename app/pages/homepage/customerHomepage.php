@@ -57,7 +57,7 @@
                         $products = json_decode($json_data,true);
                         foreach ($products as $product){
                             ?>
-                            <a href="../customer/productDetail.php?product_id=<?= $product['product_id']; ?>">
+                            <a class='text-decoration-none' href="../customer/productDetail.php?product_id=<?= $product['product_id']; ?>">
                                 <div class="col card">
                                     <img src='<?php echo "../../../www/assets/images/".$product['image'] ?>' class='card-img-top'>
                                     <div class="card-body d-flex justify-content-between ml-xl-3">

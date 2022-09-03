@@ -124,3 +124,41 @@ small{
     border-radius: 5px;
 }
 
+.cart-img{
+    max-width: 200px;
+    width: 30%;
+}
+
+.cart-link{
+    width: 100%;
+    background: black;
+    color: white;
+}
+
+.cart{
+    width: 100%;
+    background-color: white;
+    color: black;
+    margin: 10px 0 10px 0;
+    border-radius: 3px;
+    padding: 2px 0;
+    border: 1px solid black;
+}
+
+.cart:hover{
+    background-color: black;
+    color: white;
+}
+
+.cart span{
+    float: right;
+    margin-right: 5px;
+}
+
+.delete_btn{
+    background: red;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 3px 8px;
+}
