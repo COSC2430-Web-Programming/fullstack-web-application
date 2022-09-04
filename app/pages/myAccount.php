@@ -5,6 +5,8 @@
   define('SHIPPER_ROLE', 2);
   $json_data = file_get_contents("../database/accounts.db");
   $accounts = json_decode($json_data, true);
+
+  
 ?>
 <!doctype html>
 
@@ -79,7 +81,10 @@
                             <div class="col-xl-4 col-lg-4 col-md-6 col-md-12 text-center mb-2">
                             <!-- <input name="customerProfile" type="file" class="form-control w-100" id="customerProfile"> -->
                             <img class='avatar' src='<?php echo "../../www/assets/images/".$account['profilePicture'] ?>'>
-                            </div>
+                            <form enctype="multipart/form-data" name='changeProfilePicForm' method='post' id='form'>
+                            <input name="profilePic" type="file">
+                          </div>
+              
                             <div class="col-xl-4 col-lg-4 col-md-6 col-md-12">
                               <div class="mb-4">
                                 <label for="customerName" class="form-label pb-3 ">Username</label>
@@ -137,7 +142,7 @@
                       }
                     ?>
                       <ul class = 'd-flex justify-content-evenly list-unstyled text-center'>
-                          <li class=" btn btn-outline-dark " >Update Profile Picture</li>
+                          <li input class=" btn btn-outline-dark " >Update Profile Picture</li>
                           <li class="myacc_btn btn btn-outline-dark" onclick="location.href='logout.php';">Log Out</li>
                       </ul>
                 </div>
