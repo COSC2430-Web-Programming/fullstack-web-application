@@ -41,10 +41,12 @@
             
             </tbody>
             </table>
-           
+            <div class="d-flex w-100 justify-content-center mt-5">
+              <button class='w-50 btn btn-outline-dark' type='button'>Order</button>
+            </div>
         </div>
     </main>
-    <footer>
+    <footer class='mt-5'>
         <?php 
             require('../layout/footer.php')
         ?>
