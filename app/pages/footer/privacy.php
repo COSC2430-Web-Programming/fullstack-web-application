@@ -23,7 +23,7 @@
       <div class='header_vendor'>
         <div class="color_overlay d-flex justify-content-center align-items-center">
           <div>
-            <h3>POLICY PRIVACY</h3>
+            <h1>POLICY PRIVACY</h1>
           </div>
         </div>
       </div>
@@ -33,30 +33,30 @@
         <div class='row justify-content-center'>
             <div>
                 <blockquote>
-                Lazada understands that our users care about their personal data and how it is collected, used, shared and cared for. 
+                Laza understands that our users care about their personal data and how it is collected, used, shared and cared for. 
                 We are committed to handling your personal data in accordance with the applicable laws when you use any of the features, 
                 functions, mini-apps or mobile games available on our Platform or Services, interact with us via an external service, 
                 application or through our customer service agents, or access our Services or our Platform through your computer, mobile device, 
                 or any other device with Internet connectivity.
                 <br><br>
-                PLEASE READ THIS PRIVACY POLICY CAREFULLY. 
-                BY CLICKING OR CHECKING “SIGN UP”, “I AGREE TO LAZAS PRIVACY POLICY”, 
+                Please read this policy carefully. 
+                By clicking or checking “SIGN UP”, “I AGREE TO LAZA PRIVACY POLICY”, 
                 “I AGREE AND CONSENT TO THE COLLECTION, USE, DISCLOSURE, STORAGE, 
                 TRANSFER AND/OR PROCESSING OF MY PERSONAL DATA FOR THE PURPOSE STATED IN, 
-                AND UNDER THE TERMS OF, LAZAS PRIVACY POLICY” 
-                OR SIMILAR STATEMENTS AVAILABLE AT THE LAZADA REGISTRATION PAGE OR IN THE COURSE OF PROVIDING YOU WITH THE SERVICES OR ACCESS TO THE PLATFORM, 
-                YOU ACKNOWLEDGE THAT YOU HAVE READ AND UNDERSTOOD THE TERMS OF THIS PRIVACY POLICY AND THAT YOU HAVE AGREED AND CONSENTED TO THE COLLECTION, USE, DISCLOSURE, STORAGE, 
-                TRANSFER AND/OR PROCESSING OF YOUR PERSONAL DATA AS DESCRIBED AND UNDER THE TERMS HEREIN.
-                <br><br>
-                <b>1. Introduction to this Privacy Policy</b>
-                <br><br>
+                AND UNDER THE TERMS OF, LAZA PRIVACY POLICY” 
+                or similar statements available at the Laza Registration page or in the course of providing you with the services or access to the platform, 
+                you acknowledge that you have read and understood the terms of this privacy policy and that you have agreed and consented to the collection, use, disclosure, storage, 
+                transfer and/or processing of your personal data as describes and under the terms herein.
+                </blockquote>
+                <h2>1. Introduction to this Privacy Policy</h2>
+                <blockquote>
                 1.1. Laza and its affiliates (collectively or individually, "Laza", "we" or "us") take your privacy seriously. 
                 In Vietnam, the Laza entity controlling your personal data will be Laza South East Asia Pte. Ltd. and/or Recess Company Limited.
                 <br><br>
-                1.2. In the course of you using Lazas applications and websites (both web and mobile versions), as well as products, information, functions and other services operated by Lazada,
+                1.2. In the course of you using Laza's applications and websites (both web and mobile versions), as well as products, information, functions and other services operated by Laza,
                 we will be collecting, using, disclosing, storing and/or processing data, including your personal data. 
                 In this Privacy Policy, Platform shall refer to all relevant applications and websites (both web and mobile versions), 
-                and Services shall refer to all products, information, functions and services provided by Lazada from time to time at the Platform(s).
+                and Services shall refer to all products, information, functions and services provided by Laza from time to time at the Platform(s).
                 <br><br>
                 1.3. This Privacy Policy exists to keep you in the know about how we collect, use, disclose, store 
                 and/or process the data we collect and receive during the course of providing the Services or access to the Platform to you, 
@@ -76,11 +76,9 @@
                 1.6. This Privacy Policy applies in conjunction with other notices, contractual clauses and consent clauses that apply in relation to the collection,
                 storage, use, disclosure and/or processing of your personal data by us and is not intended to override them unless we state expressly otherwise.
                 <br><br>
-                1.7. All of these terms apply to Lazada's users, whether or not the users have created an account as Customers and/or Vendors, unless otherwise stated specifically to apply only to Customers or only to Vendors.
-            </div>
-            <div class='col-10 text-center'>
-              <a class ="text-decoration-none text-secondary" href="#">Read more</a>
-            </div>
+                1.7. All of these terms apply to Laza's users, whether or not the users have created an account as Customers and/or Vendors, unless otherwise stated specifically to apply only to Customers or only to Vendors.
+                </blockquote>
+              </div>
         </div>
     </div>
     </main>
