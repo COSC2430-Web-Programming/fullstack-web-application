@@ -32,30 +32,31 @@
     <div class='container mt-4'>
         <h2 class='col-12 text-right'>TOP QUESTIONS</h2>
         <div class='row justify-content-center'>
-            <div class='col-12'>
-                <ul class='row text-right'>
-                    <li class='col-lg-3 col-md m-1 col-5'>Return Conditions and Policy at Laza</li>
-                    <li class='col-lg-3 col-md m-1 col-5'>A overview of Return at Laza</li>
-                    <li class='col-lg-3 col-md m-1 col-5'>Information about Freeship</li>
-                    <li class='col-lg-3 col-md m-1 col-5'>How to contact Vendors</li>
-                    <li class='col-lg-3 col-md m-1 col-5'>How do I track my order status?</li>
-                    <li class='col-lg-3 col-md m-1 col-5'>Official recruiting website of Laza</li>
-                    <li class='col-lg-3 col-md m-1 col-5'>Warning: fraudulent Laza!</li>
-                    <li class='col-lg-3 col-md m-1 col-5'>How to write reviews on Laza?</li>
+            <div class='col-10'>
+                <ul class='row text-right justify-content-space-evenly mx-auto'>
+                    <li class='col-lg-3 col-md-3 m-2 p-2 border-bottom'><a href ="#" class = "text-decoration-none text-black">Return Conditions & Policy at Laza</a></li>
+                    <li class='col-lg-3 col-md-3 m-2 p-2 border-bottom'><a href ="#" class = "text-decoration-none text-black">A overview of Return at Laza</a></li>
+                    <li class='col-lg-3 col-md-3 m-2 p-2 border-bottom'><a href ="#" class = "text-decoration-none text-black">Information about Freeship</a></li>
+                    <li class='col-lg-3 col-md-3 m-2 p-2 border-bottom'><a href ="#" class = "text-decoration-none text-black">How to contact Vendors</a></li>
+                    <li class='col-lg-3 col-md-3 m-2 p-2 border-bottom'><a href ="#" class = "text-decoration-none text-black">How do I track my order status?</a></li>
+                    <li class='col-lg-3 col-md-3 m-2 p-2 border-bottom'><a href ="#" class = "text-decoration-none text-black">Official recruiting website of Laza</a></li>
+                    <li class='col-lg-3 col-md-3 m-2 p-2 border-bottom'><a href ="#" class = "text-decoration-none text-black">Warning: fraudulent Laza!</a></li>
+                    <li class='col-lg-3 col-md-3 m-2 p-2 border-bottom'><a href ="#" class = "text-decoration-none text-black">How to write reviews on Laza?</a></li>
+                    <li class='col-lg-3 col-md-3 m-2 p-2 border-bottom'><a href ="#" class = "text-decoration-none text-black">Tips to collect Laza Coins</a></li>
                 </ul>
             </div>
-            <h3 class='col-12 text-right'>TOPICS</h3>
-            <div class='col-12'>
+            <h2 class='col-12 text-right'>TOPICS</h2>
+            <div class='col-10'>
                 <ul class='d-flex justify-content-around list-unstyled text-center row'>
-                    <li class=' col-lg-3 col-md-3 m-2 p-2 bg-light border border-secondary'>My Account</li>
-                    <li class=' col-lg-3 col-md-3 m-2 p-2 bg-light border border-secondary'>Refunds</li>
-                    <li class=' col-lg-3 col-md-3 m-2 p-2 bg-light border border-secondary'>Vouchers & Promotions</li>
-                    <li class=' col-lg-3 col-md-3 m-2 p-2 bg-light border border-secondary'>Returns</li>
-                    <li class=' col-lg-3 col-md-3 m-2 p-2 bg-light border border-secondary'>Shipping & Delivery</li>
-                    <li class=' col-lg-3 col-md-3 m-2 p-2 bg-light border border-secondary'>Payments</li>
-                    <li class=' col-lg-3 col-md-3 m-2 p-2 bg-light border border-secondary'>Produts on Laza</li>
-                    <li class=' col-lg-3 col-md-3 m-2 p-2 bg-light border border-secondary'>Seller Support</li>
-                    <li class=' col-lg-3 col-md-3 m-2 p-2 bg-light border border-secondary'>Laza Comunities Policies</li>
+                    <li class=' col-lg-3 col-md-3 m-2 p-2 bg-none'><a  class = "btn btn-outline-secondary d-flex justify-content-around text-center" href="#" role = "button">My Account</a></li>
+                    <li class=' col-lg-3 col-md-3 m-2 p-2 bg-none'><a  class = "btn btn-outline-secondary d-flex justify-content-around text-center" href="#" role = "button">Refunds</a></li>
+                    <li class=' col-lg-3 col-md-3 m-2 p-2 bg-none'><a  class = "btn btn-outline-secondary d-flex justify-content-around text-center" href="#" role = "button">Vouchers</a></li>
+                    <li class=' col-lg-3 col-md-3 m-2 p-2 bg-none'><a  class = "btn btn-outline-secondary d-flex justify-content-around text-center" href="#" role = "button">Returns</a></li>
+                    <li class=' col-lg-3 col-md-3 m-2 p-2 bg-none'><a  class = "btn btn-outline-secondary d-flex justify-content-around text-center" href="#" role = "button">Delivery</a></li>
+                    <li class=' col-lg-3 col-md-3 m-2 p-2 bg-none'><a  class = "btn btn-outline-secondary d-flex justify-content-around text-center" href="#" role = "button">Payments</a></li>
+                    <li class=' col-lg-3 col-md-3 m-2 p-2 bg-none'><a  class = "btn btn-outline-secondary d-flex justify-content-around text-center" href="#" role = "button">Products</a></li>
+                    <li class=' col-lg-3 col-md-3 m-2 p-2 bg-none'><a  class = "btn btn-outline-secondary d-flex justify-content-around text-center" href="#" role = "button">Seller Support</a></li>
+                    <li class=' col-lg-3 col-md-3 m-2 p-2 bg-none'><a  class = "btn btn-outline-secondary d-flex justify-content-around text-center" href="#" role = "button">Policies</a></li>
                 </ul>
         </div>
     </div>
