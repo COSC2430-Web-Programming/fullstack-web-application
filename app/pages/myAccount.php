@@ -1,5 +1,9 @@
 <?php
-  session_start()
+  session_start();
+
+  foreach($GLOBALS('accounts') as $account ){
+    echo($account);
+  };
 ?>
 <!doctype html>
 

@@ -110,6 +110,7 @@ small{
     color: black;
     cursor: pointer;
     transition: transform .3s ease-out;
+    max-height: 600px;
 }
 
 
@@ -124,9 +125,9 @@ small{
     border-radius: 5px;
 }
 
-.cart-img{
-    max-width: 200px;
-    width: 30%;
+.image-product{
+    width: 100%;
+    max-height: 270px;
 }
 
 .cart-link{
