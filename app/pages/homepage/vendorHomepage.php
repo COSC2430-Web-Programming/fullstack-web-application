@@ -41,7 +41,7 @@
             <div class="row justify-content-center">
                 <div class="hstack gap-3 col-lg-8 mt-3 mb-3">
                     <a href='../vendor/addNewProduct.php' class='btn-option'>Add more Products</a>
-                    <a href='#' class="btn-option">View my Products</a>
+                    <a href='../vendor/viewMyProduct.php' class="btn-option">View my Products</a>
                 </div>
             </div>
         </div>
