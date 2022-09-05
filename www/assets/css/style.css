@@ -5,7 +5,6 @@
     box-sizing: 0;
 }
 
-
 .header_order {
     background: url("https://img.freepik.com/free-photo/loft-home-office-interior-design_53876-143117.jpg?w=2000");
     position: relative;
@@ -117,6 +116,13 @@ small{
     transform: translate(0, -5px);
 }
 
+<<<<<<< HEAD
+.avatar{
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+}
+=======
 .btn-filter{
     padding: 5px 20px;
     background: black;
@@ -162,3 +168,4 @@ small{
     border-radius: 5px;
     padding: 3px 8px;
 }
+>>>>>>> 4cdd28003ced5e60703a70d7eb576fe2049a7aa9

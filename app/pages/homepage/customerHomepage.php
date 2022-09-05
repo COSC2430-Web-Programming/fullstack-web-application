@@ -1,6 +1,11 @@
-<?php 
+<?php
   session_start();
+  $json_data = file_get_contents("../../database/products.db");
+  $products = json_decode($json_data,true);
+  $product_list = [];
 ?>
+<!DOCTYPE html>
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -33,11 +38,12 @@
                 <h2 class="col-12 text-center">ALL PRODUCTS</h2>
             </div>
             <div class='vstack gap-4 align-items-center mb-5'>
-                <div class="d-flex w-100 justify-content-center">
-                    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-                    <button class="btn btn-outline-success" type="submit">Search</button>
-                </div>
-                <form action="" class='row d-flex '>
+                <div class="mb-4">
+                <form action="" class='row d-flex ' method="get">
+                    <div class=" d-flex w-100 justify-content-center input-group mb-3">
+                      <input type="text" class="form-control" placeholder="Type something here..." name="name">
+                      <input class="btn btn-outline-secondary" type="submit" value="Search" name="search">
+                    </div>
                     <div class="col form-row hstack gap-2 my-3">
                         <label for="filter-price-from" class="font-weight-bold">From</label>
                         <input name="filter-price-from" type="number" class="form-control w-100" id="filter-price-from" placeholder='Minimum Price'>
@@ -50,27 +56,28 @@
                         <button type="submit" name="submit" class="btn-filter w-100">Filter</button>
                     </div>
                 </form>
-            </div>
-            <div class="row row-cols-lg-3 row-cols-md-2 row-cols-sm-2 row-cols-1 justify-content-around">
+                </div>
+                <div class="row justify-content-evenly">
                 <?php
-                        $json_data = file_get_contents("../../database/products.db");
-                        $products = json_decode($json_data,true);
-                        foreach ($products as $product){
-                            ?>
-                            <a class='text-decoration-none' href="../customer/productDetail.php?product_id=<?= $product['product_id']; ?>">
-                                <div class="col card">
-                                    <img src='<?php echo "../../../www/assets/images/".$product['image'] ?>' class='card-img-top'>
-                                    <div class="card-body d-flex justify-content-between ml-xl-3">
-                                    <span class='fw-bold'><?php echo $product['name']?></span>
-                                    <span class='fw-semibold'><?php echo $product['price']?></span>
-                                    </div>
-                                </div>
-                            </a>
-                        <?php
+                    foreach ($products as $product){
+                      if(isset($_GET['name']) && !empty($_GET['name'])){
+                        if (strpos($product['name'], $_GET['name']) === false) {
+                          continue;
                         }
-                    ?> 
-            </div>
-        </div>
+                      }
+                        ?>
+                        <div class="col-xl-4 col-lg-4 col-md-6 col-md-12 card">
+                            <img src='<?php echo "../../../www/assets/images/".$product['image'] ?>' class='card-img-top'>
+                            <div class="card-body d-flex justify-content-between ml-xl-3">
+                            <span class='fw-bold'><?php echo $product['name']?></span>
+                            <span class='fw-semibold'><?php echo $product['price']?></span>
+                            </div>
+                        </div>
+                    <?php
+                    }
+                ?>
+              </div>
+                  </div>
     </div>
 <!-- Customer homepage ends -->
     </main>
