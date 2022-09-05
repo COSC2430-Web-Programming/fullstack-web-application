@@ -37,7 +37,7 @@
                     <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
                     <button class="btn btn-outline-success" type="submit">Search</button>
                 </div>
-                <form action="../customer/product_filter.php" class='row d-flex '>
+                <form class='row d-flex'>
                     <div class="col form-row hstack gap-2 my-3">
                         <label for="filter-price-from" class="font-weight-bold">From</label>
                         <input name="filter-price-from" type="number" class="form-control w-100" id="filter-price-from" placeholder='Minimum Price'>
@@ -51,24 +51,40 @@
                     </div>
                 </form>
             </div>
-            <div class="row row-cols-lg-3 row-cols-md-2 row-cols-sm-2 row-cols-1 justify-content-around">
-                <?php
-                        $json_data = file_get_contents("../../database/products.db");
-                        $products = json_decode($json_data,true);
-                        foreach ($products as $product){
-                            ?>
-                            <a class='text-decoration-none' href="../customer/productDetail.php?product_id=<?= $product['product_id']; ?>">
-                                <div class="col card">
-                                    <img src='<?php echo "../../../www/assets/images/".$product['image'] ?>' class='card-img-top'>
-                                    <div class="card-body d-flex justify-content-between ml-xl-3">
-                                    <span class='fw-bold'><?php echo $product['name']?></span>
-                                    <span class='fw-semibold'><?php echo $product['price']?></span>
-                                    </div>
-                                </div>
-                            </a>
-                        <?php
+                <div class="row row-cols-lg-3 row-cols-md-2 row-cols-sm-2 row-cols-1 justify-content-around">
+                    <?php
+                    $json_data= file_get_contents("../../database/products.db");
+                    $products=json_decode($json_data,true);
+                    foreach ($products as $product){
+                        if (isset($_GET['filter-price-from']) && is_numeric($_GET['filter-price-from'])) {
+                            if ($product['price'] < $_GET['filter-price-from']) {
+                                continue;
+                            }
                         }
-                    ?> 
+                        if (isset($_GET['filter-price-to']) && is_numeric($_GET['filter-price-to'])) {
+                            if ($product['price'] > $_GET['filter-price-to']) {
+                                continue;
+                            }
+                        }
+                        // if (isset($_GET['form-control me-2']) && !empty($_GET['name'])){
+                        //     if (strpos($product['name'], $_GET['form-control me-2']) === false) {
+                        //         continue;
+                        //     }
+                        // }
+                        ?>
+                        <a class='text-decoration-none' href="../customer/productDetail.php?product_id=<?= $product['product_id']; ?>">
+                            <div class="col card">
+                                <img src='<?php echo "../../../www/assets/images/".$product['image'] ?>' class='card-img-top'>
+                                <div class="card-body d-flex justify-content-between ml-xl-3">
+                                <span class='fw-bold'><?php echo $product['name']?></span>
+                                <span class='fw-semibold'><?php echo $product['price']?></span>
+                                </div>
+                            </div>
+                        </a>
+                    <?php
+                    }
+                    ?>
+                </div>
             </div>
         </div>
     </div>
