@@ -1,7 +1,6 @@
 <?php 
     include("../../class/product.php")
 ?>
-
 <?php 
     session_start();
     $vendor = $_SESSION['user'];
@@ -11,7 +10,6 @@
         $description = $_POST['description'];
         $productImg = $_FILES['productImg'];
         $vendor = $vendor;
-
         $product = new Product($productName, $price, $productImg, $description, $vendor);
     }
 ?>

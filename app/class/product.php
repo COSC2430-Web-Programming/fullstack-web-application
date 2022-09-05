@@ -1,6 +1,6 @@
 <?php
 class Product {
-    private $productId; // generate ID
+    private $product_id; // generate ID
     private $name;
     private $price;
     private $image;
@@ -20,6 +20,7 @@ class Product {
         $this->description=$description;
         $this->vendor = $vendor;
         $this->stored_products = json_decode(file_get_contents($this->storage), true);
+        $this->product_id = uniqid('product_',true); // generate ID
         $this->validateImage();
 
         $this->new_product = [
@@ -27,6 +28,7 @@ class Product {
             "price" => $this->price,
             "image" => $this->image,
             "description" => $this->description,
+            "product_id" => $this->product_id,
             "vendor" => $this->vendor
         ];
 

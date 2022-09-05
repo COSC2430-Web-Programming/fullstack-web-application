@@ -31,13 +31,12 @@
         </div>
       </div>
     </header>
-    <main>
-      <div class='container mt-4'>
-        <div class='row justify-content-center'>
-              <div class='mb-4'>
-                  <h2 class="col-12 text-center">ALL PRODUCTS</h2>
-              </div>
-              <div class="row justify-content-evenly">
+    <div class='container mt-4'>
+      <div class='row justify-content-center'>
+            <div class='mb-4'>
+                <h2 class="col-12 text-center">ALL PRODUCTS</h2>
+            </div>
+            <div class="row justify-content-evenly">
               <?php
                 foreach ($products as $product){
                   if (strcmp($_SESSION['user'], $product['vendor']) == 0){

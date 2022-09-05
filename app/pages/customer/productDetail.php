@@ -1,12 +1,19 @@
 <?php 
-  $data = [
-    ['productID' => '1',
-     'name'=> 'Hamburger',
-     'image' => 'https://res.edu.vn/wp-content/uploads/2021/12/unit-46-topic-food.jpeg',
-     'description' => 'A hamburger is a sandwich consisting of a cooked meat patty on a bun or roll. You can order a hamburger, fries, and a shake at most fast food restaurants. Hamburgers are traditionally made with ground beef and served with onions, tomatoes, lettuce, ketchup, and other garnishes.',
-     'price' => 100
-    ]
-  ];
+  $json_data = file_get_contents("../../database/products.db");
+  $products = json_decode($json_data,true);
+
+  $product_id = '';
+  $detail = [];
+  if(isset($_GET['product_id'])){
+  $product_id = $_GET['product_id'];
+  }
+
+  foreach($products as $row => $info){
+    if (strcmp($info['product_id'],$product_id) == 0){
+        $detail = $info;
+    }
+  };
+
 ?>
 
 <!doctype html>
@@ -29,7 +36,7 @@
       <div class='header_order'>
         <div class="color_overlay d-flex justify-content-center align-items-center">
           <div>
-            <h3 class='hi'>PRODUCT DETAIL PAGE</h3>
+            <h3 class='h3 text-center'>PRODUCT DETAIL PAGE</h3>
           </div>
         </div>
       </div>
@@ -44,16 +51,18 @@
             <div class="col-sm-8 col-10 d-flex justify-content-center">
               <div class="card col-sm-8">
                
-                <img src="<?= $data[0]['image'] ?>" class="img-fluid w-100" alt="...">
+                <img src='<?php echo "../../../www/assets/images/".$detail['image'] ?>' class="img-fluid w-100" alt="product_img" id='productImg'>
 
                 <div class="card-body">
                   <div class="d-flex justify-content-between mt-4 mb-4 align-items-center w-100">
-                    <h5 class="card-title mb-4"> <?= $data[0]['name'] ?></h5>
-                    <p class="mb-4 d-flex justify-content-end fw-bold fs-3">$<?= $data[0]['price'] ?></p>
+                    <h5 id='productName' class="card-title mb-4"> <?= $detail['name'] ?></h5>
+                    <p id='productPrice' class="mb-4 d-flex justify-content-end fw-bold fs-3"><?= $detail['price'] ?></p>
                   </div>
-                  <p class="card-text mb-5 text-wrap text-justify"><?= $data[0]['description'] ?></p>
+                  <p id='productDescription' class="card-text mb-5 text-wrap text-justify"><?= $detail['description'] ?></p>
                   <button class=" w-100 btn btn-outline-dark btn-sm mt-3" id='add-cart' >Add To Cart</button>
-                  <span class='cart'>Cart <span>0</span></span>
+                  <a href='cartPage.php' class='cart-link'>
+                    <button class='cart'>View your cart <span>0</span></button>
+                  </a>
                 </div>
               </div>
             </div>
