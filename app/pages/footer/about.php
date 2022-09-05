@@ -66,7 +66,7 @@
     </main>
     <footer class="mt-4">
       <?php
-        require('../layout/footer,php')
+        require('../layout/footer.php')
       ?>
     </footer>
   </body>
