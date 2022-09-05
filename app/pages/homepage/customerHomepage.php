@@ -37,7 +37,7 @@
                     <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
                     <button class="btn btn-outline-success" type="submit">Search</button>
                 </div>
-                <form action="" class='row d-flex '>
+                <form action="../customer/product_filter.php" class='row d-flex '>
                     <div class="col form-row hstack gap-2 my-3">
                         <label for="filter-price-from" class="font-weight-bold">From</label>
                         <input name="filter-price-from" type="number" class="form-control w-100" id="filter-price-from" placeholder='Minimum Price'>
