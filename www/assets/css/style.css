@@ -167,3 +167,8 @@ small{
     border-radius: 5px;
     padding: 3px 8px;
 }
+
+.cart-img{
+    max-width: 200px;
+    width: 30%;
+}

@@ -5,6 +5,8 @@
   $product_list = [];
   $json_data = file_get_contents("../../database/products.db");
   $products = json_decode($json_data,true);
+
+ 
 ?>
 <!DOCTYPE html>
 <html lang="en">

@@ -1,14 +1,9 @@
 <?php
   session_start();
-
-  foreach($GLOBALS('accounts') as $account ){
-    echo($account);
-  };
   include("../class/user.php")
 ?>
 
 <?php 
-  session_start();
   $json_data = file_get_contents("../database/accounts.db");
   $accounts = json_decode($json_data, true);
 
