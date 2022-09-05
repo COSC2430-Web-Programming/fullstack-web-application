@@ -33,7 +33,7 @@
         <div class='row justify-content-center'>
           <div>
             <p>
-                Founded in 2022, we are a team of 4 was determined to finish this project (because of the deadline!?!). 
+                Founded in 2022, we are a team of 4 was determined to finish this project. 
                 Our team met and instanly felt the connection between us. Sponsored from Lazada, we made it here where we have enought budget to develop our final touch.
             </p>
           </div>
