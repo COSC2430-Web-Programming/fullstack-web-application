@@ -1,3 +1,31 @@
+<?php
+  session_start();
+  $json_data = file_get_contents("../../database/products.db");
+  $products = json_decode($json_data,true);
+  $product_list = [];
+
+    $json_data = file_get_contents("../../database/products.db");
+    $products = json_decode($json_data,true);
+    $product_list = [];
+  
+    foreach($products as $product){
+      if(isset($_GET['name']) && !empty($_GET['name'])){
+        if (strpos($product['name'], $_GET['name']) === false) {
+          continue;
+        }
+    }
+    $product_list = $product;
+    $_SESSION['product_list'] = $product_list;
+    
+  if(isset($_SESSION['product_list'])){
+   foreach($_SESSION['product_list'] as $product){
+     echo $product;
+   }
+  }
+ 
+}
+
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -29,25 +57,44 @@
                 <div class='mb-4'>
                     <h2 class="col-12 text-center">ALL PRODUCTS</h2>
                 </div>
+                <div class="mb-4">
+                  <form method="get" action="customerHomepage.php">
+                  <div class="input-group mb-3">
+                    <input type="text" class="form-control" placeholder="Type something here..." name="name">
+                    <input class="btn btn-outline-secondary" type="submit" value="Search" name="search">
+                  </div>
+                  </form>
+                </div>
                 <div class="row justify-content-evenly">
                 <?php
-                    session_start();
-                    $json_data = file_get_contents("../../database/products.db");
-                    $products = json_decode($json_data,true);
-                    foreach ($products as $product){
+                    if(isset($_SESSION['product_list'])){
+                      foreach($_SESSION['product_list'] as $product){
                         ?>
                         <div class="col-xl-4 col-lg-4 col-md-6 col-md-12 card">
+                          <img src='<?php echo "../../../www/assets/images/".$product['image'] ?>' class='card-img-top'>
+                          <div class="card-body d-flex justify-content-between ml-xl-3">
+                          <span class='fw-bold'><?php echo $product['name']?></span>
+                          <span class='fw-semibold'><?php echo $product['price']?></span>
+                        </div>
+                      <?php
+                        }
+                      ?>
+                    <?php
+                       } else {
+                        foreach ($products as $product){
+                    ?>
+                       <div class="col-xl-4 col-lg-4 col-md-6 col-md-12 card">
                             <img src='<?php echo "../../../www/assets/images/".$product['image'] ?>' class='card-img-top'>
                             <div class="card-body d-flex justify-content-between ml-xl-3">
                             <span class='fw-bold'><?php echo $product['name']?></span>
                             <span class='fw-semibold'><?php echo $product['price']?></span>
-                            </div>
                         </div>
                     <?php
+                      }
                     }
-                ?>
-            </div>
-        </div>
+                    ?>
+              </div>
+          </div>
     </main>
     <footer>
         <?php 

@@ -1,13 +1,36 @@
 <?php
+  include("../class/user.php")
+?>
+
+<?php 
   session_start();
-  define('VENDOR_ROLE', 0);
-  define('CUSTOMER_ROLE', 1);
-  define('SHIPPER_ROLE', 2);
   $json_data = file_get_contents("../database/accounts.db");
   $accounts = json_decode($json_data, true);
 
-  
-?>
+  if(isset($_POST["upload"])){
+    $path = $_FILES['profilePic']['name'];
+    echo $path;
+    // $accounts->updateUser($_SESSION['user'], 'profilePicture', $path);
+    foreach($accounts as $account){
+      if($account['username'] == $_SESSION['user']){
+        echo $account->getStoredUsers();
+      }
+    }
+  }
+    // $tmp = $accounts[$index];
+    // // delete user
+    // unset($accounts[$index]);
+    // $account = array_values($accounts);
+    // file_put_contents("../database/accounts.db", json_encode($accounts, JSON_PRETTY_PRINT));
+
+    // $username = $tmp['username'];
+    // $password = $tmp['password'];
+    // $profilePicture = $_FILES['profilePic'];
+    // $name = $tmp['name'];
+    // $address = $tmp['address'];
+    // $registeredTime = $tmp['register'];
+    // $password = $tmp['password'];
+ ?>
 <!doctype html>
 
 <html lang="en">
@@ -81,8 +104,9 @@
                             <div class="col-xl-4 col-lg-4 col-md-6 col-md-12 text-center mb-2">
                             <!-- <input name="customerProfile" type="file" class="form-control w-100" id="customerProfile"> -->
                             <img class='avatar' src='<?php echo "../../www/assets/images/".$account['profilePicture'] ?>'>
-                            <form enctype="multipart/form-data" name='changeProfilePicForm' method='post' id='form'>
+                            <form action="myAccount.php" enctype="multipart/form-data" name='changeProfilePicForm' method='post' id='form' >
                             <input name="profilePic" type="file">
+                            <input class=" btn btn-outline-dark " type="submit" name="upload" value="Update Profile Picture" id="upload">
                           </div>
               
                             <div class="col-xl-4 col-lg-4 col-md-6 col-md-12">
@@ -142,7 +166,7 @@
                       }
                     ?>
                       <ul class = 'd-flex justify-content-evenly list-unstyled text-center'>
-                          <li input class=" btn btn-outline-dark " >Update Profile Picture</li>
+                          <li input class=" btn btn-outline-dark " type="submit" name="upload" value="upload" id="upload">Update Profile Picture</li>
                           <li class="myacc_btn btn btn-outline-dark" onclick="location.href='logout.php';">Log Out</li>
                       </ul>
                 </div>
