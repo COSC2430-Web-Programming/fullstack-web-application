@@ -1,17 +1,16 @@
 <?php
   session_start();
-  if(!isset($_SESSION['user'])) {
-    header("location: ../login.php");
-    exit();
-};
+//   if(!isset($_SESSION['user'])) {
+//     header("location: ../login.php");
+//     exit();
+// };
   $json_data = file_get_contents("../../database/products.db");
   $products = json_decode($json_data,true);
   $product_list = [];
   $json_data = file_get_contents("../../database/products.db");
   $products = json_decode($json_data,true);
-
- 
 ?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -71,18 +70,18 @@
                     $products=json_decode($json_data,true);
                     $hasProduct = false;
                     foreach ($products as $product){
-                        if (isset($_GET['filter-price-from']) && is_numeric($_GET['filter-price-from'])) {
+                        if (isset($_GET['filter-price-from']) && is_numeric($_GET['filter-price-from']) && !empty($_GET['filter-price-from'])) {
                             if ($product['price'] < $_GET['filter-price-from']) {
                                 continue;
                             }
                         }
-                        if (isset($_GET['filter-price-to']) && is_numeric($_GET['filter-price-to'])) {
+                        if (isset($_GET['filter-price-to']) && is_numeric($_GET['filter-price-to']) && !empty($_GET['filter-price-to'])) {
                             if ($product['price'] > $_GET['filter-price-to']) {
                                 continue;
                             }
                         }
                         if(isset($_GET['name']) && !empty($_GET['name'])){
-                            if (strpos($product['name'], $_GET['name']) === false) {
+                            if (stripos($product['name'], $_GET['name']) === false) {
                               continue;
                             }
                         }
@@ -99,11 +98,12 @@
                         </a>
                     <?php
                     }
-                    if ($hasProduct == false){
-                        echo "<h3>No results found!</h3>";
-                    }
                     ?>
-                </div>
+                </div> <?php
+                if ($hasProduct == false){ ?>
+                    <h3>No results found!</h3>;
+                <?php
+                } ?>
             </div>
             </div>
         </div>
