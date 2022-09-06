@@ -1,5 +1,9 @@
 <?php
   session_start();
+  if(!isset($_SESSION['user'])) {
+    header("location: ../login.php");
+    exit();
+};
   $json_data = file_get_contents("../../database/products.db");
   $products = json_decode($json_data,true);
   $product_list = [];
