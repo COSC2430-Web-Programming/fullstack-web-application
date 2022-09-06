@@ -17,13 +17,19 @@
     </button>
     <div class="collapse navbar-collapse" id="mynavbar">
        <ul class="navbar-nav ms-auto">
-        <li class="nav-item ms-auto">
-          <a href="?login" class="nav-link">Login</a>
+         <li class="nav-item ms-auto">
+           <?php 
+            if(isset($_SESSION['user'])) {
+              echo '<a href="../myAccount.php" class="nav-link">My Account</a>';
+            }else{
+              echo '<a href="?logout" class="nav-link">Login</a>';
+            };
+            ?>
         </li>
         <li class="nav-item ms-auto">
-          <a href="?logout" class="nav-link">Logout</a>
+          <a href="?login" class="nav-link">Logout</a>
         </li>
-       </ul>
+      </ul>
     </div>
 </nav>
 </body>
