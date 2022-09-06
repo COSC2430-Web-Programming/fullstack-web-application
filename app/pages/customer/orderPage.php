@@ -6,6 +6,7 @@ session_start();
 ?>
 <?php
 $products_str = $_GET['products'];
+$total_cost = $_GET['total'];
 $products = explode(",", $products_str);
 // Get the products data
 $storage_products = "../../database/products.db";
@@ -60,7 +61,7 @@ $user_info = new OrderUser($user_data['username'], $user_data['name'], $user_dat
 $distribution_hub = $stored_hubs[rand(0, count($stored_hubs))];
 
 // Create new order
-$order = new Order($products_list, 500, $user_info, "active", $distribution_hub);
+$order = new Order($products_list, $total_cost, $user_info, "active", $distribution_hub);
 
 // var_dump($user_info);
 // echo json_encode($products_list);
@@ -71,7 +72,6 @@ $order = new Order($products_list, 500, $user_info, "active", $distribution_hub)
 // p_id=product_6311f116506c19.37934972[1]&
 // p_id=product_6312b42b2d46f2.13141630[1]&
 // p_id=product_6316c277724e50.26300018[1]&
-
 ?>
 
 <!doctype html>

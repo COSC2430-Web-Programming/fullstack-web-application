@@ -1,19 +1,13 @@
 function orderProducts() {
-    // Get data from local storage
-    let cartList = localStorage.getItem("productInCart")
-    console.log('cL', cartList)
+    let cartList = localStorage.getItem("productInCart") // get data from local storage
     cartList = JSON.parse(cartList)
+    var arrayOfProducts = Object.keys(cartList).map((key) => [(key), cartList[key]]); // convert object to array of object
 
-    // Convert object to array of object
-    var arrayOfProducts = Object.keys(cartList).map((key) => [(key), cartList[key]]);
-
-    // Write data to the URL
-    console.log('check array of products', arrayOfProducts);
-    
+    // Create a URL
     var url = "products=";
-    const products = [];
 
-    // Create an array as format to generate a URL
+    // Add products data to the URL
+    const products = [];
     for (let i = 0; i < arrayOfProducts.length; i++) {
         let product = arrayOfProducts[i][1];
         products.push(product);
@@ -23,11 +17,16 @@ function orderProducts() {
         url += String(e.product_id) + "[" + String(e.incart) + "]" + ",";
     })
 
-    url = url.slice(0, -1);
-    console.log('url',url);
+    url = url.slice(0, -1); // delete the last "," of the URL
+
+    // Add price
+    let totalPrice = localStorage.getItem("totalCost");
+    url += "&total=" + totalPrice;
 
     // Delete the local storage in cart
 
+
+    // Direct the use to the order page
     window.location.replace("http://localhost:2222/app/pages/customer/orderPage.php?" + url);
 
     return 0;
