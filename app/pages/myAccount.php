@@ -6,7 +6,6 @@
   };
   include("../class/user.php")
 ?>
-
 <?php 
   $json_data = file_get_contents("../database/accounts.db");
   $accounts = json_decode($json_data, true);

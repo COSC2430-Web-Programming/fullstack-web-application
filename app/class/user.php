@@ -37,8 +37,6 @@ class User {
         }
     }
 
-    
-
     protected function checkFieldValues(){
         // Check if username or password field is empty
         if (empty($this->username) && empty($this->password)) {
@@ -110,6 +108,7 @@ class User {
         }
         $this->storeData();
     }
+
     public function getStoredUsers(){
         return $this->stored_users;
     }

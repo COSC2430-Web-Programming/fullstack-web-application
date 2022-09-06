@@ -25,7 +25,7 @@ add_cart.addEventListener('click',() =>{
 })
 
 
-//Function to keep the number of item in the cart every time reload
+// Function to keep the number of item in the cart every time reload
 function onLoadCartNumbers(){
     let productNumbers = localStorage.getItem('cartNumbers')
 
