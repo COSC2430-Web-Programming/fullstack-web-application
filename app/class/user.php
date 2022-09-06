@@ -25,7 +25,7 @@ class User {
         $this->registeredTime = date('Y-m-d H:i');
         $this->stored_users = json_decode(file_get_contents($this->storage), true);
         $this->rawProfilePicture = $rawProfilePicture;
-        validateImage();
+        $this->validateImage();
 
         $this->new_user = [
             "username" => $this->username,
@@ -36,6 +36,8 @@ class User {
             $this->insertUser();
         }
     }
+
+    
 
     protected function checkFieldValues(){
         // Check if username or password field is empty
@@ -91,6 +93,25 @@ class User {
             }
         }
 
+    }
+
+    private function storeData() {
+        file_put_contents(
+            $this->storage,
+            json_encode($this->stored_users, JSON_PRETTY_PRINT)
+        );
+    }
+
+    protected function updateUser($username, $field, $value){
+        foreach($this->stored_users as $key => $stored_user){
+            if($stored_user['username'] == $username){
+                $this->stored_users[$key][$field] = $value;
+            }
+        }
+        $this->storeData();
+    }
+    public function getStoredUsers(){
+        return $this->stored_users;
     }
 
     protected function validateImage() {
