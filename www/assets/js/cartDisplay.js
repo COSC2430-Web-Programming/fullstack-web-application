@@ -50,7 +50,7 @@ function cartShow(){
         </tfoot>
         `
     }
-    console.log(cartList)
+    console.log('cartList', cartList)
 }
 
 
@@ -62,7 +62,11 @@ function deleteItem(name){
 
     // Convert product object to array
     var result = Object.keys(cartList).map((key) => [(key), cartList[key]]);
+    console.log('result', result);
 
+    // Write to the URL - Remember to write a new function
+
+    
 
     // Get the item and splice 
     let i= result.findIndex((item) => name === item[0])
@@ -80,6 +84,8 @@ function deleteItem(name){
     localStorage.setItem('productInCart',JSON.stringify(obj))
     localStorage.setItem('totalCost', final_price)
     localStorage.setItem('cartNumbers', cartNumbers)
+
+    
     cartShow()
 }
 
