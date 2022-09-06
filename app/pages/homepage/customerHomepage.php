@@ -40,11 +40,11 @@
                 <form class='row d-flex'>
                     <div class="col form-row hstack gap-2 my-3">
                         <label for="filter-price-from" class="font-weight-bold">From</label>
-                        <input name="filter-price-from" type="number" class="form-control w-100" id="filter-price-from" placeholder='Minimum Price'>
+                        <input name="filter-price-from" type="number" class="form-control w-100" id="filter-price-from" placeholder='Minimum Price' value="<?php echo (isset($_GET['filter-price-from']))?$_GET['filter-price-from']:'';?>">
                     </div>
                     <div class="col form-row hstack gap-2 my-3">
                         <label for="filter-price-to" class="font-weight-bold">To</label>
-                        <input name="filter-price-to" type="number" class="form-control w-100" id="filter-price-to" placeholder='Maximum Price'>
+                        <input name="filter-price-to" type="number" class="form-control w-100" id="filter-price-to" placeholder='Maximum Price' value="<?php echo (isset($_GET['filter-price-to']))?$_GET['filter-price-to']:'';?>">
                     </div>
                     <div class="col-md-auto form-row my-3">
                         <button type="submit" name="submit" class="btn-filter w-100">Filter</button>
@@ -55,6 +55,7 @@
                     <?php
                     $json_data= file_get_contents("../../database/products.db");
                     $products=json_decode($json_data,true);
+                    $hasProduct = false;
                     foreach ($products as $product){
                         if (isset($_GET['filter-price-from']) && is_numeric($_GET['filter-price-from'])) {
                             if ($product['price'] < $_GET['filter-price-from']) {
@@ -66,11 +67,7 @@
                                 continue;
                             }
                         }
-                        // if (isset($_GET['form-control me-2']) && !empty($_GET['name'])){
-                        //     if (strpos($product['name'], $_GET['form-control me-2']) === false) {
-                        //         continue;
-                        //     }
-                        // }
+                        $hasProduct = true
                         ?>
                         <a class='text-decoration-none' href="../customer/productDetail.php?product_id=<?= $product['product_id']; ?>">
                             <div class="col card">
@@ -82,6 +79,9 @@
                             </div>
                         </a>
                     <?php
+                    }
+                    if ($hasProduct == false){
+                        echo "<h3>No results found!</h3>";
                     }
                     ?>
                 </div>
@@ -95,9 +95,5 @@
             require('../layout/footer.php')
         ?>
     </footer>
-
-
-
 </body>
 </html>
-
