@@ -1,3 +1,8 @@
+<?php
+  session_start();
+  $json_data = file_get_contents("../../database/products.db");
+  $products = json_decode($json_data,true);
+?>
 <!doctype html>
 <html lang="en">
   <head>
@@ -33,14 +38,12 @@
             </div>
             <div class="row justify-content-evenly">
               <?php
-                session_start();
-                $json_data = file_get_contents("../../database/products.db");
-                $products = json_decode($json_data,true);
                 foreach ($products as $product){
                   if (strcmp($_SESSION['user'], $product['vendor']) == 0){
                     ?>
                       <div class="col-xl-4 col-lg-4 col-md-6 col-md-12 card">
                         <img src='<?php echo "../../../www/assets/images/".$product['image'] ?>' class='card-img-top'>
+                        <
                         <div class="card-body d-flex justify-content-between ml-xl-3">
                           <span class='fw-bold'><?php echo $product['name']?></span>
                           <span class='fw-semibold'><?php echo $product['price']?></span>
