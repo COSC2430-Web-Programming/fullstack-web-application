@@ -1,7 +1,8 @@
 <?php 
 include "../../class/orderProduct.php";
-include "../../class/customer.php";
+include("../../class/orderUser.php");
 include "../../class/order.php";
+session_start();
 ?>
 <?php
 $products_str = $_GET['products'];
@@ -12,13 +13,25 @@ $stored_products = json_decode(file_get_contents($storage_products), true);
 // Get the distribution hub data
 $storage_hubs = "../../database/hubs.db";
 $stored_hubs = json_decode(file_get_contents($storage_hubs), true);
-
+// Get the user data
+$storage_userss = "../../database/accounts.db";
+$stored_users = json_decode(file_get_contents($storage_userss), true);
+// Store products in cart to products_list
 $products_list = [];
+
+function getUserData($username) {
+    foreach($GLOBALS['stored_users'] as $user){
+        if($user['username'] == $username){
+            return $user;
+        }
+    }
+}
 
 for ($i = 0; $i < count($products); $i++) {
     $p_id = substr($products[$i], 0, -3); 
     trim($p_id, " ");
     $p_quantity = substr($products[$i], -2, 1); 
+    $p_quantity = strval($p_quantity);
     trim($p_quantity, " ");
     // echo ("quantity = ");
     // echo ($p_quantity);
@@ -27,7 +40,7 @@ for ($i = 0; $i < count($products); $i++) {
         if ($p_id === $product['product_id']) {
             // Create new object product
             echo ("check quantity start ");
-            echo ($p_quantity);
+            echo (strval($p_quantity));
             echo ("check quantity end ");
             $product_obj = new OrderProduct($p_id, $p_quantity, $product['name'], $product['price'], $product['image'], $product['description']);
             // Add to product array
@@ -37,15 +50,20 @@ for ($i = 0; $i < count($products); $i++) {
     }
 }
 
-echo json_encode($products_list);
 
 // Get user's info
+$current_user = $_SESSION['user'];
+$user_data = getUserData($current_user);
+$user_info = new OrderUser($user_data['username'], $user_data['name'], $user_data['address']);
+
 // Get random distribution hub
 $distribution_hub = $stored_hubs[rand(0, count($stored_hubs))];
 
 // Create new order
-$order = new Order($products_list, 500, "Address Ho Chi Minh City", "idle", $distribution_hub);
+$order = new Order($products_list, 500, $user_info, "active", $distribution_hub);
 
+// var_dump($user_info);
+// echo json_encode($products_list);
 // var_dump($products_str);
 // var_dump($products);
 // http://localhost:2222/app/pages/customer/orderPage.php?

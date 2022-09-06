@@ -1,3 +1,36 @@
 [
-    
+    {
+        "order_id": "order_63171d1f576c22.84938084",
+        "products_list": [
+            {
+                "error": null,
+                "success": null,
+                "product_id": "product_6316c277724e50.26300018",
+                "name": "Cartier Watch",
+                "price": "9750",
+                "image": "6316c277726d13.72134395.webp",
+                "description": "Santos de Cartier watch, large model, Manufacture mechanical movement with automatic winding, caliber 1847 MC. Steel case, PVD bezel, steel crown set with a faceted blue synthetic spinel, gray striated dial, steel sword-shaped hands with luminescent material also on the hour markers, sapphire crystal."
+            },
+            {
+                "error": null,
+                "success": null,
+                "product_id": "product_6316c1a90467f3.07653964",
+                "name": "Tiffany <3 Necklace",
+                "price": "700",
+                "image": "6316c1a904ea75.35873907.jpeg",
+                "description": "Inspired by the iconic key ring first introduced in 1969, the Return to Tiffany collection is a classic reinvented. This simple design exudes timeless elegance."
+            }
+        ],
+        "total_price": 500,
+        "user_info": {
+            "username": "jennierubyjane",
+            "name": " Kim Jennie",
+            "address": "LA, California"
+        },
+        "status": "active",
+        "distribution_hub": {
+            "name": "Danang",
+            "address": "48 Tho Quang, Son Tra District, Da Nang"
+        }
+    }
 ]
