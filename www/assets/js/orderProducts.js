@@ -24,7 +24,7 @@ function orderProducts() {
     url += "&total=" + totalPrice;
 
     // Delete the local storage in cart
-
+    window.localStorage.clear();
 
     // Direct the use to the order page
     window.location.replace("http://localhost:2222/app/pages/customer/orderPage.php?" + url);

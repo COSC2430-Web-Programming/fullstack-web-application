@@ -34,23 +34,16 @@ for ($i = 0; $i < count($products); $i++) {
     $p_quantity = substr($products[$i], -2, 1); 
     $p_quantity = strval($p_quantity);
     trim($p_quantity, " ");
-    // echo ("quantity = ");
-    // echo ($p_quantity);
 
     foreach((array) $stored_products as $product) {
         if ($p_id === $product['product_id']) {
             // Create new object product
-            echo ("check quantity start ");
-            echo (strval($p_quantity));
-            echo ("check quantity end ");
-            $product_obj = new OrderProduct($p_id, $p_quantity, $product['name'], $product['price'], $product['image'], $product['description']);
+            $product_obj = new OrderProduct($p_id, $p_quantity, $product['name'], $product['price'], $product['image']);
             // Add to product array
-            // var_dump($product_obj);
             array_push($products_list, $product_obj);
         }
     }
 }
-
 
 // Get user's info
 $current_user = $_SESSION['user'];
@@ -58,20 +51,10 @@ $user_data = getUserData($current_user);
 $user_info = new OrderUser($user_data['username'], $user_data['name'], $user_data['address']);
 
 // Get random distribution hub
-$distribution_hub = $stored_hubs[rand(0, count($stored_hubs))];
+$distribution_hub = $stored_hubs[rand(0, (count($stored_hubs) - 1))];
 
 // Create new order
 $order = new Order($products_list, $total_cost, $user_info, "active", $distribution_hub);
-
-// var_dump($user_info);
-// echo json_encode($products_list);
-// var_dump($products_str);
-// var_dump($products);
-// http://localhost:2222/app/pages/customer/orderPage.php?
-// p_id=product_6311f1d8251bd0.48478000[1]&
-// p_id=product_6311f116506c19.37934972[1]&
-// p_id=product_6312b42b2d46f2.13141630[1]&
-// p_id=product_6316c277724e50.26300018[1]&
 ?>
 
 <!doctype html>
