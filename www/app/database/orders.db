@@ -81,5 +81,35 @@
             "name": "Hanoi",
             "address": "222 Trang Tien, Hoan Kiem District, Ha Noi"
         }
+    },
+    {
+        "order_id": "order_6318cd847d8247.36822575",
+        "products_list": [
+            {
+                "product_id": "product_6311f2042f3818.20137655",
+                "quantity": "1",
+                "name": "Tiffany Watches",
+                "price": "2950",
+                "image": "6310e2c0600843.37130933.jpeg"
+            },
+            {
+                "product_id": "product_6316c277724e50.26300018",
+                "quantity": "1",
+                "name": "Cartier Watch",
+                "price": "9750",
+                "image": "6316c277726d13.72134395.webp"
+            }
+        ],
+        "total_price": "12700",
+        "user_info": {
+            "username": "jennierubyjane",
+            "name": " Kim Jennie",
+            "address": "LA, California"
+        },
+        "status": "active",
+        "distribution_hub": {
+            "name": "Saigon",
+            "address": "144 Nguyen Van Linh, District 7, Ho Chi Minh City"
+        }
     }
 ]

@@ -19,7 +19,7 @@ if(!empty($_GET['products'])) {
     $storage_hubs = "../../database/hubs.db";
     $stored_hubs = json_decode(file_get_contents($storage_hubs), true);
     // Get the user data
-    $storage_userss = "../../database/accounts.db";
+    $storage_userss = "../../../../accounts.db";
     $stored_users = json_decode(file_get_contents($storage_userss), true);
     // Store products in cart to products_list
     $products_list = [];
