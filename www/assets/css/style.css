@@ -105,11 +105,13 @@ small{
 .col.card{
     margin-top: 15px;
     border: none;
-    background: #fafaf7;
+    /* background: #fafaf7; */
+    background: white;
     color: black;
     cursor: pointer;
     transition: transform .3s ease-out;
     max-height: 600px;
+    border: 1px solid #494F55;
 }
 
 

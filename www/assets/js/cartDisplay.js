@@ -44,6 +44,9 @@ function cartShow(){
                 <td class='fw-bold'>
                     ${final_price}             
                 </td>
+                <td>
+                
+                </td>
                 
 
             </tr>
