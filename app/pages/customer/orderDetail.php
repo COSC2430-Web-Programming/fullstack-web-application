@@ -6,7 +6,7 @@
   $order_id = '';
   $detail = [];
   if(isset($_GET['order_id'])){
-  $order_id = $_GET['order_id'];
+    $order_id = $_GET['order_id'];
   }
   //Get the select value
   if(isset($_POST['submit'])){
@@ -24,10 +24,6 @@
     };
     file_put_contents('../../database/orders.db', json_encode($orders, JSON_PRETTY_PRINT));
   };
-
-  //Test
-
-
 
   foreach($orders as $order){
       if (strcmp($order['order_id'],$order_id) == 0){
@@ -51,7 +47,6 @@
         <?php 
           require('../layout/nav.php')
         ?>
-
       </div>
       <div class='header_order'>
         <div class="color_overlay d-flex justify-content-center align-items-center">
