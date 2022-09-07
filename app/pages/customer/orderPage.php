@@ -1,11 +1,13 @@
 <?php 
+session_start();
 include "../../class/orderProduct.php";
 include("../../class/orderUser.php");
 include "../../class/order.php";
-session_start();
 ?>
 <?php
-if(!empty($_GET)) {
+$order_id = '';
+
+if(!empty($_GET['products'])) {
     $products_str = $_GET['products'];
     $total_cost = $_GET['total'];
     $products = explode(",", $products_str);
@@ -46,7 +48,9 @@ if(!empty($_GET)) {
             }
         }
     }
+    
     // Generate id
+    $order_id = uniqid('order_',true);
 
     // Get user's info
     $current_user = $_SESSION['user'];
@@ -57,10 +61,35 @@ if(!empty($_GET)) {
     $distribution_hub = $stored_hubs[rand(0, (count($stored_hubs) - 1))];
 
     // Create new order
-    $order = new Order($products_list, $total_cost, $user_info, "active", $distribution_hub);
+    $order = new Order($order_id, $products_list, $total_cost, $user_info, "active", $distribution_hub);
 }
+
+// Get data from storage to display order detail
+$json_data = file_get_contents("../../database/orders.db");
+$orders = json_decode($json_data,true);
+$detail = [];
+foreach($orders as $order){
+    if (strcmp($order['order_id'],$order_id) == 0){
+        $detail = $order;
+    }
+};
+
 ?>
-<script type="text/javascript" src="../../../www/assets/js/handleOrder.js"></script>
+<script>
+function handleOrder() {
+    const currentUrl = (window.location.href);
+    const nextURL = currentUrl.slice(0, 55);
+
+    // Replace the URL without reloading
+    window.history.replaceState({}, document.title, nextURL);
+}
+
+handleOrder();
+</script>
+
+<!-- <script type="text/javascript" src="../../../www/assets/js/handleOrder.js">
+
+</script> -->
 
 <!doctype html>
 <html lang="en">
@@ -91,9 +120,6 @@ if(!empty($_GET)) {
           <div class="row">
               <div class='mb-4 d-flex justify-content-between '>
                   <h2 class="">ORDER DETAIL</h2>
-                  <div>
-                    <input type="submit" name="submit" value="Save" class='status-btn'>
-                  </div>
               </div>
               <nav aria-label="breadcrumb">
                 <ol class="breadcrumb">
@@ -103,23 +129,41 @@ if(!empty($_GET)) {
               </nav>
               </div>
               <ul class="list-group p-0">
-                     
+                <?php
+                    if (!empty($detail)) {
+                        foreach ($detail['products_list'] as $row => $info) {
+                            ?>
+                              <li class='list-group-item'>
+                                <div class='hstack gap-3'>
+                                    <div class='col-2'>
+                                        <img src='<?php echo "../../../www/assets/images/".$info['image']?>' class='img-thumbnail' alt='food'>
+                                    </div>
+                                    <div class='col-10 d-flex justify-content-between'>
+                                        <div class='fw-bold'><?php echo $info['name']?></div>
+                                        <span class='badge text-dark rounded-pill me-4 fs-5'><?php echo $info['quantity']?></span>
+                                    </div>
+                                </div>
+                              </li>
+                              <?php
+                          }
+                    }    
+                ?>
                   <li class="list-group-item">
                       <div class=" d-flex justify-content-between">
                           <div class="fw-bold">TOTAL PRICE</div>
-                          <span class="fw-bold"> total price</span>
+                          <span class="fw-bold"> $<?= !empty($detail) ? $detail['total_price'] : 0 ?></span>
                       </div>
                   </li>
                   <li class="list-group-item">
                       <div class=" d-flex justify-content-between">
                           <div class="fw-bold">ADDRESS</div>
-                          <span class="fw-bold"> User's address</span>
+                          <span class="fw-bold"> <?= !empty($detail) ? $detail['user_info']['address'] : " " ?></span>
                       </div>
                   </li>
                   <li class="list-group-item">
                       <div class=" d-flex justify-content-between">
                           <div class="fw-bold">STATUS</div>
-                          
+                          <option value=""><?= !empty($detail) ? $detail['status'] : " " ?></option>
                       </div>
                   </li>
               </ul>

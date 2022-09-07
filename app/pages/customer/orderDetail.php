@@ -29,7 +29,7 @@
       if (strcmp($order['order_id'],$order_id) == 0){
           $detail = $order;
       }
-    };
+  };
     
 ?>
 <!doctype html>

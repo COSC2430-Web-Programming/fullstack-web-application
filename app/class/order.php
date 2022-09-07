@@ -12,8 +12,8 @@ class Order {
     private $stored_orders;
     private $new_order;
 
-    function __construct($products_list, $total_price, $user_info, $status, $distribution_hub) {
-        $this->order_id = uniqid('order_',true);
+    function __construct($order_id, $products_list, $total_price, $user_info, $status, $distribution_hub) {
+        $this->order_id = $order_id;
         $this->products_list = $products_list;
         $this->total_price = $total_price;
         $this->user_info = $user_info;

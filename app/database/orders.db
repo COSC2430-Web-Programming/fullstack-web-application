@@ -23,70 +23,17 @@
         }
     },
     {
-        "order_id": "order_6318623b5411b7.19233244",
+        "order_id": "order_63187719e9d812.75354827",
         "products_list": [
             {
-                "product_id": "product_6316c1a90467f3.07653964",
-                "quantity": "1",
-                "name": "Tiffany <3 Necklace",
-                "price": "700",
-                "image": "6316c1a904ea75.35873907.jpeg"
+                "product_id": "product_6316c277724e50.26300018",
+                "quantity": "2",
+                "name": "Cartier Watch",
+                "price": "9750",
+                "image": "6316c277726d13.72134395.webp"
             }
         ],
-        "total_price": "700",
-        "user_info": {
-            "username": "jennierubyjane",
-            "name": " Kim Jennie",
-            "address": "LA, California"
-        },
-        "status": "active",
-        "distribution_hub": {
-            "name": "Danang",
-            "address": "48 Tho Quang, Son Tra District, Da Nang"
-        }
-    },
-    {
-        "order_id": "order_6318664ce49348.01020036",
-        "products_list": [
-            {
-                "product_id": "product_6311f2042f3818.20137655",
-                "quantity": "1",
-                "name": "Tiffany Watches",
-                "price": "2950",
-                "image": "6310e2c0600843.37130933.jpeg"
-            },
-            {
-                "product_id": "product_6316c1a90467f3.07653964",
-                "quantity": "1",
-                "name": "Tiffany <3 Necklace",
-                "price": "700",
-                "image": "6316c1a904ea75.35873907.jpeg"
-            }
-        ],
-        "total_price": "3650",
-        "user_info": {
-            "username": "jennierubyjane",
-            "name": " Kim Jennie",
-            "address": "LA, California"
-        },
-        "status": "active",
-        "distribution_hub": {
-            "name": "Danang",
-            "address": "48 Tho Quang, Son Tra District, Da Nang"
-        }
-    },
-    {
-        "order_id": "order_63186850976a21.05354300",
-        "products_list": [
-            {
-                "product_id": "product_6311f2042f3818.20137655",
-                "quantity": "1",
-                "name": "Tiffany Watches",
-                "price": "2950",
-                "image": "6310e2c0600843.37130933.jpeg"
-            }
-        ],
-        "total_price": "2950",
+        "total_price": "19500",
         "user_info": {
             "username": "jennierubyjane",
             "name": " Kim Jennie",
@@ -96,6 +43,75 @@
         "distribution_hub": {
             "name": "Hanoi",
             "address": "222 Trang Tien, Hoan Kiem District, Ha Noi"
+        }
+    },
+    {
+        "order_id": "order_631877448a6219.53901023",
+        "products_list": [
+            {
+                "product_id": "product_6311f2042f3818.20137655",
+                "quantity": "3",
+                "name": "Tiffany Watches",
+                "price": "2950",
+                "image": "6310e2c0600843.37130933.jpeg"
+            }
+        ],
+        "total_price": "8850",
+        "user_info": {
+            "username": "jennierubyjane",
+            "name": " Kim Jennie",
+            "address": "LA, California"
+        },
+        "status": "active",
+        "distribution_hub": {
+            "name": "Hanoi",
+            "address": "222 Trang Tien, Hoan Kiem District, Ha Noi"
+        }
+    },
+    {
+        "order_id": "order_631877748cea08.14374004",
+        "products_list": [
+            {
+                "product_id": "product_6311f2042f3818.20137655",
+                "quantity": "2",
+                "name": "Tiffany Watches",
+                "price": "2950",
+                "image": "6310e2c0600843.37130933.jpeg"
+            }
+        ],
+        "total_price": "5900",
+        "user_info": {
+            "username": "jennierubyjane",
+            "name": " Kim Jennie",
+            "address": "LA, California"
+        },
+        "status": "active",
+        "distribution_hub": {
+            "name": "Saigon",
+            "address": "144 Nguyen Van Linh, District 7, Ho Chi Minh City"
+        }
+    },
+    {
+        "order_id": "order_6318780cb9e636.98521625",
+        "products_list": [
+            {
+                "product_id": "product_6311f2042f3818.20137655",
+                "quantity": "2",
+                "name": "Tiffany Watches",
+                "price": "2950",
+                "image": "6310e2c0600843.37130933.jpeg"
+            }
+        ],
+        "total_price": "5900",
+        "user_info": {
+            "username": "jennierubyjane",
+            "name": " Kim Jennie",
+            "address": "LA, California"
+        },
+        "status": "active",
+        "distribution_hub": {
+            "name": "Danang",
+            "address": "48 Tho Quang, Son Tra District, Da Nang"
         }
     }
 ]
