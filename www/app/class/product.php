@@ -55,9 +55,9 @@ class Product {
     protected function insertProduct(){
         array_push($this->stored_products, $this->new_product);
         if (file_put_contents($this->storage, json_encode($this->stored_products, JSON_PRETTY_PRINT))) {
-            return $this->success = "Successfully registered";
+            return $this->success = "Successfully added.";
         } else {
-            $this->error = "Unsuccessfully registered, please try again";
+            $this->error = "Unsuccessfully added, please try again.";
         }
     }
 

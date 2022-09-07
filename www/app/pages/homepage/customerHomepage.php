@@ -64,7 +64,7 @@
                         </div>
                     </form>
             </div>
-                <div class="row row-cols-lg-3 row-cols-md-2 row-cols-sm-2 row-cols-1 justify-content-around">
+                <div class="row row-cols-lg-3 row-cols-md-2 row-cols-sm-2 row-cols-1">
                     <?php
                     $json_data= file_get_contents("../../database/products.db");
                     $products=json_decode($json_data,true);

@@ -8,7 +8,7 @@ class LoginUser {
     private $password;
     public $error;
     public $success;
-    private $storage = "../database/accounts.db";
+    private $storage = "../../../accounts.db";
     private $stored_users; 
     private $new_user;
 
