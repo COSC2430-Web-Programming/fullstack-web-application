@@ -4,9 +4,11 @@ function cartShow(){
     let productContainer = document.querySelector(".products")
     let final_price = 0
 
-    Object.values(cartList).map((item) => {
-        final_price += (item.incart * item.price)
-    })
+    if (cartList) {
+        Object.values(cartList).map((item) => {
+            final_price += (item.incart * item.price)
+        })
+    }
 
     console.log(final_price)
 
@@ -67,10 +69,6 @@ function deleteItem(name){
     var result = Object.keys(cartList).map((key) => [(key), cartList[key]]);
     console.log('result', result);
 
-    // Write to the URL - Remember to write a new function
-
-    
-
     // Get the item and splice 
     let i= result.findIndex((item) => name === item[0])
     result.splice(i,1)
@@ -84,7 +82,7 @@ function deleteItem(name){
     })
 
     //Update to local storage after delete
-    localStorage.setItem('productInCart',JSON.stringify(obj))
+    localStorage.setItem('productInCart', JSON.stringify(obj))
     localStorage.setItem('totalCost', final_price)
     localStorage.setItem('cartNumbers', cartNumbers)
 
