@@ -1,39 +1,100 @@
 <?php
   session_start();
-  if(!isset($_SESSION['user'])) {
-    header("location: login.php");
-    exit();
-  };
-  include("../class/user.php")
 ?>
-<?php 
-  $json_data = file_get_contents("../database/accounts.db");
-  $accounts = json_decode($json_data, true);
 
-  if(isset($_POST["upload"])){
-    $path = $_FILES['profilePic']['name'];
-    echo $path;
-    // $accounts->updateUser($_SESSION['user'], 'profilePicture', $path);
-    foreach($accounts as $account){
-      if($account['username'] == $_SESSION['user']){
-        echo $account->getStoredUsers();
-      }
+<?php
+  function validateImage($rawProfilePicture) {
+    $imageName = $rawProfilePicture['name'];
+    $imageTmpName = $rawProfilePicture['tmp_name'];
+    $imageSize = $rawProfilePicture['size'];
+    $imageError = $rawProfilePicture['error'];
+
+    $imageExt = explode('.', $imageName);
+    $imageActualExt = strtolower(end($imageExt));
+    // Allowed types for an image
+    $allowed = array('jpg', 'jpeg', 'png', 'pdf', 'webp');
+
+    if (in_array($imageActualExt, $allowed)) {
+        if ($imageError === 0) {
+            if ($imageSize < 1000000) {
+                return true;
+            } else{
+              return false;
+            }
+        }else{
+          return false;
+        }
+      }else{
+        return false;
     }
   }
-    // $tmp = $accounts[$index];
-    // // delete user
-    // unset($accounts[$index]);
-    // $account = array_values($accounts);
-    // file_put_contents("../database/accounts.db", json_encode($accounts, JSON_PRETTY_PRINT));
+?>
 
-    // $username = $tmp['username'];
-    // $password = $tmp['password'];
-    // $profilePicture = $_FILES['profilePic'];
-    // $name = $tmp['name'];
-    // $address = $tmp['address'];
-    // $registeredTime = $tmp['register'];
-    // $password = $tmp['password'];
- ?>
+<?php 
+  include("../class/user.php");
+  $json_data = file_get_contents("../../../accounts.db");
+  $accounts = json_decode($json_data, true);
+  foreach($accounts as $index => $account){
+  if(strcmp($_SESSION['user'], $account['username'])==0){
+      $i = $index;
+      $acc = $accounts[$index];
+    }
+  }
+
+  if(isset($_POST["upload"])){
+    if(validateImage($_FILES['profilePic'])){
+      $isValidated = true;
+      if($acc['role'] == CUSTOMER_ROLE){
+        $input = array(
+          'username' => $acc['username'],
+          'password' => $acc['password'],
+          'profilePicture' => $_FILES['profilePic']['name'],
+          'name' => $acc['name'],
+          'address' => $acc['address'],
+          'registeredTime' => $acc['registeredTime'],
+          'role' => $acc['role'],
+        );
+      }
+      if($acc['role'] == VENDOR_ROLE){
+        $input = array(
+          'username' => $acc['username'],
+          'password' => $acc['password'],
+          'profilePicture' => $_FILES['profilePic']['name'],
+          'businessName' => $acc['businessName'],
+          'businessAddress' => $acc['businessAddress'],
+          'registeredTime' => $acc['registeredTime'],
+          'role' => $acc['role'],
+        );
+      }
+      if($acc['role'] == SHIPPER_ROLE){
+        $input = array(
+          'username' => $acc['username'],
+          'password' => $acc['password'],
+          'distributionHub' => $acc['distributionHub'],
+          'profilePicture' => $_FILES['profilePic']['name'],
+          'registeredTime' => $acc['registeredTime'],
+          'role' => $acc['role'],
+        );
+      }
+    // foreach($accounts as $index => $account){
+    //   if(strcmp($account['username'],$_SESSION['user'])==0){
+    //       // $i = $index;
+    //       // $acc = $accounts[$index];
+    //       $account['profilePicture'] = $_FILES['profilePic']['name'];
+    //     }
+    //   }
+    //   file_put_contents('../database/accounts.db', json_encode($accounts, JSON_PRETTY_PRINT));
+
+      $accounts[$i] = $input;
+      $imageDir = '../../assets/images/';
+      $imagePath = $imageDir.basename($_FILES['profilePic']['name']);
+      if(move_uploaded_file($_FILES['profilePic']['tmp_name'], $imagePath)){
+        unlink("../../assets/images/".$acc['profilePicture']);
+      }
+      file_put_contents('../../../accounts.db', json_encode($accounts, JSON_PRETTY_PRINT));
+    }
+  }
+?>
 <!doctype html>
 
 <html lang="en">
@@ -106,10 +167,11 @@
                           <div class="row mt-4 justify-content-evenly">
                             <div class="col-xl-4 col-lg-4 col-md-6 col-md-12 text-center mb-2">
                             <!-- <input name="customerProfile" type="file" class="form-control w-100" id="customerProfile"> -->
-                            <img class='avatar' src='<?php echo "../../www/assets/images/".$account['profilePicture'] ?>'>
+                            <img class='avatar' src='<?php echo "../../assets/images/".$account['profilePicture'] ?>'>
                             <form action="myAccount.php" enctype="multipart/form-data" name='changeProfilePicForm' method='post' id='form' >
-                            <input name="profilePic" type="file">
-                            <input class=" btn btn-outline-dark " type="submit" name="upload" value="Update Profile Picture" id="upload">
+                            <input name="profilePic" type="file" id="profilePic">
+                            <label for="profilePic" id="labelForProfile">Choose a picture</label>
+                            <input class=" btn btn-outline-dark btn-sm " type="submit" name="upload" value="Update Profile Picture" id="upload">
                           </div>
               
                             <div class="col-xl-4 col-lg-4 col-md-6 col-md-12">
@@ -168,10 +230,9 @@
                         }
                       }
                     ?>
-                      <ul class = 'd-flex justify-content-evenly list-unstyled text-center'>
-                          <li input class=" btn btn-outline-dark " type="submit" name="upload" value="upload" id="upload">Update Profile Picture</li>
-                          <li class="myacc_btn btn btn-outline-dark"><a class="logout-link " href="logout.php">Log Out</a></li>
-                      </ul>
+                      <div class = 'd-flex justify-content-evenly list-unstyled text-center'>
+                         <input class="myacc_btn btn btn-outline-dark" placeholder="Log Out" onclick="location.href='logout.php';">
+                      </div>
                 </div>
             </div>
         </div>
