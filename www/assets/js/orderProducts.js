@@ -26,8 +26,11 @@ function orderProducts() {
     // Delete the local storage in cart
     window.localStorage.clear();
 
+    // Get the current server URL
+    const currentUrl = (window.location.href).slice(0, -12);
+
     // Direct the use to the order page
-    window.location.replace("http://localhost:2222/app/pages/customer/orderPage.php?" + url);
+    window.location.replace(currentUrl + "orderPage.php?" + url);
 
     return 0;
 }
