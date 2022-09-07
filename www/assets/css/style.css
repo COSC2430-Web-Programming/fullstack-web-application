@@ -199,3 +199,8 @@ small{
 .logout-link:hover{
     color:white;
 }
+
+.nav-link:hover{
+    color: black;
+    text-decoration: underline;
+}
