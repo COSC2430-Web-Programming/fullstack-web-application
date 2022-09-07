@@ -34,7 +34,7 @@ function onLoadCartNumbers(){
     }
 }
 
-// Function to calculate the number of produts in the cart and add to local storage
+// Function to calculate the number of products in the cart and add to local storage
 function cartNumber(product) {
     console.log("The product is clicked", product)
     let productNumbers = localStorage.getItem('cartNumbers')

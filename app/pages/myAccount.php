@@ -1,5 +1,9 @@
 <?php
   session_start();
+  if(!isset($_SESSION['user'])) {
+    header("location: login.php");
+    exit();
+  };
   include("../class/user.php")
 ?>
 <?php 
@@ -166,7 +170,7 @@
                     ?>
                       <ul class = 'd-flex justify-content-evenly list-unstyled text-center'>
                           <li input class=" btn btn-outline-dark " type="submit" name="upload" value="upload" id="upload">Update Profile Picture</li>
-                          <li class="myacc_btn btn btn-outline-dark" onclick="location.href='logout.php';">Log Out</li>
+                          <li class="myacc_btn btn btn-outline-dark"><a class="logout-link " href="logout.php">Log Out</a></li>
                       </ul>
                 </div>
             </div>

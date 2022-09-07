@@ -130,9 +130,13 @@ small{
 }
 
 .image-product{
-    width: 100%;
-    max-height: 270px;
+    width: 200px;
+    display: block;
+    height: 200px;
+    margin-left: auto;
+    margin-right: auto;
 }
+
 
 .cart-link{
     width: 100%;
@@ -171,4 +175,27 @@ small{
 .cart-img{
     max-width: 200px;
     width: 30%;
+}
+
+.status-btn{
+    padding: 10px 20px;
+    outline: none;
+    background: black;
+    color: white;
+    border-radius: 5px;
+}
+
+.status-btn:hover{
+   
+    background: white;
+    color: black
+}
+
+.logout-link{
+    text-decoration: none;
+    color: black;
+}
+
+.logout-link:hover{
+    color:white;
 }

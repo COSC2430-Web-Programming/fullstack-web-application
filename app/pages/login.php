@@ -18,38 +18,40 @@
     </style>
   </head>
   <body>
-    <div class="container mt-5">
-        <section class="Form justify-content-center">
-            <div class="container">
-                <div class="row m-0">
-                    <div class="col-lg">
-                        <h1 class="font-weight-bold py-3 text-center">Laza</h1>
-                        <h4 class='text-center'>Login to your account</h4>
-                        <form action="" method="post" enctype="multipart/form-data" autocomplete="off">
-                            <div class="form-row">
-                                <div class="col-lg mx-auto">
-                                    <input type="text" name="username" placeholder="Username" class="form-control my-3 p-2">
-                                </div>
+        <main>
+            <div class="container mt-5">
+                <section class="Form justify-content-center">
+                    <div class="container">
+                        <div class="row m-0">
+                            <div class="col-lg">
+                                <h1 class="font-weight-bold py-3 text-center">Laza</h1>
+                                <h4 class='text-center'>Login to your account</h4>
+                                <form action="" method="post" enctype="multipart/form-data" autocomplete="off">
+                                    <div class="form-row">
+                                        <div class="col-lg mx-auto">
+                                            <input type="text" name="username" placeholder="Username" class="form-control my-3 p-2">
+                                        </div>
+                                    </div>
+                                    <div class="form-row">
+                                        <div class="col-lg mx-auto">
+                                            <input type="password" name="password" placeholder="Password" class="form-control my-3 p-2">
+                                        </div>
+                                    </div>
+                                    <div class="form-row">
+                                        <div class="col-lg mx-auto">
+                                            <button type="submit" name="submit" class="btn-login">Login</button>
+                                        </div>
+                                    </div>
+                                    <p class='text-center'>If you haven't had an account? <a href="register/customerRegister.php">Register here!</a></p>
+                                    <p class="error text-center"><?php echo @$user->error ?></p>
+                                    <p class="succes text-center"><?php echo @$user->success ?></p>
+                                </form>
                             </div>
-                            <div class="form-row">
-                                <div class="col-lg mx-auto">
-                                    <input type="password" name="password" placeholder="Password" class="form-control my-3 p-2">
-                                </div>
-                            </div>
-                            <div class="form-row">
-                                <div class="col-lg mx-auto">
-                                    <button type="submit" name="submit" class="btn-login">Login</button>
-                                </div>
-                            </div>
-                            <p class='text-center'>If you haven't had an account? <a href="register/customerRegister.php">Register here!</a></p>
-                            <p class="error text-center"><?php echo @$user->error ?></p>
-                            <p class="succes text-center"><?php echo @$user->success ?></p>
-                        </form>
+                        </div>
                     </div>
-                </div>
+                </section>
             </div>
-        </section>
-    </div>
+        </main>
     
     
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
