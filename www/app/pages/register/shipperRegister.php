@@ -1,16 +1,15 @@
-<?php include("../../class/customer.php") ?>
+<?php include("../../class/shipper.php") ?>
 <?php
    if(isset($_POST['submit'])){
       $username = $_POST['username'];
       $password = $_POST['password'];
       $raw_password = $_POST['password'];
       $password = password_hash($password, PASSWORD_DEFAULT);
-      $name = $_POST['customerName'];
-      $address = $_POST['address'];
+      $hub = $_POST['distributionHub'];
       // include("imageUpload.php");
       $profilePicture =  $_FILES['profilePicture'];
-     
-      $user = new Customer($username, $password, $raw_password, $profilePicture, $name, $address);
+
+      $user = new Shipper($username, $password, $raw_password, $hub, $profilePicture);
    }
 ?>
 
@@ -23,8 +22,8 @@
 
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-    <link rel="stylesheet" type="text/css" href="../../../www/assets/css/register.css">
-    <title>Register for Customer</title>
+    <link rel="stylesheet" type="text/css" href="../../../assets/css/register.css">
+    <title>Register for Shipper</title>
   </head>
   <body>
     <div class='container mt-4'>
@@ -38,20 +37,15 @@
             <div class="col-10">
                 <ul class='d-flex justify-content-around list-unstyled text-center'>
                     <li class=' col-lg-2 col-md m-2 p-2 bg-light border border-secondary'><a href='vendorRegister.php' class=' text-decoration-none text-secondary'>Vendor</a></li>
-                    <li class=' col-lg-2 col-md m-2 p-2 bg-secondary border border-secondary '><a href='customerRegister.php' class=' text-decoration-none text-white' id="userRole">Customer</a></li>
-                    <li class=' col-lg-2 col-md m-2 p-2 bg-light border border-secondary'><a href='shipperRegister.php' class=' text-decoration-none text-secondary'>Shipper</a></li>
+                    <li class=' col-lg-2 col-md m-2 p-2 bg-light border border-secondary'><a href='customerRegister.php' class='text-decoration-none text-secondary'>Customer</a></li>
+                    <li class=' col-lg-2 col-md m-2 p-2 bg-secondary border border-secondary'><a href='shipperRegister.php' class='text-decoration-none text-white' id='userRole'>Shipper</a></li>
                 </ul>
                 <div id='error'></div>
-                <form action="" class="col-sm-10 col-lg-8 form mx-auto" id="form" enctype="multipart/form-data" name='form' method='post'>
+                <form action="" class="col-sm-10 col-lg-8 form mx-auto" id="form" enctype="multipart/form-data" name='registerForm' method='post'>
                   <p class="error"><?php echo @$user->error ?></p>
                   <p class="success"><?php echo @$user->success ?></p>
                   <div class="mb-4">
-                    <label for="customerName" class="font-weight-bold pb-3">Name</label>
-                    <input name="customerName" type="text" class="form-control w-100" id="customerName" placeholder='Name'>
-                    <small id="customerNameError"></small>
-                  </div>
-                  <div class="mb-4">
-                    <label for="username" class="form-label pb-3 ">Username</label>
+                    <label for="username" class="font-weight-bold pb-3">Username</label>
                     <input name="username" type="text" class="form-control w-100" id="username" placeholder='Username'>
                     <small id="usernameError"></small>
                   </div>
@@ -60,26 +54,34 @@
                     <input name="password" type="password" class="form-control w-100" id="password" placeholder='Password'>
                     <small id="passwordError"></small>
                   </div>
+                  <div class="mb-4">
+                    <label for="distributionHub" class="form-label pb-3">Distribution Hub</label>
+                    <select name="distributionHub" class="form-select mb-4" aria-label="Default select example"">
+                        <option selected value="">Select one distribution hub</option>
+                        <?php 
+                          // display all hubs in the database
+                          $storage_hubs =  '../../database/hubs.db';
+                          $stored_hubs = json_decode(file_get_contents($storage_hubs), true);
+                          foreach($stored_hubs as $hub) {
+                        ?>
+                          <option value="<?php echo $hub['name']; ?>"> <?php echo $hub['name']; ?> </option>
+                        <?php } ?> 
+                    </select> 
+                  </div>
                   <div class="mb-5">
-                    <label for="profilePicture" class="form-label pb-2">Profile picture</label>
+                    <label for="profilePicture" class="form-label pb-2">Profile</label>
                     <input name="profilePicture" type="file" class="form-control w-100" id="profilePicture">
                   </div>
-                  <div class="mb-5">
-                    <label for="address" class="form-label pb-2">Address</label>
-                    <input name="address" type="text" class="form-control w-100" id="address">
-                    <small id="customerAddressError"></small>
+                  <div class="mb-4 row justify-content-center">
+                    <input name='submit' value="Register" type="submit" class=" col-lg-8 btn btn-outline-dark " id="submit">
                   </div>
-                  <div class="mb-4 d-grid gap-2 col-6 mx-auto">
-                    <input name='submit' value="Register" type="submit" class=" btn btn-outline-dark" id="submit">
-                  </div>
-
                 </form>
             </div>
         </div>
     </div>
     <script>      
-      document.getElementById("userRole").value = 'customer';
+      document.getElementById("userRole").value = 'shipper';
     </script>
-    <script src="../../../www/assets/js/register.js"></script>
+    <script src="../../../assets/js/register.js"></script>
   </body>
 </html>

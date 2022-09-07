@@ -21,7 +21,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <link rel="stylesheet" href="libs/bootstrap/css/bootstrap.min.css" >
-    <link rel="stylesheet" href="../../../www/assets/css/style.css">
+    <link rel="stylesheet" href="../../../assets/css/style.css">
   </head>
   </head>
   <body>
@@ -70,6 +70,6 @@
           require('../layout/footer.php')
       ?>
     </footer>
-    <script src="../../../www/assets/js/addNewProduct.js"></script>
+    <script src="../../../assets/js/addNewProduct.js"></script>
   </body>
 </html>

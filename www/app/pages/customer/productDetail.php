@@ -23,7 +23,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Bootstrap demo</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
-    <link rel="stylesheet" type="text/css" href="../../../www/assets/css/style.css" />
+    <link rel="stylesheet" type="text/css" href="../../../assets/css/style.css" />
   </head>
   <body>
   <header class='col-12 p-0'>
@@ -51,7 +51,7 @@
             <div class="col-sm-8 col-10 d-flex justify-content-center">
               <div class="card col-sm-8">
                
-                <img src='<?php echo "../../../www/assets/images/".$detail['image'] ?>' class="img-fluid w-100" alt="product_img" id='productImg'>
+                <img src='<?php echo "../../../assets/images/".$detail['image'] ?>' class="img-fluid w-100" alt="product_img" id='productImg'>
 
                 <div class="card-body">
                   <div class="d-flex justify-content-between mt-4 mb-4 align-items-center w-100">
@@ -75,7 +75,7 @@
           require('../layout/footer.php')
       ?>
     </footer>
-    <script src="../../../www/assets/js/addToCart.js"></script>
+    <script src="../../../assets/js/addToCart.js"></script>
   </body>
 </html>
 

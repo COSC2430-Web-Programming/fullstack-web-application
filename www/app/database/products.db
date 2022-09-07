@@ -46,5 +46,13 @@
         "description": "Santos de Cartier watch, large model, Manufacture mechanical movement with automatic winding, caliber 1847 MC. Steel case, PVD bezel, steel crown set with a faceted blue synthetic spinel, gray striated dial, steel sword-shaped hands with luminescent material also on the hour markers, sapphire crystal.",
         "product_id": "product_6316c277724e50.26300018",
         "vendor": "vthanh"
+    },
+    {
+        "name": "Montblanc Bracelet",
+        "price": "1234",
+        "image": "6318adad6afef5.95135179.webp",
+        "description": "From MontBlanc",
+        "product_id": "product_6318adad6afdd4.54694731",
+        "vendor": "vthanh"
     }
 ]

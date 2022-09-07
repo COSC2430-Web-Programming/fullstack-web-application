@@ -15,7 +15,7 @@ if (in_array($imageActualExt, $allowed)) {
     if ($imageError === 0) {
         if ($imageSize < 1000000) {
             $imageNameNew = uniqid('', true).".".$imageActualExt;
-            $imageDestination = '../../../www/assets/images/'.$imageNameNew;
+            $imageDestination = '../../../assets/images/'.$imageNameNew;
             move_uploaded_file($imageTmpName, $imageDestination);
         } else {
             echo "Your image size is too big. Please choose another image!";

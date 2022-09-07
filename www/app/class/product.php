@@ -77,7 +77,7 @@ class Product {
             if ($imageError === 0) {
                 if ($imageSize < 1000000) {
                     $imageNameNew = uniqid('', true).".".$imageActualExt;
-                    $imageDestination = '../../../www/assets/images/'.$imageNameNew;
+                    $imageDestination = '../../../assets/images/'.$imageNameNew;
                     $this->image = $imageNameNew;
                     move_uploaded_file($imageTmpName, $imageDestination);
                 } else {

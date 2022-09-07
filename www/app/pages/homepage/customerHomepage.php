@@ -16,7 +16,7 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <link rel="stylesheet" type="text/css" href="../../../www/assets/css/style.css" />
+    <link rel="stylesheet" type="text/css" href="../../../assets/css/style.css" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href='https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css' rel='stylesheet'>
     <title>Customer Homepage</title>
@@ -89,7 +89,7 @@
                         ?>
                         <a class='text-decoration-none' href="../customer/productDetail.php?product_id=<?= $product['product_id']; ?>">
                             <div class="col card">
-                                <img src='<?php echo "../../../www/assets/images/".$product['image'] ?>' class='image-product'>
+                                <img src='<?php echo "../../../assets/images/".$product['image'] ?>' class='image-product'>
                                 <div class="card-body d-flex justify-content-between ml-xl-3">
                                 <span class='fw-bold'><?php echo $product['name']?></span>
                                 <span class='fw-semibold'><?php echo $product['price']?></span>

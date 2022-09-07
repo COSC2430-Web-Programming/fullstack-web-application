@@ -9,7 +9,7 @@
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" type="text/css" href="../../../www/assets/css/style.css" />
+    <link rel="stylesheet" href="../../../assets/css/style.css">
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
 
@@ -42,8 +42,7 @@
                   if (strcmp($_SESSION['user'], $product['vendor']) == 0){
                     ?>
                       <div class="col-xl-4 col-lg-4 col-md-6 col-md-12 card">
-                        <img src='<?php echo "../../../www/assets/images/".$product['image'] ?>' class='card-img-top'>
-                        <
+                        <img src='<?php echo "../../../assets/images/".$product['image'] ?>' class='card-img-top'>
                         <div class="card-body d-flex justify-content-between ml-xl-3">
                           <span class='fw-bold'><?php echo $product['name']?></span>
                           <span class='fw-semibold'><?php echo $product['price']?></span>
