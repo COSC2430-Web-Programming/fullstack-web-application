@@ -112,7 +112,7 @@
                             <option value="Cancelled">Cancelled</option>
                           </select>
 
-                          <!-- <span class="fw-bold"> <?= $detail['status'] ?></span> -->
+                          
                       </div>
                   </li>
               </ul>

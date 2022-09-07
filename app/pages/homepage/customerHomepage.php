@@ -89,7 +89,7 @@
                         ?>
                         <a class='text-decoration-none' href="../customer/productDetail.php?product_id=<?= $product['product_id']; ?>">
                             <div class="col card">
-                                <img src='<?php echo "../../../www/assets/images/".$product['image'] ?>' class='card-img-top'>
+                                <img src='<?php echo "../../../www/assets/images/".$product['image'] ?>' class='image-product'>
                                 <div class="card-body d-flex justify-content-between ml-xl-3">
                                 <span class='fw-bold'><?php echo $product['name']?></span>
                                 <span class='fw-semibold'><?php echo $product['price']?></span>
