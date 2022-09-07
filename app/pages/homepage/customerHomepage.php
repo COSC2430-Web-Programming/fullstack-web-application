@@ -101,7 +101,7 @@
                     ?>
                 </div> <?php
                 if ($hasProduct == false){ ?>
-                    <h3>No results found!</h3>;
+                    <h3>No results found!</h3>
                 <?php
                 } ?>
             </div>
