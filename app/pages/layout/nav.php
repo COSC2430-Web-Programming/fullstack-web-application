@@ -27,7 +27,7 @@
             ?>
         </li>
         <li class="nav-item ms-auto">
-          <a href="?login" class="nav-link">Logout</a>
+          <a href="../logout.php" class="nav-link">Logout</a>
         </li>
       </ul>
     </div>

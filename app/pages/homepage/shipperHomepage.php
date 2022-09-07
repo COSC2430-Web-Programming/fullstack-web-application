@@ -4,40 +4,12 @@
       header("location: ../login.php");
       exit();
   }
-    $data = [
-      [
-      'orderID' => '1',
-      'products' => array(
-          ['image' => 'http://cdn.tgdd.vn/Files/2020/10/24/1301635/list-12-nha-hang-quan-an-sushi-cuc-chat-luong-o-quan-1-202201141555392974.jpg','name' => 'Sushi','quantity' => '1'],
-          ['image' => 'http://cdn.tgdd.vn/Files/2020/10/24/1301635/list-12-nha-hang-quan-an-sushi-cuc-chat-luong-o-quan-1-202201141555392974.jpg','name' => 'Kimpap','quantity' => '3'],
-          ['image' => 'http://cdn.tgdd.vn/Files/2020/10/24/1301635/list-12-nha-hang-quan-an-sushi-cuc-chat-luong-o-quan-1-202201141555392974.jpg','name' => 'Egg','quantity' => '1'],
-      ),
-      'total_price' => '100',
-      'address' => '359 Le Dai Hanh',
-      'status' => 'active'],
-      [
-      'orderID' => '2',
-      'products' => array(
-          ['image' => 'http://cdn.tgdd.vn/Files/2020/10/24/1301635/list-12-nha-hang-quan-an-sushi-cuc-chat-luong-o-quan-1-202201141555392974.jpg','name' => 'Sushi','quantity' => '1'],
-          ['image' => 'http://cdn.tgdd.vn/Files/2020/10/24/1301635/list-12-nha-hang-quan-an-sushi-cuc-chat-luong-o-quan-1-202201141555392974.jpg','name' => 'Kimpap','quantity' => '3'],
-          ['image' => 'http://cdn.tgdd.vn/Files/2020/10/24/1301635/list-12-nha-hang-quan-an-sushi-cuc-chat-luong-o-quan-1-202201141555392974.jpg','name' => 'Egg','quantity' => '1'],
-      ),
-      'total_price' => '300',
-      'address' => '359 Le Dai Hanh',
-      'status' => 'active'],
-      [
-        'orderID' => '2',
-        'products' => array(
-            ['image' => 'http://cdn.tgdd.vn/Files/2020/10/24/1301635/list-12-nha-hang-quan-an-sushi-cuc-chat-luong-o-quan-1-202201141555392974.jpg','name' => 'Sushi','quantity' => '1'],
-            ['image' => 'http://cdn.tgdd.vn/Files/2020/10/24/1301635/list-12-nha-hang-quan-an-sushi-cuc-chat-luong-o-quan-1-202201141555392974.jpg','name' => 'Kimpap','quantity' => '3'],
-            ['image' => 'http://cdn.tgdd.vn/Files/2020/10/24/1301635/list-12-nha-hang-quan-an-sushi-cuc-chat-luong-o-quan-1-202201141555392974.jpg','name' => 'Egg','quantity' => '1'],
-        ),
-        'total_price' => '300',
-        'address' => '359 Le Dai Hanh',
-        'status' => 'active'],
-    ];
 
   $table_header= ["OrderID","Address","Status","TotalPrice"];
+  $json_data = file_get_contents("../../database/orders.db");
+  $orders = json_decode($json_data,true);
+
+
 ?>
 
 <!doctype html>
@@ -58,7 +30,6 @@
         <?php 
           require('../layout/nav.php')
         ?>
-
       </div>
       <div class='header_order'>
         <div class="color_overlay d-flex justify-content-center align-items-center">
@@ -86,16 +57,18 @@
                       </tr>
                     </thead>
                 <?php 
-                  foreach($data as $row =>$info){
+                  foreach($orders as $order){
+                    if(strcmp($order['status'],'active') == 0){
                     ?>
                         <tr>
-                        <td><?=$info['orderID']; ?></td>
-                        <td><?=$info['address']; ?></td>
-                        <td><?=$info['total_price']; ?></td>
-                        <td><?=$info['status']; ?></td>
-                        <td><a href="../layout/orderDetail.php?orderID=<?= $info['orderID']; ?>">See Detail</a></td>
+                        <td><?=$order['order_id']; ?></td>
+                        <td><?=$order['user_info']['address']; ?></td>
+                        <td><?=$order['status']; ?></td>
+                        <td><?=$order['total_price']; ?></td>
+                        <td><a href="../customer/orderDetail.php?order_id=<?= $order['order_id']; ?>">See Detail</a></td>
                       </tr>
                     <?php
+                    };  
                   };
                 ?>
               </table>
