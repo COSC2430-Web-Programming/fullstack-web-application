@@ -1,5 +1,4 @@
-# fullstack-web-application
-[COSC2430] Full-stack Web Application
+# [COSC2430] Full-stack Web Application
 
 ## Team Members
 1. Tran Thuc Ai Quynh - s3872104
