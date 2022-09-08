@@ -25,13 +25,18 @@
   </head>
   </head>
   <body>
-    <div class="container mt-4">
+    <header class='col-12 p-0'>
+      <div class="container">
         <?php 
-            require('../layout/nav.php')
+          require('../layout/nav.php')
         ?>
+      </div>
+    </header>
+    <main>
+    <div class="container mt-4">
         <div class="row justify-content-center">
             <div class="mb-4">
-                <h2 class="col-12 text-center"> ADD NEW PRODUCT</h2>
+                <h2 class="col-12 text-center">ADD NEW PRODUCT</h2>
             </div>
             <div class="col-10">
                 <form action="" class="col-sm-10 col-lg-8 form mx-auto" enctype="multipart/form-data" name='addNewProductForm' method='post' id='form'>
@@ -65,6 +70,7 @@
             </div>
         </div>
     </div>
+    <main>
     <footer class='mt-4'>
       <?php 
           require('../layout/footer.php')

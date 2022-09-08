@@ -1,4 +1,5 @@
 <?php
+  session_start();
   $json_data = file_get_contents("../../database/orders.db");
   $orders = json_decode($json_data,true);
   $selectOption = '';

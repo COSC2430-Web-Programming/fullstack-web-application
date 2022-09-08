@@ -53,7 +53,7 @@
             "name": " Kim Jennie",
             "address": "LA, California"
         },
-        "status": "active",
+        "status": "Delievered",
         "distribution_hub": {
             "name": "Danang",
             "address": "48 Tho Quang, Son Tra District, Da Nang"
@@ -170,6 +170,29 @@
             }
         ],
         "total_price": "1400",
+        "user_info": {
+            "username": "jennierubyjane",
+            "name": " Kim Jennie",
+            "address": "LA, California"
+        },
+        "status": "active",
+        "distribution_hub": {
+            "name": "Danang",
+            "address": "48 Tho Quang, Son Tra District, Da Nang"
+        }
+    },
+    {
+        "order_id": "order_63199a0a0eb811.91610446",
+        "products_list": [
+            {
+                "product_id": "product_6311f2042f3818.20137655",
+                "quantity": "1",
+                "name": "Tiffany Watches",
+                "price": "2950",
+                "image": "6310e2c0600843.37130933.jpeg"
+            }
+        ],
+        "total_price": "2950",
         "user_info": {
             "username": "jennierubyjane",
             "name": " Kim Jennie",

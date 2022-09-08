@@ -51,5 +51,23 @@
         "address": "District 7",
         "registeredTime": "2022-09-07 21:57",
         "role": 1
+    },
+    "8": {
+        "username": "hulanguyen",
+        "password": "$2y$10$862qtEhhrqlhiY.QOSOW3.oDyDFAbkHAeW2dWSWgnLdMq1hbmy9\/e",
+        "profilePicture": "63199e1ae34300.45638363.jpg",
+        "name": "Sang Nguyen",
+        "address": "TPHCM VN",
+        "registeredTime": "2022-09-08 14:47",
+        "role": 1
+    },
+    "9": {
+        "username": "hannguyen",
+        "password": "$2y$10$Z\/7mN7gygTYDWfgCaFCnsOgvezukFGtoPiYjMiSuzm7lVg02fWY.K",
+        "profilePicture": "63199e56ab2ed5.90092349.webp",
+        "name": "Han Nguyen",
+        "address": "TPHCM VN",
+        "registeredTime": "2022-09-08 14:48",
+        "role": 1
     }
 }
