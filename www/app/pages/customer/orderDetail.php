@@ -1,4 +1,5 @@
 <?php
+  session_start();
   $json_data = file_get_contents("../../database/orders.db");
   $orders = json_decode($json_data,true);
   $selectOption = '';
@@ -48,7 +49,7 @@
           require('../layout/nav.php')
         ?>
       </div>
-      <div class='header_order'>
+      <div class='header_customer'>
         <div class="color_overlay d-flex justify-content-center align-items-center">
           <div>
             <h3 class='h3 text-center'>ORDER DETAIL PAGE</h3>

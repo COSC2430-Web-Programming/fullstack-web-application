@@ -1,7 +1,7 @@
 <?php
   session_start();
   if(!isset($_SESSION['user'])) {
-    header("location: login.php");
+    header("location: ../login.php");
     exit();
   }
 ?>
@@ -34,7 +34,7 @@
 ?>
 
 <?php 
-  include("../../class/user.php");
+  // include("../../class/user.php");
   $json_data = file_get_contents("../../../../accounts.db");
   $accounts = json_decode($json_data, true);
   foreach($accounts as $index => $account){
@@ -48,7 +48,7 @@
     if(validateImage($_FILES['profilePic'])){
       $image_new_name = uniqid('user_', true).basename($_FILES['profilePic']['name']);
       $isValidated = true;
-      if($acc['role'] === 1){
+      if($acc['role'] == CUSTOMER_ROLE){
         $input = array(
           'username' => $acc['username'],
           'password' => $acc['password'],
@@ -59,7 +59,7 @@
           'role' => $acc['role'],
         );
       }
-      if($acc['role'] === 0){
+      if($acc['role'] == VENDOR_ROLE){
         $input = array(
           'username' => $acc['username'],
           'password' => $acc['password'],
@@ -70,7 +70,7 @@
           'role' => $acc['role'],
         );
       }
-      if($acc['role'] === 2){
+      if($acc['role'] == SHIPPER_ROLE){
         $input = array(
           'username' => $acc['username'],
           'password' => $acc['password'],
@@ -93,7 +93,7 @@
       $imageDir = '../../../assets/images/';
       $imagePath = $imageDir.$image_new_name;
       if(move_uploaded_file($_FILES['profilePic']['tmp_name'], $imagePath)){
-        unlink("../../assets/images/".$acc['profilePicture']);
+        unlink("../../../assets/images/".$acc['profilePicture']);
       }
       file_put_contents('../../../../accounts.db', json_encode($accounts, JSON_PRETTY_PRINT));
     }
@@ -116,7 +116,7 @@
     <header class='col-12 p-0'>
       <div class="container">
         <?php 
-          require('../../pages/layout/nav.php')
+          require('../layout/nav.php')
         ?>
 
       </div>
@@ -141,21 +141,21 @@
                           if(strcmp($_SESSION['user'], $account['username']) == 0){
                             if($account['role'] == VENDOR_ROLE){
                                 ?>
-                              <li class=' col-xl-2 col-lg-2 col-md-2 m-2 p-2 bg-secondary border border-secondary'>Vendor</li>
+                              <li class=' col-xl-2 col-lg-2 col-md-2 m-2 p-2 bg-secondary border border-secondary text-white'>Vendor</li>
                             <?php
                               }
                             ?>
                             <?php 
                             if($account['role'] == CUSTOMER_ROLE){
                               ?>
-                              <li class='col-xl-2 col-lg-2 col-md-2 m-2 p-2 bg-secondary border border-secondary'>Customer</li>
+                              <li class='col-xl-2 col-lg-2 col-md-2 m-2 p-2 bg-secondary border border-secondary text-white'>Customer</li>
                             <?php
                               }
                             ?>
                             <?php 
                             if($account['role'] == SHIPPER_ROLE){
                               ?>
-                              <li class='col-xl-2 col-lg-2 col-md-2 m-2 p-2 bg-secondary border border-secondary'>Shipper</li>
+                              <li class='col-xl-2 col-lg-2 col-md-2 m-2 p-2 bg-secondary border border-secondary text-white'>Shipper</li>
                             <?php
                               }
                             ?>
@@ -171,7 +171,7 @@
                           <div class="row mt-4 justify-content-evenly">
                             <div class="col-xl-4 col-lg-4 col-md-6 col-md-12 text-center mb-2">
                             <!-- <input name="customerProfile" type="file" class="form-control w-100" id="customerProfile"> -->
-                            <img class='avatar mb-2' src='<?php echo "../../assets/images/".$account['profilePicture'] ?>'>
+                            <img class='avatar mb-2' src='<?php echo "../../../assets/images/".$account['profilePicture'] ?>'>
                             <form action="myAccount.php" enctype="multipart/form-data" name='changeProfilePicForm' method='post' id='form' >
                                <input name="profilePic" type="file" id="profilePic">
                               <input class=" btn btn-outline-dark btn-sm mb-4" type="submit" name="upload" value="Update Profile Picture" id="upload">
@@ -234,7 +234,7 @@
                       }
                     ?>
                       <div class = 'd-flex justify-content-evenly list-unstyled text-center'>
-                         <a href="../pages/logout.php" class="btn btn-outline-dark">Log Out</a>
+                         <input class="myacc_btn btn btn-outline-dark btn-md" placeholder="Log Out" onclick="location.href='../logout.php';">
                       </div>
                 </div>
             </div>

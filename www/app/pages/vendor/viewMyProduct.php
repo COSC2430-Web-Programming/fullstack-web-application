@@ -26,7 +26,7 @@
       <div class='header_vendor'>
         <div class="color_overlay d-flex justify-content-center align-items-center">
           <div>
-            <h3>VENDOR DASHBOARD</h3>
+            <h3>VENDOR VIEW ALL PRODUCTS</h3>
           </div>
         </div>
       </div>
@@ -54,6 +54,7 @@
                 }
              ?>
        </div>
+      </div>
       </div>
     </main>
     

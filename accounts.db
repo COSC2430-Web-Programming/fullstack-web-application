@@ -2,7 +2,7 @@
     "0": {
         "username": "vthanh",
         "password": "$2y$10$6ZlnNEC31l07pP1QTG2Dh.\/Bp0GBnLMgsSxCNpiWv5jcncKPa\/BCu",
-        "profilePicture": "ponyo_sleeping.jpeg",
+        "profilePicture": "user_63199407cea656.39256467ponyo_sleeping.jpeg",
         "businessName": "Hoang Anh",
         "businessAddress": "12 Pooh",
         "registeredTime": "2022-08-28 20:11",
@@ -42,14 +42,5 @@
         "profilePicture": "user_6318ca38402143.32766187karina.jpeg",
         "registeredTime": "2022-09-01 17:14",
         "role": 2
-    },
-    "7": {
-        "username": "winniethepooh",
-        "password": "$2y$10$Mlj0RDdw27.RVWuFs5nVAuVCwcOt8ZMPtVQNn3PQCyeskMdemK6Jm",
-        "profilePicture": "6318b158b91327.40991620.jpeg",
-        "name": "Winnie The Pooh",
-        "address": "District 7",
-        "registeredTime": "2022-09-07 21:57",
-        "role": 1
     }
 }
