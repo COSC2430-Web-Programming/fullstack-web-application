@@ -76,7 +76,7 @@ class Product {
         if (in_array($imageActualExt, $allowed)) {
             if ($imageError === 0) {
                 if ($imageSize < 1000000) {
-                    $imageNameNew = uniqid('', true).".".$imageActualExt;
+                    $imageNameNew = uniqid('product_', true).".".$imageActualExt;
                     $imageDestination = '../../../assets/images/'.$imageNameNew;
                     $this->image = $imageNameNew;
                     move_uploaded_file($imageTmpName, $imageDestination);

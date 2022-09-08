@@ -15,7 +15,6 @@ class Vendor extends User {
         $this->registeredTime = date('Y-m-d H:i');
         $this->role = VENDOR_ROLE;
         $this->stored_users = json_decode(file_get_contents($this->storage), true);
-        $this->validateImage();
 
         $this->new_user = [
             "username" => $this->username,

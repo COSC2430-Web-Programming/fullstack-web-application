@@ -5,10 +5,7 @@
       $password = $_POST['password'];
       $raw_password = $_POST['password'];
       $password = password_hash($password, PASSWORD_DEFAULT);
-
-      // include("imageUpload.php");   
       $profilePicture =  $_FILES['profilePicture'];
-   
       $businessName = $_POST['businessName'];
       $businessAddress = $_POST['businessAddress'];
 
@@ -83,4 +80,9 @@
     </script>
     <script src="../../../assets/js/register.js"></script>
   </body>
+  <footer class='mt-5'>
+    <?php 
+        require('../layout/footer.php')
+    ?>
+  </footer>
 </html>

@@ -7,7 +7,6 @@
       $password = password_hash($password, PASSWORD_DEFAULT);
       $name = $_POST['customerName'];
       $address = $_POST['address'];
-      // include("imageUpload.php");
       $profilePicture =  $_FILES['profilePicture'];
      
       $user = new Customer($username, $password, $raw_password, $profilePicture, $name, $address);
@@ -82,4 +81,9 @@
     </script>
     <script src="../../../assets/js/register.js"></script>
   </body>
+  <footer class='mt-5'>
+    <?php 
+        require('../layout/footer.php')
+    ?>
+  </footer>
 </html>
