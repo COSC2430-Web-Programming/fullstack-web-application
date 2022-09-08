@@ -11,7 +11,14 @@
 </head>
 <body>
 <nav class="navbar navbar-expand-lg navbar-light">
-    <a class="navbar-brand display-1" href="#"><img class="logo" src="../../../assets/images/logo.jpeg" ></a>
+    <div class="hstack gap-3">
+      <div>Laza</div>
+      <div>
+        <a class="navbar-brand display-1" href="#">
+          <img class="logo" src="../../../assets/images/logo.jpeg" />
+        </a>
+      </div>
+    </div>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mynavbar">
       <i class="bi bi-list text-dark"></i>
     </button>
