@@ -122,7 +122,7 @@
       </div>
       <div class='header_order'>
         <div class="color_overlay d-flex justify-content-center align-items-center">
-          <div>
+          <div class="text-center">
             <h3>MY ACCOUNT PAGE</h3>
           </div>
         </div>
@@ -171,11 +171,10 @@
                           <div class="row mt-4 justify-content-evenly">
                             <div class="col-xl-4 col-lg-4 col-md-6 col-md-12 text-center mb-2">
                             <!-- <input name="customerProfile" type="file" class="form-control w-100" id="customerProfile"> -->
-                            <img class='avatar' src='<?php echo "../../assets/images/".$account['profilePicture'] ?>'>
+                            <img class='avatar mb-2' src='<?php echo "../../assets/images/".$account['profilePicture'] ?>'>
                             <form action="myAccount.php" enctype="multipart/form-data" name='changeProfilePicForm' method='post' id='form' >
-                            <input name="profilePic" type="file" id="profilePic">
-                            <label for="profilePic" id="labelForProfile">Choose a picture</label>
-                            <input class=" btn btn-outline-dark btn-sm " type="submit" name="upload" value="Update Profile Picture" id="upload">
+                               <input name="profilePic" type="file" id="profilePic">
+                              <input class=" btn btn-outline-dark btn-sm mb-4" type="submit" name="upload" value="Update Profile Picture" id="upload">
                           </div>
               
                             <div class="col-xl-4 col-lg-4 col-md-6 col-md-12">
@@ -235,7 +234,7 @@
                       }
                     ?>
                       <div class = 'd-flex justify-content-evenly list-unstyled text-center'>
-                         <input class="myacc_btn btn btn-outline-dark" placeholder="Log Out" onclick="location.href='logout.php';">
+                         <input class="myacc_btn btn btn-outline-dark btn-md" placeholder="Log Out" onclick="location.href='logout.php';">
                       </div>
                 </div>
             </div>
