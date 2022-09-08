@@ -8,15 +8,6 @@
         "registeredTime": "2022-08-28 20:11",
         "role": 0
     },
-    "3": {
-        "username": "lalisamanoban",
-        "password": "$2y$10$xCMo4c9PGnos4avw.3zlxeMQm.80XY5C9LB9KFZLVIZ92.8HNHPW2",
-        "profilePicture": "63106694a60136.09567911.jpeg",
-        "name": "Lalisa Manoban",
-        "address": "Bangkok, Thailand",
-        "registeredTime": "2022-09-01 15:00",
-        "role": 1
-    },
     "4": {
         "username": "jennierubyjane",
         "password": "$2y$10$A\/krMWp4eG6Yj2oZELKyo.XYXiwlzcG\/ZKgg94wgnzRszrezJuN5C",
@@ -42,5 +33,23 @@
         "profilePicture": "user_6318ca38402143.32766187karina.jpeg",
         "registeredTime": "2022-09-01 17:14",
         "role": 2
+    },
+    "7": {
+        "username": "winniethepooh",
+        "password": "$2y$10$ZBtAbFNcHPV73TEyb\/YNQeSmOWfbZtORdAluZjtRowmmeLvdAbkom",
+        "profilePicture": "63199fccec6768.48183514.jpeg",
+        "businessName": "Winnie The Pooh",
+        "businessAddress": "Pooh Land",
+        "registeredTime": "2022-09-08 14:54",
+        "role": 0
+    },
+    "8": {
+        "username": "lalisamanoban",
+        "password": "$2y$10$pzCAWV3GC2nWRh4yTbAqx.F00.gm0f1oudHyLA9zgbloChraGYnXC",
+        "profilePicture": "user_reg_6319a0a558cef3.75903966.jpeg",
+        "name": "Lalisa Manoban",
+        "address": "Bangkok, Thailand",
+        "registeredTime": "2022-09-08 14:58",
+        "role": 1
     }
 }

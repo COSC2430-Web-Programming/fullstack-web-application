@@ -6,7 +6,6 @@
       $raw_password = $_POST['password'];
       $password = password_hash($password, PASSWORD_DEFAULT);
       $hub = $_POST['distributionHub'];
-      // include("imageUpload.php");
       $profilePicture =  $_FILES['profilePicture'];
 
       $user = new Shipper($username, $password, $raw_password, $hub, $profilePicture);
@@ -84,4 +83,9 @@
     </script>
     <script src="../../../assets/js/register.js"></script>
   </body>
+  <footer class='mt-5'>
+    <?php 
+        require('../layout/footer.php')
+    ?>
+  </footer>
 </html>

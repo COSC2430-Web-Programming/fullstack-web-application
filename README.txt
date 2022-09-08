@@ -15,6 +15,8 @@ Contribution: All members contribute equally
 
 Accounts in the website (username - password)
 1. Vendor
+winniethepooh - Pooh1234@
+vthanh - 1234 (only used at the initial state)
 
 2. Customer
 jennierubyjane - Pooh1234@ 

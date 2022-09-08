@@ -79,14 +79,6 @@
           'role' => $acc['role'],
         );
       }
-    // foreach($accounts as $index => $account){
-    //   if(strcmp($account['username'],$_SESSION['user'])==0){
-    //       // $i = $index;
-    //       // $acc = $accounts[$index];
-    //       $account['profilePicture'] = $_FILES['profilePic']['name'];
-    //     }
-    //   }
-    //   file_put_contents('../database/accounts.db', json_encode($accounts, JSON_PRETTY_PRINT));
 
       $accounts[$i] = $input;
       $imageDir = '../../../assets/images/';

@@ -10,5 +10,9 @@
     {
         "name": "Danang",
         "address": "48 Tho Quang, Son Tra District, Da Nang"
+    },
+    {
+        "name": "Long Xuyen",
+        "address": "122 Nguyen Du, Long Xuyen, An Giang"
     }
 ]
