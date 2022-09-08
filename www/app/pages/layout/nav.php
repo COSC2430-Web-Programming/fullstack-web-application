@@ -11,7 +11,14 @@
 </head>
 <body>
 <nav class="navbar navbar-expand-lg navbar-light">
-    <a class="navbar-brand display-1" href="#">Laza</a>
+    <div class="hstack gap-3">
+      <div>Laza</div>
+      <div>
+        <a class="navbar-brand display-1" href="#">
+          <img class="logo" src="../../../assets/images/logo.jpeg" />
+        </a>
+      </div>
+    </div>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mynavbar">
       <i class="bi bi-list text-dark"></i>
     </button>
@@ -20,7 +27,7 @@
          <li class="nav-item ms-auto">
            <?php 
             if(isset($_SESSION['user'])) {
-              echo '<a href="../myAccount.php" class="nav-link">My Account</a>';
+              echo '<a href="../allRoles/myAccount.php" class="nav-link">My Account</a>';
             }else{
               echo '<a href="../login.php" class="nav-link">Login</a>';
             };

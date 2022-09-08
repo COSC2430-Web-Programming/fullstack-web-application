@@ -78,10 +78,12 @@ foreach($orders as $order){
 <script>
 function handleOrder() {
     const currentUrl = (window.location.href);
-    const nextURL = currentUrl.slice(0, 55);
+    const nextUrl = currentUrl.slice(0, 41) + "cartPage.php";
 
     // Replace the URL without reloading
-    window.history.replaceState({}, document.title, nextURL);
+    // window.history.replaceState({}, document.title, currentUrl + "orderPage.php?" + url);
+
+    window.location.replace(nextUrl);
 }
 
 handleOrder();
@@ -90,90 +92,3 @@ handleOrder();
 <!-- <script type="text/javascript" src="../../../www/assets/js/handleOrder.js">
 
 </script> -->
-
-<!doctype html>
-<html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" type="text/css" href="../../../assets/css/style.css" />
-    <title>Your Order Page</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
-  </head>
-  <body>
-    <header class='col-12 p-0'>
-      <div class="container">
-        <?php 
-          require('../layout/nav.php')
-        ?>          
-      </div>
-      <div class='header_vendor'>
-        <div class="color_overlay d-flex justify-content-center align-items-center">
-          <div>
-            <h3>YOUR ORDER</h3>
-          </div>
-        </div>
-      </div>
-    </header>
-    <main>
-        <div class='container mt-4'>
-          <div class="row">
-              <div class='mb-4 d-flex justify-content-between '>
-                  <h2 class="">ORDER DETAIL</h2>
-              </div>
-              <nav aria-label="breadcrumb">
-                <ol class="breadcrumb">
-                  <li class="breadcrumb-item"><a href="../homepage/customerHomepage.php">Home</a></li>
-                  <li class="breadcrumb-item active" aria-current="page">Order Details</li>
-                </ol>
-              </nav>
-              </div>
-              <ul class="list-group p-0">
-                <?php
-                    if (!empty($detail)) {
-                        foreach ($detail['products_list'] as $row => $info) {
-                            ?>
-                              <li class='list-group-item'>
-                                <div class='hstack gap-3'>
-                                    <div class='col-2'>
-                                        <img src='<?php echo "../../../assets/images/".$info['image']?>' class='img-thumbnail' alt='food'>
-                                    </div>
-                                    <div class='col-10 d-flex justify-content-between'>
-                                        <div class='fw-bold'><?php echo $info['name']?></div>
-                                        <span class='badge text-dark rounded-pill me-4 fs-5'><?php echo $info['quantity']?></span>
-                                    </div>
-                                </div>
-                              </li>
-                              <?php
-                          }
-                    }    
-                ?>
-                  <li class="list-group-item">
-                      <div class=" d-flex justify-content-between">
-                          <div class="fw-bold">TOTAL PRICE</div>
-                          <span class="fw-bold"> $<?= !empty($detail) ? $detail['total_price'] : 0 ?></span>
-                      </div>
-                  </li>
-                  <li class="list-group-item">
-                      <div class=" d-flex justify-content-between">
-                          <div class="fw-bold">ADDRESS</div>
-                          <span class="fw-bold"> <?= !empty($detail) ? $detail['user_info']['address'] : " " ?></span>
-                      </div>
-                  </li>
-                  <li class="list-group-item">
-                      <div class=" d-flex justify-content-between">
-                          <div class="fw-bold">STATUS</div>
-                          <option value=""><?= !empty($detail) ? $detail['status'] : " " ?></option>
-                      </div>
-                  </li>
-              </ul>
-          </div>
-        </div>
-    </main>
-    <footer class='mt-5'>
-        <?php 
-            require('../layout/footer.php')
-        ?>
-    </footer>
-  </body>
-</html>
