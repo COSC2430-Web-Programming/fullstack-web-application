@@ -27,7 +27,7 @@
          <li class="nav-item ms-auto">
            <?php 
             if(isset($_SESSION['user'])) {
-              echo '<a href="../myAccount.php" class="nav-link">My Account</a>';
+              echo '<a href="../allRoles/myAccount.php" class="nav-link">My Account</a>';
             }else{
               echo '<a href="?logout" class="nav-link">Login</a>';
             };

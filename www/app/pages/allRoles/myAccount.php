@@ -1,7 +1,7 @@
 <?php
   session_start();
   if(!isset($_SESSION['user'])) {
-    header("location: login.php");
+    header("location: ../login.php");
     exit();
   }
 ?>
@@ -34,8 +34,8 @@
 ?>
 
 <?php 
-  include("../class/user.php");
-  $json_data = file_get_contents("../../../accounts.db");
+  include("../../class/user.php");
+  $json_data = file_get_contents("../../../../accounts.db");
   $accounts = json_decode($json_data, true);
   foreach($accounts as $index => $account){
   if(strcmp($_SESSION['user'], $account['username'])==0){
@@ -90,12 +90,12 @@
     //   file_put_contents('../database/accounts.db', json_encode($accounts, JSON_PRETTY_PRINT));
 
       $accounts[$i] = $input;
-      $imageDir = '../../assets/images/';
+      $imageDir = '../../../assets/images/';
       $imagePath = $imageDir.$image_new_name;
       if(move_uploaded_file($_FILES['profilePic']['tmp_name'], $imagePath)){
-        unlink("../../assets/images/".$acc['profilePicture']);
+        unlink("../../../assets/images/".$acc['profilePicture']);
       }
-      file_put_contents('../../../accounts.db', json_encode($accounts, JSON_PRETTY_PRINT));
+      file_put_contents('../../../../accounts.db', json_encode($accounts, JSON_PRETTY_PRINT));
     }
   }
 ?>
@@ -116,7 +116,7 @@
     <header class='col-12 p-0'>
       <div class="container">
         <?php 
-          require('layout/nav.php')
+          require('../layout/nav.php')
         ?>
 
       </div>
@@ -171,7 +171,7 @@
                           <div class="row mt-4 justify-content-evenly">
                             <div class="col-xl-4 col-lg-4 col-md-6 col-md-12 text-center mb-2">
                             <!-- <input name="customerProfile" type="file" class="form-control w-100" id="customerProfile"> -->
-                            <img class='avatar mb-2' src='<?php echo "../../assets/images/".$account['profilePicture'] ?>'>
+                            <img class='avatar mb-2' src='<?php echo "../../../assets/images/".$account['profilePicture'] ?>'>
                             <form action="myAccount.php" enctype="multipart/form-data" name='changeProfilePicForm' method='post' id='form' >
                                <input name="profilePic" type="file" id="profilePic">
                               <input class=" btn btn-outline-dark btn-sm mb-4" type="submit" name="upload" value="Update Profile Picture" id="upload">
@@ -234,7 +234,7 @@
                       }
                     ?>
                       <div class = 'd-flex justify-content-evenly list-unstyled text-center'>
-                         <input class="myacc_btn btn btn-outline-dark btn-md" placeholder="Log Out" onclick="location.href='logout.php';">
+                         <input class="myacc_btn btn btn-outline-dark btn-md" placeholder="Log Out" onclick="location.href='../logout.php';">
                       </div>
                 </div>
             </div>
@@ -242,7 +242,7 @@
     </main>
     <footer class='mt-4'>
       <?php 
-          require('layout/footer.php')
+          require('../layout/footer.php')
       ?>
   </footer>
   </body>
