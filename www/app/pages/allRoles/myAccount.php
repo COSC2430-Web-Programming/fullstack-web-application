@@ -34,7 +34,7 @@
 ?>
 
 <?php 
-  include("../../class/user.php");
+  // include("../../class/user.php");
   $json_data = file_get_contents("../../../../accounts.db");
   $accounts = json_decode($json_data, true);
   foreach($accounts as $index => $account){
