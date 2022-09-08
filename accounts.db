@@ -2,49 +2,11 @@
     "0": {
         "username": "vthanh",
         "password": "$2y$10$6ZlnNEC31l07pP1QTG2Dh.\/Bp0GBnLMgsSxCNpiWv5jcncKPa\/BCu",
-        "profilePicture": {
-            "name": "ponyo_sleeping.jpeg",
-            "full_path": "ponyo_sleeping.jpeg",
-            "type": "image\/jpeg",
-            "tmp_name": "\/private\/var\/folders\/v7\/9w87bmpj6t146bx2k767gn600000gn\/T\/phpvxOJe8",
-            "error": 0,
-            "size": 51414
-        },
+        "profilePicture": "ponyo_sleeping.jpeg",
         "businessName": "Hoang Anh",
         "businessAddress": "12 Pooh",
         "registeredTime": "2022-08-28 20:11",
         "role": 0
-    },
-    "1": {
-        "username": "hoanganh",
-        "password": "$2y$10$tisAkFjK2PmxZLujhvj9BuoiaW7VvfkaqDLJUyPIzlLSn\/a7Zxpne",
-        "profilePicture": {
-            "name": "",
-            "full_path": "",
-            "type": "",
-            "tmp_name": "",
-            "error": 0,
-            "size": 0
-        },
-        "businessName": "Anh Hoang",
-        "businessAddress": "13 Pooh",
-        "registeredTime": "2022-08-29 09:07",
-        "role": 0
-    },
-    "2": {
-        "username": "12",
-        "password": "$2y$10$S\/c6GnMc44hHpjqsvrTvs.07d.bJ1ZE7N5CD412ODW9wrKhmAEufe",
-        "distributionHub": "Saigon",
-        "profilePicture": {
-            "name": "",
-            "full_path": "",
-            "type": "",
-            "tmp_name": "",
-            "error": 4,
-            "size": 0
-        },
-        "registeredTime": "2022-08-31 08:13",
-        "role": 2
     },
     "3": {
         "username": "lalisamanoban",
@@ -58,7 +20,7 @@
     "4": {
         "username": "jennierubyjane",
         "password": "$2y$10$A\/krMWp4eG6Yj2oZELKyo.XYXiwlzcG\/ZKgg94wgnzRszrezJuN5C",
-        "profilePicture": "6310699a4c1020.99049980.jpeg",
+        "profilePicture": "user_6318cab6e1bce2.08598342jenniemu.jpeg",
         "name": " Kim Jennie",
         "address": "LA, California",
         "registeredTime": "2022-09-01 15:13",
@@ -77,7 +39,7 @@
         "username": "karinashipper",
         "password": "$2y$10$XVmI1zXVCDZZKEjElaMFjeu8OXFqjUQAEu\/.FkU88fD.Dj4rbC76O",
         "distributionHub": "Saigon",
-        "profilePicture": "631085f5969660.76488046.jpeg",
+        "profilePicture": "user_6318ca38402143.32766187karina.jpeg",
         "registeredTime": "2022-09-01 17:14",
         "role": 2
     },

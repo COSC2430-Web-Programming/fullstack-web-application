@@ -18,6 +18,13 @@
     </style>
   </head>
   <body>
+    <header class='col-12 p-0'>
+        <div class="container">
+            <?php 
+            require('layout/nav.php')
+            ?>
+        </div>
+        </header>
         <main>
             <div class="container mt-5">
                 <section class="Form justify-content-center">
