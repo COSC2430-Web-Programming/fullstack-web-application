@@ -39,7 +39,19 @@
 }
 
 .header_vendor {
-    background: url("https://www.deskera.com/blog/content/images/2021/05/store-5619201_1920.jpg");
+    background: url("https://downtownnaperville.com/wp-content/uploads/2015/09/Store-Image-2-scaled-e1598983225605-1200x587.jpg");
+    position: relative;
+    background-size: cover;
+    min-height: 45vh;
+    color: white;
+    background-position: center;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    
+}
+.header_customer {
+    background: url("https://downtownnaperville.com/wp-content/uploads/2015/09/Store-Image-2-scaled-e1598983225605-1200x587.jpg");
     position: relative;
     background-size: cover;
     min-height: 45vh;

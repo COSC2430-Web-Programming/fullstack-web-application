@@ -1,3 +1,6 @@
+<?php 
+session_start();
+?>
 <!doctype html>
 <html lang="en">
   <head>
@@ -14,7 +17,7 @@
           require('../layout/nav.php')
         ?>          
       </div>
-      <div class='header_vendor'>
+      <div class='header_customer'>
         <div class="color_overlay d-flex justify-content-center align-items-center">
           <div>
             <h3>CART</h3>

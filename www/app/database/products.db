@@ -54,5 +54,13 @@
         "description": "From MontBlanc 2022",
         "product_id": "product_6318b8c7b0a9c2.22816179",
         "vendor": "vthanh"
+    },
+    {
+        "name": "Cartier Ring",
+        "price": "4000",
+        "image": "6319805e605d87.77791308.jpg",
+        "description": "Cartier Wedding Ring",
+        "product_id": "product_6319805e603520.06734276",
+        "vendor": "vthanh"
     }
 ]

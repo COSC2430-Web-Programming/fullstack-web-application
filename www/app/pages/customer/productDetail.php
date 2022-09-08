@@ -1,4 +1,5 @@
 <?php 
+  session_start();
   $json_data = file_get_contents("../../database/products.db");
   $products = json_decode($json_data,true);
 
@@ -33,7 +34,7 @@
         ?>
 
       </div>
-      <div class='header_order'>
+      <div class='header_customer'>
         <div class="color_overlay d-flex justify-content-center align-items-center">
           <div>
             <h3 class='h3 text-center'>PRODUCT DETAIL PAGE</h3>
