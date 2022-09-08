@@ -11,7 +11,7 @@
 </head>
 <body>
 <nav class="navbar navbar-expand-lg navbar-light">
-    <a class="navbar-brand display-1" href="#"><img class="logo" src=".//../../../assets/images/logo.jpeg" ></a>
+    <a class="navbar-brand display-1" href="#"><img class="logo" src="../../../assets/images/logo.jpeg" ></a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mynavbar">
       <i class="bi bi-list text-dark"></i>
     </button>

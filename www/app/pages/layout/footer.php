@@ -15,7 +15,7 @@
     <div class="container text-white">
         <div class='d-flex p-2  justify-content-between align-items-center '>
             <a href="#" class="navbar-brand mx-0 px-0  font-weight-bold col-4">
-                    LOGO
+              <img class="logo" src="../../../assets/images/logo.jpeg" >
             </a>
             <ul class="nav justify-content-center text-white">
                 <li class="nav-item m-3">
