@@ -110,5 +110,13 @@
         "description": "Jean Schlumberger\u2019s visionary creations are among the world\u2019s most intricate designs. Brilliant sapphires and diamonds alternate with X's, creating this dazzling design.",
         "product_id": "product_6319b6d9bdc336.70703369",
         "vendor": "winniethepooh"
+    },
+    {
+        "name": "Cartier Ring",
+        "price": "4000",
+        "image": "6319805e605d87.77791308.jpg",
+        "description": "Cartier Wedding Ring",
+        "product_id": "product_6319805e603520.06734276",
+        "vendor": "vthanh"
     }
 ]

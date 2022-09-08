@@ -34,7 +34,6 @@
 ?>
 
 <?php 
-  include("../../class/user.php");
   $json_data = file_get_contents("../../../../accounts.db");
   $accounts = json_decode($json_data, true);
   foreach($accounts as $index => $account){
@@ -80,14 +79,6 @@
           'role' => $acc['role'],
         );
       }
-    // foreach($accounts as $index => $account){
-    //   if(strcmp($account['username'],$_SESSION['user'])==0){
-    //       // $i = $index;
-    //       // $acc = $accounts[$index];
-    //       $account['profilePicture'] = $_FILES['profilePic']['name'];
-    //     }
-    //   }
-    //   file_put_contents('../database/accounts.db', json_encode($accounts, JSON_PRETTY_PRINT));
 
       $accounts[$i] = $input;
       $imageDir = '../../../assets/images/';
@@ -141,21 +132,21 @@
                           if(strcmp($_SESSION['user'], $account['username']) == 0){
                             if($account['role'] == VENDOR_ROLE){
                                 ?>
-                              <li class=' col-xl-2 col-lg-2 col-md-2 m-2 p-2 bg-secondary border border-secondary'>Vendor</li>
+                              <li class=' col-xl-2 col-lg-2 col-md-2 m-2 p-2 bg-secondary border border-secondary text-white'>Vendor</li>
                             <?php
                               }
                             ?>
                             <?php 
                             if($account['role'] == CUSTOMER_ROLE){
                               ?>
-                              <li class='col-xl-2 col-lg-2 col-md-2 m-2 p-2 bg-secondary border border-secondary'>Customer</li>
+                              <li class='col-xl-2 col-lg-2 col-md-2 m-2 p-2 bg-secondary border border-secondary text-white'>Customer</li>
                             <?php
                               }
                             ?>
                             <?php 
                             if($account['role'] == SHIPPER_ROLE){
                               ?>
-                              <li class='col-xl-2 col-lg-2 col-md-2 m-2 p-2 bg-secondary border border-secondary'>Shipper</li>
+                              <li class='col-xl-2 col-lg-2 col-md-2 m-2 p-2 bg-secondary border border-secondary text-white'>Shipper</li>
                             <?php
                               }
                             ?>
