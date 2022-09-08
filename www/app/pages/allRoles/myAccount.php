@@ -34,7 +34,6 @@
 ?>
 
 <?php 
-  // include("../../class/user.php");
   $json_data = file_get_contents("../../../../accounts.db");
   $accounts = json_decode($json_data, true);
   foreach($accounts as $index => $account){
@@ -120,7 +119,7 @@
         ?>
 
       </div>
-      <div class='header_order'>
+      <div class='header_customer'>
         <div class="color_overlay d-flex justify-content-center align-items-center">
           <div class="text-center">
             <h3>MY ACCOUNT PAGE</h3>

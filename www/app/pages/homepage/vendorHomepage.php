@@ -18,7 +18,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>User's Homepage</title>
+    <title>Vendor Homepage</title>
     <link rel="stylesheet" type="text/css" href="../../../assets/css/style.css" />
 </head>
 <body>
@@ -28,7 +28,7 @@
           require('../layout/nav.php')
         ?>
       </div>
-      <div class='header_order'>
+      <div class='header_vendor'>
         <div class="color_overlay d-flex justify-content-center align-items-center">
           <div>
             <h3>VENDOR PAGE</h3>

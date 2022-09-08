@@ -16,7 +16,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <title>Laza</title>
+  <title>My Account</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" type="text/css" href="../../../assets/css/style.css" />
@@ -36,10 +36,7 @@
             if($acc['role'] == VENDOR_ROLE){
               ?>
               <a class="navbar-brand display-1" href="../homepage/vendorHomepage.php">
-                <hstack>
                   <img class="logo" src="../../../assets/images/logo.png" />
-                  <p>Laza</p>
-                </hstack>
               </a>
               <?php
                 }
@@ -48,9 +45,7 @@
               if($acc['role'] == CUSTOMER_ROLE){
                 ?>
               <a class="navbar-brand display-1" href="../homepage/customerHomepage.php">
-                <hstack>
-                  <img class="logo" src="../../../assets/images/logo.png" />
-                </hstack>
+                <img class="logo" src="../../../assets/images/logo.png" />
               </a>
               <?php
                 }

@@ -12,8 +12,7 @@
     <link rel="stylesheet" href="../../../assets/css/style.css">
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-
-    <title>Dashboard</title>
+    <title>Vendor Homepage</title>
   </head>
   <body>
     <header class='col-12 p-0'>
@@ -26,7 +25,7 @@
       <div class='header_vendor'>
         <div class="color_overlay d-flex justify-content-center align-items-center">
           <div>
-            <h3>VENDOR VIEW ALL PRODUCTS</h3>
+            <h3>VIEW ALL PRODUCTS</h3>
           </div>
         </div>
       </div>
