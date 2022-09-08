@@ -34,8 +34,8 @@
 ?>
 
 <?php 
-  include("../class/user.php");
-  $json_data = file_get_contents("../../../accounts.db");
+  include("../../class/user.php");
+  $json_data = file_get_contents("../../../../accounts.db");
   $accounts = json_decode($json_data, true);
   foreach($accounts as $index => $account){
   if(strcmp($_SESSION['user'], $account['username'])==0){
@@ -48,7 +48,7 @@
     if(validateImage($_FILES['profilePic'])){
       $image_new_name = uniqid('user_', true).basename($_FILES['profilePic']['name']);
       $isValidated = true;
-      if($acc['role'] == CUSTOMER_ROLE){
+      if($acc['role'] === 1){
         $input = array(
           'username' => $acc['username'],
           'password' => $acc['password'],
@@ -59,7 +59,7 @@
           'role' => $acc['role'],
         );
       }
-      if($acc['role'] == VENDOR_ROLE){
+      if($acc['role'] === 0){
         $input = array(
           'username' => $acc['username'],
           'password' => $acc['password'],
@@ -70,7 +70,7 @@
           'role' => $acc['role'],
         );
       }
-      if($acc['role'] == SHIPPER_ROLE){
+      if($acc['role'] === 2){
         $input = array(
           'username' => $acc['username'],
           'password' => $acc['password'],
@@ -90,12 +90,12 @@
     //   file_put_contents('../database/accounts.db', json_encode($accounts, JSON_PRETTY_PRINT));
 
       $accounts[$i] = $input;
-      $imageDir = '../../assets/images/';
+      $imageDir = '../../../assets/images/';
       $imagePath = $imageDir.$image_new_name;
       if(move_uploaded_file($_FILES['profilePic']['tmp_name'], $imagePath)){
         unlink("../../assets/images/".$acc['profilePicture']);
       }
-      file_put_contents('../../../accounts.db', json_encode($accounts, JSON_PRETTY_PRINT));
+      file_put_contents('../../../../accounts.db', json_encode($accounts, JSON_PRETTY_PRINT));
     }
   }
 ?>
@@ -106,7 +106,7 @@
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" type="text/css" href="../../assets/css/style.css" />
+    <link rel="stylesheet" type="text/css" href="../../../assets/css/style.css" />
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
 
@@ -116,7 +116,7 @@
     <header class='col-12 p-0'>
       <div class="container">
         <?php 
-          require('../pages/layout/nav.php')
+          require('../../pages/layout/nav.php')
         ?>
 
       </div>
@@ -234,7 +234,7 @@
                       }
                     ?>
                       <div class = 'd-flex justify-content-evenly list-unstyled text-center'>
-                         <input class="myacc_btn btn btn-outline-dark btn-md" placeholder="Log Out" onclick="location.href='logout.php';">
+                         <a href="../pages/logout.php" class="btn btn-outline-dark">Log Out</a>
                       </div>
                 </div>
             </div>
@@ -242,7 +242,7 @@
     </main>
     <footer class='mt-4'>
       <?php 
-          require('layout/footer.php')
+          require('../layout/footer.php')
       ?>
   </footer>
   </body>
