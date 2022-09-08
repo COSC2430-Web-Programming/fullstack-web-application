@@ -204,17 +204,14 @@ small{
     color: black;
     text-decoration: underline;
 }
-input[type="file"]{
-    display: none;
+
+
+#profilePic{
+    margin-bottom: 2em;
+    padding-left: 1.5em;
 }
 
-#labelForProfile{
-    font-size: small;
-    height: 30px;
-    width: 150px;
-    background-color: blanchedalmond;
-    border:solid;
-    border-radius: 5px;
-    /* position: absolute; */
-    margin:auto;
+.logo{
+    width: 50px;
+    height: 50px;
 }
