@@ -157,5 +157,28 @@
             "name": "Danang",
             "address": "48 Tho Quang, Son Tra District, Da Nang"
         }
+    },
+    {
+        "order_id": "order_631b04e0c1a4f2.07305582",
+        "products_list": [
+            {
+                "product_id": "product_6311f224c84211.73613912",
+                "quantity": "2",
+                "name": "Tiffany Bracelet",
+                "price": "1000",
+                "image": "6310d9c96f5e51.85516925.jpeg"
+            }
+        ],
+        "total_price": "2000",
+        "user_info": {
+            "username": "jennierubyjane",
+            "name": " Kim Jennie",
+            "address": "LA, California"
+        },
+        "status": "active",
+        "distribution_hub": {
+            "name": "Saigon",
+            "address": "144 Nguyen Van Linh, District 7, Ho Chi Minh City"
+        }
     }
 ]

@@ -154,8 +154,8 @@ small{
 
 .cart-link{
     width: 100%;
-    background: black;
-    color: white;
+    background-color: red;
+    color: black;
 }
 
 .cart{
