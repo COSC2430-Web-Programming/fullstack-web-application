@@ -17,15 +17,15 @@ if (isset($_POST['submit'])) {
 </head>
 
 <body>
-    <header class='col-12 p-0'>
+    <header class='col-12 p-0 mb-5'>
         <div class="container">
             <?php
             require('layout/nav.php')
             ?>
         </div>
     </header>
-    <main>
-        <div class="container mt-5">
+    <main class='mb-5'>
+        <div class="container mt-5 mb-5">
             <section class="Form justify-content-center">
                 <div class="container">
                     <div class="row m-0">
@@ -59,13 +59,11 @@ if (isset($_POST['submit'])) {
             </section>
         </div>
     </main>
-    <footer>
+    <footer class='mt-5'>
         <?php 
           require('layout/footer.php')
       ?>
     </footer>
-
-
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
 </body>
 
