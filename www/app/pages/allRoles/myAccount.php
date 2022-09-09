@@ -111,7 +111,7 @@
         ?>
 
       </div>
-      <div class='header_order'>
+      <div class='header_customer'>
         <div class="color_overlay d-flex justify-content-center align-items-center">
           <div class="text-center">
             <h3>MY ACCOUNT PAGE</h3>
