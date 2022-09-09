@@ -14,7 +14,7 @@ $allowed = array('jpg', 'jpeg', 'png', 'pdf');
 if (in_array($imageActualExt, $allowed)) {
     if ($imageError === 0) {
         if ($imageSize < 1000000) {
-            $imageNameNew = uniqid('', true).".".$imageActualExt;
+            $imageNameNew = uniqid('img_', true).".".$imageActualExt;
             $imageDestination = '../../../assets/images/'.$imageNameNew;
             move_uploaded_file($imageTmpName, $imageDestination);
         } else {
@@ -26,6 +26,4 @@ if (in_array($imageActualExt, $allowed)) {
 } else {
     echo "You cannot upload image of this type!. Please choose another image!";
 }
-
-
 ?>
