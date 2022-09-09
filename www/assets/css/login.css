@@ -1,53 +1,51 @@
 * {
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
 }
 
 body {
-    background-color: #F2F5F5;
-    /* display: flex;
+  background-color: #f2f5f5;
+  /* display: flex;
     justify-content: center; */
 }
 
 .row {
-    width: 100%;
-    background: white;
-    margin: 5%;
-    /* box-shadow: 12px 12px 22px grey; */
-    display: flex;
-    justify-content: center;
+  width: 100%;
+  background: white;
+  margin: 5%;
+  /* box-shadow: 12px 12px 22px grey; */
+  display: flex;
+  justify-content: center;
 }
 
 .col-lg {
-    max-width: 500px;
+  max-width: 500px;
 }
 
 .btn-login {
-    border: none;
-    outline: none;
-    height: 45px;
-    width: 100%;
-    background-color: black;
-    color: white;
-    border-radius: 4px;
-    font-weight: bold;
-    margin-top: 3px;
-    margin-bottom: 20px;
-    transition-duration: 0.4s;
+  border: none;
+  outline: none;
+  height: 45px;
+  width: 100%;
+  background-color: black;
+  color: white;
+  border-radius: 4px;
+  font-weight: bold;
+  margin-top: 3px;
+  margin-bottom: 20px;
+  transition-duration: 0.4s;
 }
 
 .btn-login:hover {
-    background-color: #3687e4;
-    color: white;
+  background-color: #3687e4;
+  color: white;
 }
 
 .error {
-    color: red;
+  color: red;
 }
 
 .success {
-    color: green;
+  color: green;
 }
-
-

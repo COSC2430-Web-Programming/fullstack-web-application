@@ -1,36 +1,39 @@
 function orderProducts() {
-    let cartList = localStorage.getItem("productInCart") // get data from local storage
-    cartList = JSON.parse(cartList)
-    var arrayOfProducts = Object.keys(cartList).map((key) => [(key), cartList[key]]); // convert object to array of object
+  let cartList = localStorage.getItem("productInCart"); // get data from local storage
+  cartList = JSON.parse(cartList);
+  var arrayOfProducts = Object.keys(cartList).map((key) => [
+    key,
+    cartList[key],
+  ]); // convert object to array of object
 
-    // Create a URL
-    var url = "products=";
+  // Create a URL
+  var url = "products=";
 
-    // Add products data to the URL
-    const products = [];
-    for (let i = 0; i < arrayOfProducts.length; i++) {
-        let product = arrayOfProducts[i][1];
-        products.push(product);
-    }
+  // Add products data to the URL
+  const products = [];
+  for (let i = 0; i < arrayOfProducts.length; i++) {
+    let product = arrayOfProducts[i][1];
+    products.push(product);
+  }
 
-    products.forEach(function(e) {
-        url += String(e.product_id) + "[" + String(e.incart) + "]" + ",";
-    })
+  products.forEach(function (e) {
+    url += String(e.product_id) + "[" + String(e.incart) + "]" + ",";
+  });
 
-    url = url.slice(0, -1); // delete the last "," of the URL
+  url = url.slice(0, -1); // delete the last "," of the URL
 
-    // Add price
-    let totalPrice = localStorage.getItem("totalCost");
-    url += "&total=" + totalPrice;
+  // Add price
+  let totalPrice = localStorage.getItem("totalCost");
+  url += "&total=" + totalPrice;
 
-    // Delete the local storage in cart
-    window.localStorage.clear();
+  // Delete the local storage in cart
+  window.localStorage.clear();
 
-    // Get the current server URL
-    const currentUrl = (window.location.href).slice(0, -12);
+  // Get the current server URL
+  const currentUrl = window.location.href.slice(0, -12);
 
-    // Direct the use to the order page
-    window.location.replace(currentUrl + "orderPage.php?" + url);
+  // Direct the use to the order page
+  window.location.replace(currentUrl + "orderPage.php?" + url);
 
-    return 0;
+  return 0;
 }

@@ -157,5 +157,28 @@
             "name": "Danang",
             "address": "48 Tho Quang, Son Tra District, Da Nang"
         }
+    },
+    {
+        "order_id": "order_631b02537db088.29116330",
+        "products_list": [
+            {
+                "product_id": "product_6319b40ad10a11.60789161",
+                "quantity": "1",
+                "name": "Tiffany P Bracelet",
+                "price": "1950",
+                "image": "product_6319b40ad14132.75545039.jpeg"
+            }
+        ],
+        "total_price": "1950",
+        "user_info": {
+            "username": "jennierubyjane",
+            "name": " Kim Jennie",
+            "address": "LA, California"
+        },
+        "status": "active",
+        "distribution_hub": {
+            "name": "Saigon",
+            "address": "144 Nguyen Van Linh, District 7, Ho Chi Minh City"
+        }
     }
 ]
