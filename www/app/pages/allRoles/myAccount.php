@@ -228,7 +228,7 @@
                       }
                     ?>
                       <div class = 'd-flex justify-content-evenly list-unstyled text-center'>
-                         <input class="myacc_btn btn btn-outline-dark btn-md" placeholder="Log Out" onclick="location.href='../logout.php';">
+                         <a href="../logout.php" class="btn btn-outline-dark btn-md">Log Out</a>
                       </div>
                 </div>
             </div>
