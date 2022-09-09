@@ -180,5 +180,35 @@
             "name": "Saigon",
             "address": "144 Nguyen Van Linh, District 7, Ho Chi Minh City"
         }
+    },
+    {
+        "order_id": "order_631b5690d2dd23.21916104",
+        "products_list": [
+            {
+                "product_id": "product_6311f224c84211.73613912",
+                "quantity": "1",
+                "name": "Tiffany Bracelet",
+                "price": "1000",
+                "image": "6310d9c96f5e51.85516925.jpeg"
+            },
+            {
+                "product_id": "product_6311f2042f3818.20137655",
+                "quantity": "1",
+                "name": "Tiffany Watches",
+                "price": "2950",
+                "image": "6310e2c0600843.37130933.jpeg"
+            }
+        ],
+        "total_price": "3950",
+        "user_info": {
+            "username": "jennierubyjane",
+            "name": " Kim Jennie",
+            "address": "LA, California"
+        },
+        "status": "active",
+        "distribution_hub": {
+            "name": "Danang",
+            "address": "48 Tho Quang, Son Tra District, Da Nang"
+        }
     }
 ]
