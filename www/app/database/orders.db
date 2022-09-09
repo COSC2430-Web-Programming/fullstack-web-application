@@ -180,5 +180,28 @@
             "name": "Saigon",
             "address": "144 Nguyen Van Linh, District 7, Ho Chi Minh City"
         }
+    },
+    {
+        "order_id": "order_631b12948f1150.22147294",
+        "products_list": [
+            {
+                "product_id": "product_6319b4c66464f6.15667125",
+                "quantity": "1",
+                "name": "Tiffany 1837 Ring",
+                "price": "500",
+                "image": "product_6319b4c6646680.15111731.jpeg"
+            }
+        ],
+        "total_price": "500",
+        "user_info": {
+            "username": "jennierubyjane",
+            "name": " Kim Jennie",
+            "address": "LA, California"
+        },
+        "status": "active",
+        "distribution_hub": {
+            "name": "Long Xuyen",
+            "address": "122 Nguyen Du, Long Xuyen, An Giang"
+        }
     }
 ]
