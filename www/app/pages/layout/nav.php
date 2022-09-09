@@ -39,7 +39,7 @@ if (isset($_SESSION['user'])) {
           if ($acc['role'] == VENDOR_ROLE) {
         ?>
             <a class="navbar-brand display-1" href="../homepage/vendorHomepage.php">
-              <img class="logo" src="../../../assets/images/logo.png" />
+              <img class="logo" src="../../../assets/images/logo.png" alt='logo' />
             </a>
           <?php
           }
@@ -48,7 +48,7 @@ if (isset($_SESSION['user'])) {
           if ($acc['role'] == CUSTOMER_ROLE) {
           ?>
             <a class="navbar-brand display-1" href="../homepage/customerHomepage.php">
-              <img class="logo" src="../../../assets/images/logo.png" />
+              <img class="logo" src="../../../assets/images/logo.png" alt='logo'/>
             </a>
           <?php
           }
@@ -57,14 +57,14 @@ if (isset($_SESSION['user'])) {
           if ($acc['role'] == SHIPPER_ROLE) {
           ?>
             <a class="navbar-brand display-1" href="../homepage/shipperHomepage.php">
-              <img class="logo" src="../../../assets/images/logo.png" />
+              <img class="logo" src="../../../assets/images/logo.png" alt='logo' />
             </a>
           <?php
           }
         } else {
           ?>
           <a class="navbar-brand display-1">
-            <img class="logo" src="../../../assets/images/logo.png" />
+            <img class="logo" src="../../../assets/images/logo.png" alt='logo' />
           </a>
         <?php
         }

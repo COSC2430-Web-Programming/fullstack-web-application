@@ -60,6 +60,7 @@
                 </ul>
         </div>
     </div>
+</div>
     </main>
     <footer class='mt-4'>
         <?php
