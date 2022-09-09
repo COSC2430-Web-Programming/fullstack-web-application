@@ -81,12 +81,18 @@ if (isset($_SESSION['user'])) {
           if (isset($_SESSION['user'])) {
             echo '<a href="../allRoles/myAccount.php" class="nav-link">My Account</a>';
           } else {
-            echo '<a href="../login.php" class="nav-link">Login</a>';
+            echo '<a href="login.php" class="nav-link">Login</a>';
           };
           ?>
         </li>
         <li class="nav-item ms-auto">
-          <a href="../logout.php" class="nav-link">Logout</a>
+          <?php
+            if(isset($_SESSION['user'])){
+              echo '<a href="../logout.php" class="nav-link">Logout</a>';
+            }else{
+              echo '<a href="login.php" class="nav-link">Logout</a>';
+            }
+          ?>
         </li>
       </ul>
     </div>

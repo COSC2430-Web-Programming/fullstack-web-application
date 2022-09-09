@@ -17,15 +17,15 @@ if (isset($_POST['submit'])) {
 </head>
 
 <body>
-    <header class='col-12 p-0'>
+    <header class='col-12 p-0 mb-5'>
         <div class="container">
             <?php
             require('layout/nav.php')
             ?>
         </div>
     </header>
-    <main>
-        <div class="container mt-5">
+    <main class='mb-5'>
+        <div class="container mt-5 mb-5">
             <section class="Form justify-content-center">
                 <div class="container">
                     <div class="row m-0">
