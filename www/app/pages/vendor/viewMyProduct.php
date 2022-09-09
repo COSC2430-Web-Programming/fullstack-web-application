@@ -30,6 +30,7 @@
         </div>
       </div>
     </header>
+    <main>
     <div class='container mt-4'>
       <div class='row justify-content-center'>
             <div class='mb-4'>
@@ -41,7 +42,7 @@
                   if (strcmp($_SESSION['user'], $product['vendor']) == 0){
                     ?>
                       <div class="col-xl-4 col-lg-4 col-md-6 col-md-12 card">
-                        <img src='<?php echo "../../../assets/images/".$product['image'] ?>' class='image-product'>
+                        <img alt="Product's Image" src="<?php echo "../../../assets/images/".$product["image"]?>" class="image-product"/>
                         <div class="card-body d-flex justify-content-between ml-xl-3">
                           <span class='fw-bold'><?php echo $product['name']?></span>
                           <span class='fw-semibold'><?php echo $product['price']?></span>

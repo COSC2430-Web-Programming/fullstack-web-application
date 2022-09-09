@@ -46,7 +46,7 @@
             </div>
             <div class='vstack gap-4 align-items-center mb-5'>
                 <div class="mb-4">
-                    <form action="" class='row d-flex ' method="get">
+                    <form action="customerHomepage.php" class='row d-flex' method="get">
                         <div class=" d-flex w-100 justify-content-center input-group mb-3">
                         <input type="text" class="form-control" placeholder="Type something here..." name="name" value="<?php echo (isset($_GET['name']))?$_GET['name']:'';?>">
                         <input class="btn btn-outline-secondary" type="submit" value="Search" name="search">
@@ -89,7 +89,7 @@
                         ?>
                         <a class='text-decoration-none' href="../customer/productDetail.php?product_id=<?= $product['product_id']; ?>">
                             <div class="col card">
-                                <img src='<?php echo "../../../assets/images/".$product['image'] ?>' class='image-product'>
+                                <img alt="Product's Image" src='<?php echo "../../../assets/images/".$product['image'] ?>' class='image-product'>
                                 <div class="card-body d-flex justify-content-between ml-xl-3">
                                 <span class='fw-bold'><?php echo $product['name']?></span>
                                 <span class='fw-semibold'><?php echo $product['price']?></span>
@@ -107,7 +107,6 @@
             </div>
             </div>
         </div>
-    </div>
 <!-- Customer homepage ends -->
     </main>
     <footer>
