@@ -201,8 +201,8 @@
                                         <p class="profileInfo w-100" id="customerName"><?php echo $account['name'] ?></p>
                                       </div>
                                       <div class="mb-4">
-                                        <label class="mb-2">Address</label>
-                                        <label class="profileInfo w-100"><?php echo $account['address'] ?></label>
+                                        <p class="mb-2">Address</p>
+                                        <p class="profileInfo w-100"><?php echo $account['address'] ?></p>
                                       </div>
                                     <?php
                                       }
@@ -211,8 +211,8 @@
                                     if($account['role'] == SHIPPER_ROLE){
                                       ?>
                                       <div class="mb-4">
-                                        <label class="mb-2">Distribution Hub</label>
-                                        <label class="profileInfo w-100"><?php echo $account['distributionHub'] ?></label>
+                                        <p class="mb-2">Distribution Hub</p>
+                                        <p class="profileInfo w-100"><?php echo $account['distributionHub'] ?></p>
                                       </div>
                                     <?php
                                       }
