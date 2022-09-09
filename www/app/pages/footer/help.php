@@ -33,7 +33,7 @@
         <h2 class='col-12 text-right'>TOP QUESTIONS</h2>
         <div class='row justify-content-center'>
             <div class='col-10'>
-                <ul class='row text-right justify-content-space-evenly mx-auto'>
+                <ul class='row text-right justify-content-around mx-auto'>
                     <li class='col-lg-3 col-md-3 m-2 p-2 border-bottom'><a href ="#" class = "text-decoration-none text-black">Return Conditions & Policy at Laza</a></li>
                     <li class='col-lg-3 col-md-3 m-2 p-2 border-bottom'><a href ="#" class = "text-decoration-none text-black">A overview of Return at Laza</a></li>
                     <li class='col-lg-3 col-md-3 m-2 p-2 border-bottom'><a href ="#" class = "text-decoration-none text-black">Information about Freeship</a></li>
