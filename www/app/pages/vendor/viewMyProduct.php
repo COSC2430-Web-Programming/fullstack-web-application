@@ -56,6 +56,7 @@
       </div>
       </div>
     </main>
+    <div style="height: 100px"></div>
     
     <footer class='mt-4'>
       <?php 
