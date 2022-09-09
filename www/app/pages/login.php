@@ -59,7 +59,8 @@ if (isset($_POST['submit'])) {
             </section>
         </div>
     </main>
-    <footer class='mt-5'>
+    <div style="height: 145px"></div>
+    <footer>
         <?php 
           require('layout/footer.php')
       ?>

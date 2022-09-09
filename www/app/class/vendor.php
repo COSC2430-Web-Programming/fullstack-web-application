@@ -78,6 +78,7 @@ class Vendor extends User {
     protected function insertUser() {
         if($this->usernameExists() == FALSE && $this->businessNameExists() == FALSE && $this->businessAddressExists() == FALSE) {
             array_push($this->stored_users, $this->new_user);
+            $this->validateImage();
             // Write data to file
             if (file_put_contents($this->storage, json_encode($this->stored_users, JSON_PRETTY_PRINT))) {
                 return $this->success = "Successfully registered";
