@@ -36,10 +36,9 @@
             if($acc['role'] == VENDOR_ROLE){
               ?>
               <a class="navbar-brand display-1" href="../homepage/vendorHomepage.php">
-                <hstack>
+                <div class="d-flex">
                   <img class="logo" src="../../../assets/images/logo.png" />
-                  <p>Laza</p>
-                </hstack>
+                </div>
               </a>
               <?php
                 }

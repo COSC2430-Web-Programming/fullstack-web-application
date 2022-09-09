@@ -1,8 +1,7 @@
-@import url('https://fonts.googleapis.com/css2?family=Abel&family=Inter:wght@200;300;400&display=swap');
 *{
     margin: 0;
     padding: 0;
-    box-sizing: 0;
+    box-sizing: border-box;
 }
 
 .header_order {
@@ -154,8 +153,8 @@ small{
 
 .cart-link{
     width: 100%;
-    background: black;
-    color: white;
+    background-color: red;
+    color: black;
 }
 
 .cart{
