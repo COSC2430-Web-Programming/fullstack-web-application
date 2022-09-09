@@ -51,5 +51,14 @@
         "address": "Bangkok, Thailand",
         "registeredTime": "2022-09-08 14:58",
         "role": 1
+    },
+    "9": {
+        "username": "hoanganh",
+        "password": "$2y$10$7t3e4KBjrhSPfSP47X0T0OYeKiw3oUztm5UtJVEC2Cr9xrpmF2Hwm",
+        "profilePicture": null,
+        "businessName": "The Store of Anh",
+        "businessAddress": "D7, Ho Chi Minh City",
+        "registeredTime": "2022-09-09 23:39",
+        "role": 0
     }
 }
