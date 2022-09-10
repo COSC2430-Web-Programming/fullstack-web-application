@@ -1,5 +1,5 @@
-{
-    "0": {
+[
+    {
         "username": "vthanh12",
         "password": "$2y$10$XVmI1zXVCDZZKEjElaMFjeu8OXFqjUQAEu\/.FkU88fD.Dj4rbC76O",
         "profilePicture": "user_631c4c6d597583.63860355ponyo_sleeping.jpeg",
@@ -8,16 +8,16 @@
         "registeredTime": "2022-08-28 20:11",
         "role": 0
     },
-    "1": {
+    {
         "username": "jennierubyjane",
         "password": "$2y$10$A\/krMWp4eG6Yj2oZELKyo.XYXiwlzcG\/ZKgg94wgnzRszrezJuN5C",
-        "profilePicture": "user_631b8ef403cd68.33338021user_6318cab6e1bce2.08598342jenniemu.jpeg",
+        "profilePicture": "user_631c8fac0c22f7.21618379jenniemu.jpeg",
         "name": " Kim Jennie",
         "address": "LA, California",
         "registeredTime": "2022-09-01 15:13",
         "role": 1
     },
-    "2": {
+    {
         "username": "jisookim",
         "password": "$2y$10$fn4mrX8PB9\/rud\/llDhwe.gQVps8SB0SKPm7f4tfhSqTMyx3.FkQa",
         "profilePicture": "63107df902abf5.10684301.jpeg",
@@ -26,7 +26,7 @@
         "registeredTime": "2022-09-01 16:40",
         "role": 1
     },
-    "3": {
+    {
         "username": "karinashipper",
         "password": "$2y$10$XVmI1zXVCDZZKEjElaMFjeu8OXFqjUQAEu\/.FkU88fD.Dj4rbC76O",
         "distributionHub": "Saigon",
@@ -34,7 +34,7 @@
         "registeredTime": "2022-09-01 17:14",
         "role": 2
     },
-    "4": {
+    {
         "username": "winniethepooh",
         "password": "$2y$10$ZBtAbFNcHPV73TEyb\/YNQeSmOWfbZtORdAluZjtRowmmeLvdAbkom",
         "profilePicture": "63199fccec6768.48183514.jpeg",
@@ -43,7 +43,7 @@
         "registeredTime": "2022-09-08 14:54",
         "role": 0
     },
-    "5": {
+    {
         "username": "lalisamanoban",
         "password": "$2y$10$pzCAWV3GC2nWRh4yTbAqx.F00.gm0f1oudHyLA9zgbloChraGYnXC",
         "profilePicture": "user_reg_6319a0a558cef3.75903966.jpeg",
@@ -52,13 +52,13 @@
         "registeredTime": "2022-09-08 14:58",
         "role": 1
     },
-    "6": {
+    {
         "username": "hoanganh",
         "password": "$2y$10$7t3e4KBjrhSPfSP47X0T0OYeKiw3oUztm5UtJVEC2Cr9xrpmF2Hwm",
-        "profilePicture": null,
+        "profilePicture": "user_reg_631b6c5811a870.09654931.jpeg",
         "businessName": "The Store of Anh",
         "businessAddress": "D7, Ho Chi Minh City",
         "registeredTime": "2022-09-09 23:39",
         "role": 0
     }
-}
+]
