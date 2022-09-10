@@ -7,7 +7,7 @@ Demonstration Video URL: https://www.youtube.com/watch?v=E775u3WN5Us&ab_channel=
 GitHub Repository URL: https://github.com/COSC2430-Web-Programming/fullstack-web-application.git
 
 Guideline to run the website:
-1. Navigate to the "fullstack-web-application/www"
+1. Navigate to the "fullstack-web-application/www" folder
 2. Run the following command "php -S localhost:2222" in your terminal
 3. Start using the website by passing the following url "http://localhost:2222" to you web browser (Google Chrome for example)
 

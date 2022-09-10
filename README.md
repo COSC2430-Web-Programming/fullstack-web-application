@@ -8,10 +8,11 @@
 
 
 **Demonstration Video URL**: https://www.youtube.com/watch?v=E775u3WN5Us&ab_channel=MayTran
+
 **GitHub Repository URL**: https://github.com/COSC2430-Web-Programming/fullstack-web-application.git
 
 ## Guideline to run the website:
-1. Navigate to the "fullstack-web-application/www"
+1. Navigate to the "fullstack-web-application/www" folder
 2. Run the following command "php -S localhost:2222" in your terminal
 3. Start using the website by passing the following url "http://localhost:2222" to you web browser (Google Chrome for example)
 
@@ -20,17 +21,18 @@ All members contribute equally
 
 ## Accounts in the website (username - password)
 1. Vendor
-vthanh12 - Pooh1234@
-winniethepooh - Pooh1234@
-hoanganh - Pooh1234@
+- vthanh12 - Pooh1234@
+- winniethepooh - Pooh1234@
+- hoanganh - Pooh1234@
+
 
 2. Customer
-jennierubyjane - Pooh1234@
-jisookim - Pooh1234@
-lalisamanoban - Pooh1234@
+- jennierubyjane - Pooh1234@
+- jisookim - Pooh1234@
+- lalisamanoban - Pooh1234@
 
 3. Shipper
-karinashipper - Pooh1234@
+- karinashipper - Pooh1234@
 
 ## Citation
 
