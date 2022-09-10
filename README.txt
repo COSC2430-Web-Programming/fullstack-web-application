@@ -3,7 +3,7 @@
 3. Nguyen Le Bao Han - s3894290  
 4. Vo Thanh Hoang Anh - s3891714
 
-Demonstration Video URL:
+Demonstration Video URL: https://www.youtube.com/watch?v=E775u3WN5Us&ab_channel=MayTran
 GitHub Repository URL: https://github.com/COSC2430-Web-Programming/fullstack-web-application.git
 
 Guideline to run the website:
