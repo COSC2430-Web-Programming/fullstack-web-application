@@ -81,8 +81,8 @@ class User {
 
     protected function insertUser(){
         if($this->usernameExists() == FALSE) {
-            array_push($this->stored_users, $this->new_user);
             $this->validateImage();
+            array_push($this->stored_users, $this->new_user);
             // Write data to file
             if (file_put_contents($this->storage, json_encode($this->stored_users, JSON_PRETTY_PRINT))) {
                 return $this->success = "Successfully registered";
@@ -90,7 +90,6 @@ class User {
                 $this->error = "Unsuccessfully registered, please try again";
             }
         }
-
     }
 
     private function storeData() {

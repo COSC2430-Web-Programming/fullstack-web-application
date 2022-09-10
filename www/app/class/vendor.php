@@ -15,16 +15,6 @@ class Vendor extends User {
         $this->registeredTime = date('Y-m-d H:i');
         $this->role = VENDOR_ROLE;
         $this->stored_users = json_decode(file_get_contents($this->storage), true);
-
-        $this->new_user = [
-            "username" => $this->username,
-            "password" => $this->password,
-            "profilePicture" => $this->profilePicture,
-            "businessName" => $this->businessName,
-            "businessAddress" => $this->businessAddress,
-            "registeredTime" => $this->registeredTime,
-            "role" => $this->role
-        ];
         
         if ($this->checkFieldValues() == TRUE && $this->checkFieldValuesOfVendor() == TRUE) {
             $this->insertUser();
@@ -77,8 +67,19 @@ class Vendor extends User {
 
     protected function insertUser() {
         if($this->usernameExists() == FALSE && $this->businessNameExists() == FALSE && $this->businessAddressExists() == FALSE) {
-            array_push($this->stored_users, $this->new_user);
             $this->validateImage();
+
+            $this->new_user = [
+                "username" => $this->username,
+                "password" => $this->password,
+                "profilePicture" => $this->profilePicture,
+                "businessName" => $this->businessName,
+                "businessAddress" => $this->businessAddress,
+                "registeredTime" => $this->registeredTime,
+                "role" => $this->role
+            ];
+            
+            array_push($this->stored_users, $this->new_user);
             // Write data to file
             if (file_put_contents($this->storage, json_encode($this->stored_users, JSON_PRETTY_PRINT))) {
                 return $this->success = "Successfully registered";
