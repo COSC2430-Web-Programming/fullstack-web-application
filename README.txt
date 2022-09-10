@@ -17,9 +17,12 @@ Accounts in the website (username - password)
 1. Vendor
 vthanh12 - Pooh1234@
 winniethepooh - Pooh1234@
+hoanganh - Pooh1234@
 
 2. Customer
-jennierubyjane - Pooh1234@ 
+jennierubyjane - Pooh1234@
+jisookim - Pooh1234@
+lalisamanoban - Pooh1234@
 
 3. Shipper
 karinashipper - Pooh1234@
